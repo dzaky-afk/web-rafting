@@ -759,128 +759,205 @@ export default function AccommodationCatering() {
               Diracik dari bahan segar dan bumbu rempah otentik khas Sunda & Nusantara. Siap disajikan hangat di basecamp rafting maupun di villa.
             </p>
 
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-              {[
-                { id: "all", label: "Semua Box (11)" },
-                { id: "box", label: "Nasi Box & Bento (7)" },
-                { id: "sunda", label: "Tradisional Sunda (3)" },
-                { id: "tumpeng", label: "Tumpeng Syukuran (1)" },
-                { id: "prasmanan", label: "Prasmanan (Menu 1-6)" },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setCateringCategory(tab.id as any)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-heading font-bold tracking-wide transition-all cursor-pointer ${
-                    cateringCategory === tab.id
-                      ? "bg-slate-900 text-white shadow-md scale-105"
-                      : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+            {/* Format Sajian Switcher: Nasi Box & Bento vs Prasmanan */}
+            <div className="inline-flex p-1 sm:p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 shadow-inner mt-6 max-w-md w-full justify-center">
+              <button
+                type="button"
+                onClick={() => setCateringCategory("all")}
+                className={`flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-heading font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 ${
+                  cateringCategory !== "prasmanan"
+                    ? "bg-emerald-600 text-white shadow-md"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
+                }`}
+              >
+                <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span>Nasi Box & Bento ({CATERING_ITEMS.length})</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setCateringCategory("prasmanan")}
+                className={`flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-heading font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 ${
+                  cateringCategory === "prasmanan"
+                    ? "bg-slate-900 text-white shadow-md"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
+                }`}
+              >
+                <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
+                <span>Prasmanan ({PRASMANAN_MENUS.length} Menu)</span>
+              </button>
             </div>
+
+            {/* Sub-Filters for Nasi Box */}
+            {cateringCategory !== "prasmanan" && (
+              <div className="flex flex-wrap items-center justify-center gap-2 mt-4 animate-in fade-in duration-200">
+                {[
+                  { id: "all", label: `Semua Menu (${CATERING_ITEMS.length})` },
+                  { id: "box", label: `Nasi Box & Bento (${CATERING_ITEMS.filter((i) => i.category === "box").length})` },
+                  { id: "sunda", label: `Tradisional Sunda (${CATERING_ITEMS.filter((i) => i.category === "sunda").length})` },
+                  { id: "tumpeng", label: `Tumpeng Syukuran (${CATERING_ITEMS.filter((i) => i.category === "tumpeng").length})` },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setCateringCategory(tab.id as any)}
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-heading font-bold tracking-wide transition-all cursor-pointer ${
+                      cateringCategory === tab.id
+                        ? "bg-slate-900 text-white shadow-sm scale-105"
+                        : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* COMPACT CATERING ITEMS GRID (2 cols on mobile, 3 on tablet, 4 on desktop) */}
-          {cateringCategory !== "prasmanan" && (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5 mb-14">
-              {CATERING_ITEMS.filter(
-                (item) => cateringCategory === "all" || item.category === cateringCategory
-              ).map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white rounded-2xl overflow-hidden border border-slate-200/70 shadow-xs hover:shadow-lg hover:border-emerald-300/80 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
-                >
-                  {/* Photo with 4:3 Aspect Ratio */}
+          {/* CATERING ITEMS GRID (When on Nasi Box & Bento) */}
+          {cateringCategory !== "prasmanan" ? (
+            <>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5 mb-8">
+                {CATERING_ITEMS.filter(
+                  (item) => cateringCategory === "all" || item.category === cateringCategory
+                ).map((item) => (
                   <div
-                    onClick={() =>
-                      setLightboxPhoto({
-                        src: item.image,
-                        title: item.name,
-                        desc: item.desc,
-                        category: item.categoryLabel,
-                      })
-                    }
-                    className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 cursor-pointer"
+                    key={item.id}
+                    className="bg-white rounded-2xl overflow-hidden border border-slate-200/70 shadow-xs hover:shadow-lg hover:border-emerald-300/80 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
                   >
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-3 py-1 rounded-full bg-slate-900/85 text-white text-[10px] font-heading font-bold tracking-wide backdrop-blur-sm flex items-center gap-1 shadow-md">
-                        <Eye className="w-3 h-3 text-emerald-400" />
-                        <span>Perbesar</span>
-                      </span>
+                    {/* Photo with 4:3 Aspect Ratio */}
+                    <div
+                      onClick={() =>
+                        setLightboxPhoto({
+                          src: item.image,
+                          title: item.name,
+                          desc: item.desc,
+                          category: item.categoryLabel,
+                        })
+                      }
+                      className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 cursor-pointer"
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-3 py-1 rounded-full bg-slate-900/85 text-white text-[10px] font-heading font-bold tracking-wide backdrop-blur-sm flex items-center gap-1 shadow-md">
+                          <Eye className="w-3 h-3 text-emerald-400" />
+                          <span>Perbesar</span>
+                        </span>
+                      </div>
+                      {/* Badge */}
+                      <div className="absolute top-2.5 left-2.5">
+                        <span
+                          className={`text-[9px] sm:text-[10px] font-heading font-bold tracking-wide px-2.5 py-0.5 rounded-full shadow-xs backdrop-blur-xs ${item.badgeColor}`}
+                        >
+                          {item.badge}
+                        </span>
+                      </div>
                     </div>
-                    {/* Badge */}
-                    <div className="absolute top-2.5 left-2.5">
-                      <span
-                        className={`text-[9px] sm:text-[10px] font-heading font-bold tracking-wide px-2.5 py-0.5 rounded-full shadow-xs backdrop-blur-xs ${item.badgeColor}`}
-                      >
-                        {item.badge}
-                      </span>
+
+                    {/* Card Body */}
+                    <div className="p-3 sm:p-3.5 flex-1 flex flex-col justify-between">
+                      <div>
+                        <div className="text-[10px] font-heading font-bold text-emerald-600 uppercase tracking-wider mb-1">
+                          {item.categoryLabel}
+                        </div>
+                        <h4 className="font-heading font-bold text-xs sm:text-sm text-slate-900 line-clamp-1 group-hover:text-emerald-700 transition-colors">
+                          {item.name}
+                        </h4>
+                        <p className="text-[11px] text-slate-500 line-clamp-2 mt-1 leading-relaxed font-normal">
+                          {item.desc}
+                        </p>
+
+                        {/* Item list bullets */}
+                        <div className="mt-2.5 pt-2 border-t border-slate-100 space-y-1">
+                          {item.items.slice(0, 3).map((dish, idx) => (
+                            <div key={idx} className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-600">
+                              <CheckCircle2 className="w-3 h-3 text-emerald-500 shrink-0" />
+                              <span className="truncate">{dish}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Order Button */}
+                      <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLightboxPhoto({
+                              src: item.image,
+                              title: item.name,
+                              desc: item.desc,
+                              category: item.categoryLabel,
+                            })
+                          }
+                          className="text-[11px] text-slate-500 hover:text-slate-800 font-heading font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                        >
+                          <Eye className="w-3 h-3" />
+                          <span>Rincian</span>
+                        </button>
+                        <a
+                          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                            `Halo SA Adventure, saya tertarik memesan katering: ${item.name}`
+                          )}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 hover:text-emerald-900 font-heading font-bold text-[11px] px-2.5 py-1 rounded-lg border border-emerald-200 transition-all cursor-pointer"
+                        >
+                          <WhatsAppIcon className="w-3 h-3 fill-current" />
+                          <span>Pesan</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  {/* Card Body */}
-                  <div className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
-                    <div>
-                      <div className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider mb-1">
-                        {item.categoryLabel}
-                      </div>
-                      
-                      {/* Dish Title with neat typography and 2-line space */}
-                      <h4 className="font-heading font-bold text-[13px] sm:text-[15px] text-slate-800 leading-snug tracking-tight group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[36px] sm:min-h-[42px]">
-                        {item.name}
-                      </h4>
-                      
-                      {/* Description */}
-                      <p className="text-slate-500 text-[11px] leading-relaxed line-clamp-2 my-2 font-normal">
-                        {item.desc}
-                      </p>
-
-                      {/* Checklist Items */}
-                      <div className="space-y-1.5 pt-2 border-t border-slate-100 mb-3.5">
-                        {item.items.slice(0, 3).map((sub, sIdx) => (
-                          <div
-                            key={sIdx}
-                            className="flex items-center gap-1.5 text-[11px] text-slate-600 font-medium"
-                          >
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                            <span className="truncate">{sub}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Action Order Button */}
-                    <a
-                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                        `Halo SA Adventure, saya tertarik memesan "${item.name}". Mohon info harga dan minimal ordernya.`
-                      )}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-heading font-bold text-[11px] sm:text-xs py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-[0.98]"
-                    >
-                      <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
-                      <span>Pesan Menu Ini</span>
-                    </a>
+              {/* Callout Card to Prasmanan */}
+              <div className="mb-14 bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                <div>
+                  <div className="text-xs sm:text-sm font-heading font-bold text-emerald-950 flex items-center justify-center sm:justify-start gap-1.5">
+                    <Flame className="w-4 h-4 text-amber-500" />
+                    <span>Butuh Sajian Prasmanan (Buffet) & Live Stall untuk Rombongan?</span>
+                  </div>
+                  <div className="text-xs text-emerald-700 mt-1 font-normal">
+                    Tersedia Paket Prasmanan Menu 1 s/d 6 mulai Rp 45.000/pax, kambing guling utuh & aneka gubukan.
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+                <button
+                  type="button"
+                  onClick={() => setCateringCategory("prasmanan")}
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs shadow-sm transition-all shrink-0 cursor-pointer flex items-center gap-1.5"
+                >
+                  <span>Buka Pilihan Prasmanan (1-6)</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </>
+          ) : (
+            /* ========================================================================= */
+            /* PRASMANAN (BUFFET) & GUBUKAN SECTION */
+            /* ========================================================================= */
+            <div className="animate-in fade-in duration-200">
+              <div className="mb-4 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setCateringCategory("all")}
+                  className="inline-flex items-center gap-1.5 text-xs text-emerald-700 hover:text-emerald-900 font-heading font-bold transition-colors cursor-pointer bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Lihat Pilihan Nasi Box & Bento</span>
+                </button>
+                <span className="text-[11px] text-slate-500 font-medium">
+                  Format Jamuan: Prasmanan Rombongan
+                </span>
+              </div>
 
-          {/* ========================================================================= */}
-          {/* PRASMANAN (BUFFET) & GUBUKAN SECTION */}
-          {/* ========================================================================= */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 rounded-2xl p-5 sm:p-7 lg:p-9 text-white shadow-xl mb-10">
-            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 rounded-2xl p-5 sm:p-7 lg:p-9 text-white shadow-xl mb-10">
+                <div className="max-w-4xl mx-auto">
               
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/15">
@@ -1029,8 +1106,10 @@ export default function AccommodationCatering() {
 
             </div>
           </div>
-
         </div>
+      )}
+
+    </div>
 
         {/* ========================================================================= */}
         {/* LIGHTBOX MODAL (FOR HIGH-RES FULL VIEW) */}
