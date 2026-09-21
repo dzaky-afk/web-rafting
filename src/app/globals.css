@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-outfit: 'Outfit', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --brand-blue: #0052cc;
+  --brand-blue-light: #0284c7;
+  --brand-sky: #0ea5e9;
+  --brand-navy: #0b192c;
+  --brand-glass: rgba(255, 255, 255, 0.75);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: var(--font-jakarta), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  /* iOS Safari Date & Time input overflow prevention */
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+  }
+}
+
+/* Glassmorphic Utilities ("Bening & Segar") */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 242, 254, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 20px 35px -8px rgba(2, 132, 199, 0.16), 0 8px 12px -3px rgba(0, 0, 0, 0.04);
+}
+
+.glass-pill {
+  background: rgba(240, 249, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.glass-dark {
+  background: rgba(11, 25, 44, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-dark-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bg-mesh-river {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 90% 60%, rgba(13, 148, 136, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(0, 82, 204, 0.08) 0%, transparent 50%),
+    #f8fafc;
+}
+
+/* === Ultra-Smooth Water & Rafting Animations === */
+
+/* 1. Smooth Floating Boat on Water Waves */
+@keyframes smoothFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotate(-1.2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(1.4deg);
+  }
+}
+
+.animate-smooth-raft {
+  animation: smoothFloat 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* 2. Paddle Rowing Motion */
+@keyframes paddleStroke {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-6deg) translate(-2px, -3px);
+  }
+}
+
+.animate-paddle {
+  transform-origin: center top;
+  animation: paddleStroke 2s ease-in-out infinite;
+}
+
+/* 3. Water Splashing Droplets Pulsing */
+@keyframes waterSplashPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.animate-splash-pulse {
+  animation: waterSplashPulse 2.4s ease-in-out infinite;
+}
+
+/* 4. Water Wave Flow Shimmer */
+@keyframes waveFlow {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-5%);
+    opacity: 0.7;
+  }
+}
+
+.animate-wave-flow {
+  animation: waveFlow 4.5s ease-in-out infinite;
+}
+
+/* 5. Clean Accent Text (Tanpa Gradasi) */
+.accent-title {
+  color: #0052cc;
+}
+
+/* 6. Subtle Floating Badge */
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleBounce 3s ease-in-out infinite;
+}
+
+/* 7. WhatsApp Radar Ring */
+@keyframes waRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.animate-wa-ring {
+  animation: waRing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

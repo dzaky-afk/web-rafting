@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SA Adventure - Wisata Arung Jeram (Rafting) Cisadane Bogor & Outdoor Adventure</title>
+  <meta name="description"
+    content="Rasakan sensasi arung jeram Cisadane Bogor bersama SA Adventure. Paket Rafting mulai Rp 168.000/Pax, perlengkapan standar internasional CE, pemandu bersertifikasi BNSP, dan asuransi resmi.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/sa-adventure-logo.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#0052cc',
+              deep: '#003b95',
+              sky: '#0284c7',
+              cyan: '#06b6d4',
+              teal: '#0d9488',
+              navy: '#0b192c',
+              emerald: '#059669',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    section {
+      scroll-margin-top: 85px;
+    }
+
+    /* === Glassmorphism Design System === */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 12px 36px -8px rgba(2, 132, 199, 0.09), 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .glass-card-hover {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card-hover:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 24px 44px -10px rgba(2, 132, 199, 0.18), 0 8px 16px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    .glass-pill {
+      background: rgba(240, 249, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(186, 230, 253, 0.8);
+    }
+
+    .glass-dark {
+      background: rgba(11, 25, 44, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .glass-dark-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-accent {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(0, 82, 204, 0.06));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+
+    /* Ambient background glows */
+    .bg-mesh-river {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 90% 60%, rgba(13, 148, 136, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(0, 82, 204, 0.08) 0%, transparent 50%),
+        #f8fafc;
+    }
+
+    /* Custom range slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: #e2e8f0;
+      border-radius: 9999px;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #0052cc;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -8px;
+      box-shadow: 0 0 10px rgba(0, 82, 204, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    /* Animations */
+    @keyframes smoothFloat {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-4px) rotate(-1deg);
+      }
+
+      50% {
+        transform: translateY(-8px) rotate(0.8deg);
+      }
+
+      75% {
+        transform: translateY(-3px) rotate(1.2deg);
+      }
+    }
+
+    .animate-smooth-raft {
+      animation: smoothFloat 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    }
+
+    @keyframes waveFlow {
+
+      0%,
+      100% {
+        transform: translateX(-3%);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: translateX(3%);
+        opacity: 1;
+      }
+    }
+
+    .animate-wave-flow {
+      animation: waveFlow 4s ease-in-out infinite;
+    }
+
+    @keyframes waRing {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.45);
+        opacity: 0;
+      }
+    }
+
+    .animate-wa-ring {
+      animation: waRing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes lightSweep {
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #0052cc 0%, #38bdf8 50%, #0052cc 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: lightSweep 4s linear infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-mesh-river text-slate-900 font-sans antialiased pb-16 md:pb-0 min-h-screen">
+
+  <!-- Top Announcement Bar (Glassmorphic Ticker) -->
+  <div
+    class="bg-gradient-to-r from-[#003b95] via-[#0284c7] to-[#0052cc] text-white text-[11px] sm:text-xs py-2 px-4 shadow-sm border-b border-sky-400/30">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 font-medium overflow-hidden whitespace-nowrap">
+        <span
+          class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/20 font-bold tracking-wider text-[10px] uppercase">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          Musim Rafting Terbaik
+        </span>
+        <span class="truncate">Debit Air Cisadane Ideal & Jeram Seru! Grade II-III+ Aman Pemula & Keluarga</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-xs font-semibold shrink-0">
+        <a href="#kalkulator-booking" class="hover:text-sky-200 transition flex items-center gap-1">
+          <i class="fa-solid fa-calculator text-[10px]"></i> Hitung Estimasi
+        </a>
+        <span>|</span>
+        <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20tanya%20info%20rafting"
+          target="_blank" rel="noreferrer" class="hover:text-sky-200 transition flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-300"></i> CS Online 24/7
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Island Header (Glassmorphism Nav) -->
+  <header class="sticky top-0 z-50 py-3 px-4 sm:px-8 transition-all duration-300">
+    <div
+      class="max-w-7xl mx-auto glass-nav rounded-2xl sm:rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all">
+
+      <!-- Logo - Clean Official Brand Mark -->
+      <a href="#home" class="flex items-center gap-2 group shrink-0" aria-label="SA Adventure Beranda">
+        <img src="images/sa-adventure-logo.png" alt="SA Adventure Logo"
+          class="h-11 sm:h-13 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <!-- Desktop Nav - Simple 5 Core Links -->
+      <nav
+        class="hidden lg:flex items-center gap-1 font-heading font-extrabold text-xs tracking-wider bg-white/60 p-1.5 rounded-full border border-sky-100/80 backdrop-blur-md shadow-inner"
+        id="navLinks">
+        <a href="#home"
+          class="nav-item active px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap bg-[#0052cc] text-white shadow-md shadow-blue-600/30 font-black">
+          <span>BERANDA</span>
+        </a>
+        <a href="#paket-rafting"
+          class="nav-item px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-slate-600 hover:text-[#0052cc] hover:bg-white/80">
+          <span>PAKET RAFTING</span>
+        </a>
+        <a href="#aktivitas"
+          class="nav-item px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-slate-600 hover:text-[#0052cc] hover:bg-white/80">
+          <span>AKTIVITAS</span>
+        </a>
+        <a href="#tentang-kami"
+          class="nav-item px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-slate-600 hover:text-[#0052cc] hover:bg-white/80">
+          <span>TENTANG KAMI</span>
+        </a>
+        <a href="#kontak"
+          class="nav-item px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-slate-600 hover:text-[#0052cc] hover:bg-white/80">
+          <span>KONTAK</span>
+        </a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-2.5">
+        <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20paket%20rafting%20Cisadane"
+          target="_blank" rel="noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-[#0284c7] to-[#0052cc] hover:from-[#0369a1] hover:to-[#003b95] text-white font-heading font-black text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md shadow-blue-500/25 transition-all duration-300 hover:scale-[1.03]">
+          <i class="fa-brands fa-whatsapp text-base text-emerald-300"></i>
+          <span>RESERVASI SEKARANG</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer (Frosted Glass) -->
+    <div id="mobileDrawer" class="hidden fixed inset-0 z-50 lg:hidden">
+      <div id="mobileBackdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
+      <div
+        class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white/90 backdrop-blur-2xl text-slate-900 p-6 shadow-2xl flex flex-col justify-between border-l border-white/60">
+        <div>
+          <div class="flex justify-between items-center border-b border-sky-100 pb-4 mb-5">
+            <div class="flex items-center gap-2.5">
+              <img src="images/sa-adventure-logo.png" alt="SA Adventure Logo" class="h-9 w-auto object-contain">
+              <div>
+                <span class="font-heading font-black text-base text-slate-900 block leading-none">SA ADVENTURE</span>
+                <span class="text-[9px] text-[#0284c7] font-bold uppercase">Rafting Cisadane</span>
+              </div>
+            </div>
+            <button id="mobileCloseBtn" class="text-slate-400 hover:text-slate-700 p-2">
+              <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+          </div>
+          <ul class="flex flex-col gap-1.5 font-heading font-bold text-sm text-slate-700">
+            <li><a href="#home"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">BERANDA</a></li>
+            <li><a href="#paket-rafting"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">PAKET RAFTING</a></li>
+            <li><a href="#jeram-cisadane"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">JERAM IKONIK</a></li>
+            <li><a href="#kalkulator-booking"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">KALKULATOR BOOKING</a>
+            </li>
+            <li><a href="#aktivitas"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">AKTIVITAS LAIN</a>
+            </li>
+            <li><a href="#tentang-kami"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">TENTANG KAMI</a></li>
+            <li><a href="#keamanan"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">SOP & RUNDOWN</a></li>
+            <li><a href="#galeri"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">GALERI FOTO &
+                VIDEO</a></li>
+            <li><a href="#kontak"
+                class="mobile-nav-link block p-3 rounded-xl hover:bg-sky-50 hover:text-[#0052cc]">LOKASI & KONTAK</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-5 border-t border-sky-100">
+          <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20tanya%20informasi%20paket%20rafting"
+            target="_blank" rel="noreferrer"
+            class="w-full bg-gradient-to-r from-[#0284c7] to-[#0052cc] text-white font-heading font-black text-sm py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
+            <span>Reservasi WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Atmospheric Whitewater Glass Experience) -->
+  <section id="home"
+    class="relative min-h-[90vh] flex flex-col justify-between pt-16 pb-16 text-white overflow-hidden bg-slate-950">
+    <!-- Hero Background Image & Gradient Mesh -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/drive_uploads/DSCN9999.JPG" alt="Rafting Cisadane SA Adventure"
+        class="w-full h-full object-cover object-[center_16%] sm:object-center brightness-[0.92] sm:brightness-[0.78] sm:scale-105 transition-transform duration-1000">
+      <div class="block sm:hidden absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent via-35% to-slate-950/95"></div>
+      <div class="hidden sm:block absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/35">
+      </div>
+      <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto pt-[36vh] sm:pt-0">
+      <!-- Mobile Visual Space Cue: tombol geser ke info -->
+      <div class="block sm:hidden -mt-10 mb-8 text-center">
+        <a href="#hero-content"
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/25 text-xs text-white shadow-lg active:scale-95 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping"></span>
+          <span class="font-semibold text-[11px]">Lihat Info & Paket Rafting</span>
+          <i class="fa-solid fa-chevron-down text-[10px] text-sky-400 animate-bounce"></i>
+        </a>
+      </div>
+
+      <div id="hero-content" class="max-w-3xl">
+
+        <!-- Subtle Verified Badge -->
+        <div
+          class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-xs text-slate-200 mb-5 sm:mb-6 font-medium shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+          <span class="font-semibold tracking-wide uppercase text-slate-200">Official Rafting Cisadane Bogor</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-slate-300 flex items-center gap-1.5 font-semibold">
+            <i class="fa-solid fa-star text-amber-400"></i>
+            4.9/5 (500+ Ulasan)
+          </span>
+        </div>
+
+        <!-- Main Headline (Clean Solid Colors, No Gradient on Font) -->
+        <h1
+          class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight leading-[1.08] mb-4 sm:mb-6 text-white">
+          <span class="block">TAKLUHKAN JERAM,</span>
+          <span class="block text-sky-400">
+            RASAKAN PETUALANGAN SEJATI!
+          </span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="text-xs sm:text-base text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal max-w-2xl">
+          Arung jeram seru di Sungai Cisadane Caringin Bogor bersama <strong>SA Adventure</strong>. Nikmati jeram alami
+          Grade II–III+, pemandu berlisensi BNSP, peralatan standar internasional CE, dan sajian makan siang prasmanan
+          Sunda khas pedesaan.
+        </p>
+
+        <!-- Key Specs Cards - Clean & Harmonious -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mb-6 sm:mb-8 max-w-2xl">
+          <div class="bg-slate-900/70 backdrop-blur-sm rounded-xl p-3.5 border border-slate-800 text-center">
+            <div class="text-[11px] text-slate-400 font-medium">Jalur Rafting</div>
+            <div class="text-base sm:text-lg font-heading font-black text-white mt-0.5">7 & 11 KM</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">1.5 - 2.5 Jam Trip</div>
+          </div>
+          <div class="bg-slate-900/70 backdrop-blur-sm rounded-xl p-3.5 border border-slate-800 text-center">
+            <div class="text-[11px] text-slate-400 font-medium">Tingkat Jeram</div>
+            <div class="text-base sm:text-lg font-heading font-black text-white mt-0.5">Grade II - III+</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Aman Pemula & Anak</div>
+          </div>
+          <div class="bg-slate-900/70 backdrop-blur-sm rounded-xl p-3.5 border border-slate-800 text-center">
+            <div class="text-[11px] text-slate-400 font-medium">Standar Safety</div>
+            <div class="text-base sm:text-lg font-heading font-black text-white mt-0.5">Guide BNSP</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Rescue Standby</div>
+          </div>
+          <div class="bg-slate-900/70 backdrop-blur-sm rounded-xl p-3.5 border border-slate-800 text-center">
+            <div class="text-[11px] text-slate-400 font-medium">Harga Mulai</div>
+            <div class="text-base sm:text-lg font-heading font-black text-white mt-0.5">168 Ribu</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Per Pax Lengkap</div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Quick Floating Booking Bar (Like Top Rafting Portals) -->
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10">
+      <div
+        class="bg-slate-900/90 backdrop-blur-2xl rounded-2xl p-5 sm:p-6 border border-white/15 shadow-2xl overflow-hidden">
+        <form id="quickBookingForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+
+          <!-- Field 1: Pilih Paket -->
+          <div class="w-full min-w-0">
+            <label
+              class="block text-xs font-bold text-sky-200 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+              <i class="fa-solid fa-ship text-sky-400"></i> Pilih Paket Rafting
+            </label>
+            <select id="quickPackageSelect"
+              class="w-full block min-w-0 max-w-full box-border bg-slate-900/80 border border-white/20 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400 font-medium">
+              <option value="Paket B (Rafting Complete - 11 KM)">Paket B: Rafting Complete (11 KM - Rp 199k)</option>
+              <option value="Paket A (Rafting Basic - 7 KM)">Paket A: Rafting Basic (7 KM - Rp 168k)</option>
+              <option value="Paket Combo (Rafting + Paintball)">Paket Combo: Rafting + Paintball (Rp 295k)</option>
+              <option value="Paket Outbound Team Building">Paket Outbound & Team Building</option>
+            </select>
+          </div>
+
+          <!-- Field 2: Tanggal Rencana -->
+          <div class="w-full min-w-0">
+            <label
+              class="block text-xs font-bold text-sky-200 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+              <i class="fa-regular fa-calendar-days text-sky-400"></i> Rencana Tanggal
+            </label>
+            <input type="date" id="quickDateInput"
+              class="w-full block min-w-0 max-w-full box-border bg-slate-900/80 border border-white/20 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400 font-medium text-left [color-scheme:dark]">
+          </div>
+
+          <!-- Field 3: Jumlah Peserta -->
+          <div class="w-full min-w-0">
+            <label
+              class="block text-xs font-bold text-sky-200 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+              <i class="fa-solid fa-users text-sky-400"></i> Jumlah Peserta (Pax)
+            </label>
+            <div class="flex items-center gap-2 w-full min-w-0">
+              <input type="number" id="quickPaxInput" min="10" value="20"
+                class="flex-1 min-w-0 w-full box-border bg-slate-900/80 border border-white/20 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400 font-medium [color-scheme:dark]">
+              <span class="text-xs text-slate-300 font-bold shrink-0">Orang</span>
+            </div>
+          </div>
+
+          <!-- Field 4: Button Check / Submit -->
+          <div class="w-full min-w-0">
+            <button type="submit"
+              class="w-full bg-[#0052cc] hover:bg-[#0041a8] text-white font-heading font-bold text-sm py-3 px-4 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Cek Ketersediaan</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Stats & Badges Bar (Glass) -->
+  <section class="py-8 bg-white/40 border-b border-sky-100/60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <div
+            class="w-12 h-12 rounded-2xl bg-sky-50 text-[#0052cc] flex items-center justify-center mb-2 border border-sky-100 shadow-sm">
+            <i class="fa-solid fa-certificate text-xl"></i>
+          </div>
+          <span class="font-heading font-black text-2xl text-slate-900">100%</span>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Pemandu Bersertifikat BNSP</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="w-12 h-12 rounded-2xl bg-sky-50 text-[#0052cc] flex items-center justify-center mb-2 border border-sky-100 shadow-sm">
+            <i class="fa-solid fa-shield-halved text-xl"></i>
+          </div>
+          <span class="font-heading font-black text-2xl text-slate-900">Termasuk</span>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Asuransi Kecelakaan Resmi</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="w-12 h-12 rounded-2xl bg-sky-50 text-[#0052cc] flex items-center justify-center mb-2 border border-sky-100 shadow-sm">
+            <i class="fa-solid fa-compass text-xl"></i>
+          </div>
+          <span class="font-heading font-black text-2xl text-slate-900">11 KM & 7 KM</span>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Pilihan Jalur Jeram Alami</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="w-12 h-12 rounded-2xl bg-sky-50 text-[#0052cc] flex items-center justify-center mb-2 border border-sky-100 shadow-sm">
+            <i class="fa-solid fa-utensils text-xl"></i>
+          </div>
+          <span class="font-heading font-black text-2xl text-slate-900">Prasmanan</span>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Makan Sunda & Kelapa Muda</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rafting Packages Section (Glassmorphism Cards with specs) -->
+  <section id="paket-rafting" class="py-20 sm:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div
+          class="inline-flex items-center gap-1.5 font-heading font-black text-xs sm:text-sm text-[#0052cc] tracking-wider uppercase mb-2.5 px-4 py-1.5 rounded-full glass-pill">
+          <i class="fa-solid fa-water"></i>
+          <span>PILIHAN PAKET POPULER</span>
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900">
+          PAKET RAFTING <span class="text-[#0052cc]">CISADANE BOGOR</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+          Pilihan paket lengkap arung jeram dengan standar keamanan internasional, fasilitas komplit, saung istirahat,
+          dan sajian kuliner khas Sunda.
+        </p>
+      </div>
+
+      <!-- Mobile Swipe Guidance -->
+      <div class="flex md:hidden items-center justify-between mb-3.5 px-1">
+        <div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+          <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
+          <span>Geser kartu untuk lihat semua paket</span>
+        </div>
+        <div class="flex items-center gap-1 text-xs text-[#0052cc] font-bold">
+          <span>Slide</span>
+          <i class="fa-solid fa-chevron-right text-[10px] animate-pulse"></i>
+        </div>
+      </div>
+
+      <!-- Packages Grid: 3 Main Rafting Packages (Horizontal Snap Carousel on Mobile) -->
+      <div id="packagesSlider"
+        class="flex md:grid md:grid-cols-3 gap-5 md:gap-8 items-stretch mb-6 md:mb-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
+
+        <!-- Card 1: Paket A (Rafting Basic 7 KM) -->
+        <div
+          class="w-[86vw] max-w-[360px] sm:w-[380px] md:w-auto shrink-0 snap-center glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border border-white/80 shadow-lg">
+          <div>
+            <!-- Header Card -->
+            <div class="p-6 sm:p-7 border-b border-sky-100/70 bg-white/40">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3.5 py-1 rounded-full bg-slate-100 text-slate-700 font-heading font-black text-xs tracking-wider uppercase">
+                  PAKET A
+                </span>
+                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-2.5 py-0.5 rounded-md border border-sky-100">
+                  7 KM / ~1.5 Jam
+                </span>
+              </div>
+              <h3 class="font-heading font-black text-2xl text-slate-900 uppercase tracking-tight mb-1">
+                RAFTING BASIC
+              </h3>
+              <p class="text-xs text-slate-500 font-medium">Jalur santai cocok untuk keluarga, pemula & anak-anak</p>
+
+              <!-- Price Box -->
+              <div class="mt-5 pt-4 border-t border-slate-100 flex items-baseline gap-1">
+                <span class="font-heading font-black text-lg text-[#0052cc]">Rp</span>
+                <span class="font-heading font-black text-4xl sm:text-5xl text-[#0052cc] tracking-tight">168.000</span>
+                <span class="text-slate-500 font-bold text-xs uppercase">/PAX</span>
+              </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="p-6 sm:p-7">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Fasilitas Termasuk:</div>
+              <ul class="space-y-3 text-sm text-slate-700 font-medium">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Perahu Karet & Dayung Standar CE</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Life Jacket (Pelampung) & Helm Keselamatan</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Pemandu / Skipper Profesional di Setiap Perahu</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Tim Rescue Standby di Titik Jeram</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Transportasi Lokal (Antar-Jemput Sungai)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Coffee Break & Snack Tradisional</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Saung Istirahat & Kamar Bilas Bersih</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Asuransi Kecelakaan Resmi</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Button -->
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20Paket%20A%20(Rafting%20Basic%207%20KM)"
+              target="_blank" rel="noreferrer"
+              class="block text-center w-full bg-slate-900 hover:bg-[#0052cc] text-white font-heading font-black text-sm py-4 rounded-2xl shadow-md transition-all duration-300 uppercase tracking-wider">
+              PILIH PAKET A
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Paket B (Rafting Complete 11 KM) - BEST SELLER FEATURED -->
+        <div
+          class="w-[86vw] max-w-[360px] sm:w-[380px] md:w-auto shrink-0 snap-center glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-2 border-sky-400 shadow-2xl relative md:scale-[1.02] bg-white/85">
+          <!-- Featured Badge -->
+          <div
+            class="absolute top-0 right-0 bg-gradient-to-r from-sky-500 via-[#0052cc] to-[#003b95] text-white font-heading font-black text-[11px] tracking-wider uppercase px-4 py-1.5 rounded-bl-2xl shadow-md z-10">
+            <i class="fa-solid fa-fire text-amber-300 mr-1"></i> BEST SELLER / PALING FAVORIT
+          </div>
+
+          <div>
+            <!-- Header Card -->
+            <div
+              class="p-6 sm:p-7 border-b border-sky-100 bg-gradient-to-br from-sky-500/10 via-blue-500/5 to-transparent pt-8">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3.5 py-1 rounded-full bg-gradient-to-r from-[#0284c7] to-[#0052cc] text-white font-heading font-black text-xs tracking-wider uppercase shadow-sm">
+                  PAKET B
+                </span>
+                <span
+                  class="text-xs font-black text-[#0052cc] bg-sky-100/80 px-3 py-1 rounded-full border border-sky-200">
+                  11 KM / ~2 Jam
+                </span>
+              </div>
+              <h3 class="font-heading font-black text-2xl sm:text-3xl text-slate-900 uppercase tracking-tight mb-1">
+                RAFTING COMPLETE
+              </h3>
+              <p class="text-xs text-sky-800 font-semibold">Sensasi jeram terlengkap + Makan Siang Prasmanan Khas Sunda
+              </p>
+
+              <!-- Price Box -->
+              <div class="mt-5 pt-4 border-t border-sky-200/50 flex items-baseline gap-1">
+                <span class="font-heading font-black text-lg text-[#0052cc]">Rp</span>
+                <span class="font-heading font-black text-4xl sm:text-5xl text-[#0052cc] tracking-tight">199.000</span>
+                <span class="text-slate-500 font-bold text-xs uppercase">/PAX</span>
+              </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="p-6 sm:p-7">
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider mb-4 flex items-center gap-1.5">
+                <i class="fa-solid fa-sparkles text-amber-500"></i>
+                <span>Semua Fasilitas Paket A, PLUS:</span>
+              </div>
+              <ul class="space-y-3 text-sm text-slate-800 font-medium">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center shrink-0 text-xs shadow-sm">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="font-bold text-slate-900">Jarak Tempuh Lebih Panjang 11 KM (Seluruh Jeram Utama)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center shrink-0 text-xs shadow-sm">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="font-bold text-slate-900">Makan Siang 1x Prasmanan Khas Sunda (Ayam, Sayur Asem,
+                    Sambal)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center shrink-0 text-xs shadow-sm">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="font-bold text-slate-900">Kelapa Muda Segar / Es Jeruk di Rest Area Pinggir Sungai</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Dokumentasi Foto Aksi Pengarungan</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Banner Kegiatan Custom untuk Rombongan</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Sound Portable untuk Briefing & Acara</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Saung Gazebo Pribadi & Asuransi Resmi</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Button -->
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20Paket%20B%20(Rafting%20Complete%2011%20KM)"
+              target="_blank" rel="noreferrer"
+              class="block text-center w-full bg-gradient-to-r from-[#0284c7] via-[#0052cc] to-[#003b95] hover:from-[#0369a1] hover:to-[#002868] text-white font-heading font-black text-sm py-4 rounded-2xl shadow-lg shadow-blue-500/30 transition-all duration-300 uppercase tracking-wider hover:scale-[1.02]">
+              RESERVASI SEKARANG
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Paket C (Combo Rafting + Paintball / Outbound) -->
+        <div
+          class="w-[86vw] max-w-[360px] sm:w-[380px] md:w-auto shrink-0 snap-center glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border border-white/80 shadow-lg">
+          <div>
+            <!-- Header Card -->
+            <div class="p-6 sm:p-7 border-b border-sky-100/70 bg-white/40">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-3.5 py-1 rounded-full bg-teal-100 text-teal-800 font-heading font-black text-xs tracking-wider uppercase">
+                  PAKET COMBO
+                </span>
+                <span
+                  class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-100">
+                  Full Day Event
+                </span>
+              </div>
+              <h3 class="font-heading font-black text-2xl text-slate-900 uppercase tracking-tight mb-1">
+                RAFTING + PAINTBALL
+              </h3>
+              <p class="text-xs text-slate-500 font-medium">Kombinasi petualangan jeram & simulasi perang perang seru
+              </p>
+
+              <!-- Price Box -->
+              <div class="mt-5 pt-4 border-t border-slate-100 flex items-baseline gap-1">
+                <span class="font-heading font-black text-lg text-[#0052cc]">Rp</span>
+                <span class="font-heading font-black text-4xl sm:text-5xl text-[#0052cc] tracking-tight">295.000</span>
+                <span class="text-slate-500 font-bold text-xs uppercase">/PAX</span>
+              </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="p-6 sm:p-7">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Fasilitas Termasuk:</div>
+              <ul class="space-y-3 text-sm text-slate-700 font-medium">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Rafting Cisadane 11 KM Complete Trip</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Paintball War Game (Senjata Tippmann, 30 Peluru, Goggle & Rompi)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Instruktur & Wasit Pertandingan Paintball</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Makan Siang Prasmanan Khas Sunda</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Kelapa Muda Segar & Coffee Break</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Dokumentasi Foto & Spanduk Custom</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xs">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span>Saung Khusus & Asuransi Resmi</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Button -->
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20Paket%20Combo%20(Rafting%20+%20Paintball)"
+              target="_blank" rel="noreferrer"
+              class="block text-center w-full bg-slate-900 hover:bg-[#0052cc] text-white font-heading font-black text-sm py-4 rounded-2xl shadow-md transition-all duration-300 uppercase tracking-wider">
+              PILIH PAKET COMBO
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mobile Slide Switcher Buttons -->
+      <div class="flex md:hidden justify-center items-center gap-2 mb-8 px-2" id="pkgMobileNav">
+        <button type="button" onclick="scrollToPkgSlide(0)"
+          class="pkg-slide-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-[#0052cc] text-white shadow-md shadow-blue-500/25">Paket
+          A (7 KM)</button>
+        <button type="button" onclick="scrollToPkgSlide(1)"
+          class="pkg-slide-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">Paket
+          B (11 KM)</button>
+        <button type="button" onclick="scrollToPkgSlide(2)"
+          class="pkg-slide-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">Paket
+          Combo</button>
+      </div>
+
+      <!-- Comparison Note & Group Discount Badge -->
+      <div
+        class="glass-pill rounded-2xl p-4 sm:p-5 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 border border-sky-200/80">
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <div
+            class="w-10 h-10 rounded-xl bg-sky-50 text-[#0052cc] border border-sky-200 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-users text-lg"></i>
+          </div>
+          <div>
+            <span class="font-heading font-black text-sm text-slate-900 block">Ada Rencana Gathering Rombongan > 50
+              Orang?</span>
+            <span class="text-xs text-slate-600">Dapatkan harga penawaran khusus instansi, proposal resmi & opsi custom
+              itinerary.</span>
+          </div>
+        </div>
+        <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20kami%20ada%20rencana%20gathering%20rombongan%20besar,%20mohon%20kirimkan%20penawaran%20harga%20khusus"
+          target="_blank" rel="noreferrer"
+          class="shrink-0 bg-[#0052cc] hover:bg-[#003b95] text-white font-heading font-bold text-xs px-5 py-2.5 rounded-xl shadow transition">
+          Minta Penawaran Khusus
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Iconic Rapids Section (Panduan Jeram-Jeram Cisadane) -->
+  <section id="jeram-cisadane"
+    class="py-20 sm:py-24 bg-gradient-to-b from-sky-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <!-- Ambient River Backdrops -->
+    <div class="absolute inset-0 z-0 opacity-20">
+      <img src="images/drive_uploads/29598.jpg" alt="Rapids Texture" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div
+          class="inline-flex items-center gap-1.5 font-heading font-black text-xs text-cyan-300 tracking-wider uppercase mb-2.5 px-4 py-1.5 rounded-full bg-cyan-500/20 border border-cyan-400/30">
+          <i class="fa-solid fa-compass"></i>
+          <span>PANDUAN JERAM SUNGAI CISADANE</span>
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white">
+          SENSASI MENAKLUKKAN <span class="text-sky-400">5 JERAM IKONIK</span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          Sungai Cisadane Caringin terkenal dengan formasi jeram alami yang menantang namun tetap aman untuk semua
+          kalangan. Inilah jeram-jeram favorit yang akan Anda lewati:
+        </p>
+      </div>
+
+      <!-- Rapids Cards Grid (Harmonious & Consistent Color Scheme) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+        <!-- Jeram 1 -->
+        <div
+          class="bg-slate-900/85 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-sky-500/50 transition-all duration-200 group">
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-xl bg-slate-800 text-sky-300 font-heading font-black flex items-center justify-center text-sm border border-slate-700">
+              01
+            </span>
+            <span
+              class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-sky-300 border border-slate-700">
+              Grade II (Pemanasan)
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-xl text-white group-hover:text-sky-300 transition-colors mb-2">
+            Jeram Kerikil
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+            Jeram pembuka dengan bebatuan kecil berombak ritmis. Titik terbaik untuk melatih kekompakan mendayung dan
+            adaptasi kru perahu dengan aba-aba instruktur.
+          </p>
+        </div>
+
+        <!-- Jeram 2 -->
+        <div
+          class="bg-slate-900/85 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-sky-500/50 transition-all duration-200 group">
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-xl bg-slate-800 text-sky-300 font-heading font-black flex items-center justify-center text-sm border border-slate-700">
+              02
+            </span>
+            <span
+              class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-sky-300 border border-slate-700">
+              Grade III (Adrenalin)
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-xl text-white group-hover:text-sky-300 transition-colors mb-2">
+            Jeram Kuda Liar
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+            Arus bergelombang cepat yang menghentak perahu seperti menunggang kuda liar! Teriakan keseruan dan semburan
+            air dingin menyegarkan dijamin bikin ketagihan.
+          </p>
+        </div>
+
+        <!-- Jeram 3 -->
+        <div
+          class="bg-slate-900/85 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-sky-500/50 transition-all duration-200 group">
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-xl bg-slate-800 text-sky-300 font-heading font-black flex items-center justify-center text-sm border border-slate-700">
+              03
+            </span>
+            <span
+              class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-sky-300 border border-slate-700">
+              Grade III (Fotogenik)
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-xl text-white group-hover:text-sky-300 transition-colors mb-2">
+            Jeram Ombak Salju
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+            Hempasan buih putih menyerupai salju. Titik favorit tim fotografer SA Adventure untuk mengabadikan momen
+            ekspresi terbaik Anda saat menembus ombak.
+          </p>
+        </div>
+
+        <!-- Jeram 4 -->
+        <div
+          class="bg-slate-900/85 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-sky-500/50 transition-all duration-200 group">
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-xl bg-slate-800 text-sky-300 font-heading font-black flex items-center justify-center text-sm border border-slate-700">
+              04
+            </span>
+            <span
+              class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-sky-300 border border-slate-700">
+              Grade III+ (Teknikal)
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-xl text-white group-hover:text-sky-300 transition-colors mb-2">
+            Jeram Badak
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+            Jeram dengan batu andesit besar menyerupai punggung badak. Manuver lincah dari pemandu memastikan perahu
+            meluncur anggun di sela arus deras.
+          </p>
+        </div>
+
+        <!-- Jeram 5 - HIGHLIGHT DAM -->
+        <div class="sm:col-span-2 bg-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border border-sky-500/40 group">
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-xl bg-[#0052cc] text-white font-heading font-black flex items-center justify-center text-sm shadow">
+              05
+            </span>
+            <span
+              class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-sky-300 border border-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-water text-sky-400"></i>
+              The Climax Drop 2 Meter
+            </span>
+          </div>
+          <h3 class="font-heading font-black text-2xl text-white group-hover:text-sky-300 transition-colors mb-2">
+            Dam Jeram Pelangi (Sensasi Terjun 2 Meter)
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+            Sensasi paling ditunggu di Cisadane! Perahu akan meluncur di kemiringan dam air terjun setinggi 2 meter.
+            Sangat aman berkat bantalan air hidrolik dan penjagaan ketat tim rescue profesional di tepi kolam luncur.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Rest Area Callout -->
+      <div
+        class="bg-slate-900/80 rounded-2xl p-5 sm:p-6 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow">
+            <i class="fa-solid fa-mug-hot text-xl text-sky-200"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-lg text-white">Rest Area Tepi Sungai: Kelapa Muda & Snack</h4>
+            <p class="text-xs text-slate-300 mt-0.5">Di tengah pengarungan, kita akan singgah di saung tepi kali untuk
+              menikmati es kelapa muda murni dan gorengan hangat.</p>
+          </div>
+        </div>
+        <a href="#kalkulator-booking"
+          class="shrink-0 bg-[#0052cc] hover:bg-[#0041a8] text-white font-heading font-bold text-xs px-6 py-3 rounded-xl transition-colors shadow">
+          Hitung Estimasi Biaya
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Glassmorphism Booking Calculator -->
+  <section id="kalkulator-booking" class="py-20 sm:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div
+          class="inline-flex items-center gap-1.5 font-heading font-black text-xs sm:text-sm text-[#0052cc] tracking-wider uppercase mb-2.5 px-4 py-1.5 rounded-full glass-pill">
+          <i class="fa-solid fa-calculator"></i>
+          <span>TRANSPARAN & SIMULASI INSTAN</span>
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900">
+          KALKULATOR BIAYA <span class="text-[#0052cc]">EVENT RAFTING</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+          Hitung estimasi pengeluaran acara Anda secara transparan. Sesuaikan jumlah peserta dan pilih paket add-on
+          aktivitas sesuai kebutuhan tim Anda.
+        </p>
+      </div>
+
+      <!-- Main Calculator Card (Glassmorphism Layout) -->
+      <div class="glass-card rounded-3xl border border-white/80 p-6 sm:p-10 shadow-xl max-w-5xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+          <!-- Left Column: Controls (Pax, Package, Addons) -->
+          <div class="lg:col-span-7 space-y-7">
+
+            <!-- 1. Pilih Paket Utama -->
+            <div>
+              <label
+                class="block font-heading font-black text-sm text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+                <span
+                  class="w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs">1</span>
+                Pilih Paket Utama Rafting:
+              </label>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <label
+                  class="relative flex flex-col p-4 rounded-2xl border-2 cursor-pointer transition-all bg-white/60 hover:bg-white"
+                  id="calcPkgLabelB">
+                  <input type="radio" name="calcPkg" value="B" checked onchange="updateCalculator()" class="sr-only">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="font-heading font-black text-sm text-slate-900">Paket B (Complete)</span>
+                    <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-blue-100 text-[#0052cc]">11
+                      KM</span>
+                  </div>
+                  <div class="text-xs text-slate-500 mb-2 font-medium">Lengkap Makan Prasmanan & Kelapa</div>
+                  <div class="font-heading font-black text-base text-[#0052cc]">Rp 199.000 <span
+                      class="text-slate-400 text-xs font-normal">/pax</span></div>
+                </label>
+
+                <label
+                  class="relative flex flex-col p-4 rounded-2xl border-2 cursor-pointer transition-all bg-white/60 hover:bg-white"
+                  id="calcPkgLabelA">
+                  <input type="radio" name="calcPkg" value="A" onchange="updateCalculator()" class="sr-only">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="font-heading font-black text-sm text-slate-900">Paket A (Basic)</span>
+                    <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">7
+                      KM</span>
+                  </div>
+                  <div class="text-xs text-slate-500 mb-2 font-medium">Standar Rafting & Coffee Break</div>
+                  <div class="font-heading font-black text-base text-[#0052cc]">Rp 168.000 <span
+                      class="text-slate-400 text-xs font-normal">/pax</span></div>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Slider Jumlah Peserta -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label
+                  class="font-heading font-black text-sm text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                  <span
+                    class="w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs">2</span>
+                  Jumlah Peserta:
+                </label>
+                <div class="flex items-center gap-2">
+                  <span class="font-heading font-black text-2xl text-[#0052cc]" id="calcPaxValueDisplay">20</span>
+                  <span class="text-xs font-bold text-slate-500 uppercase">Orang / Pax</span>
+                </div>
+              </div>
+              <input type="range" id="calcPaxSlider" min="20" max="250" step="5" value="20"
+                oninput="handleSliderChange(this.value)">
+
+              <!-- Quick Select Buttons -->
+              <div class="flex items-center justify-between mt-3 text-xs">
+                <span class="text-slate-400 font-semibold">Min. 20 Pax</span>
+                <div class="flex items-center gap-1.5">
+                  <button type="button" onclick="setQuickPax(20)"
+                    class="px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-slate-700 font-bold border border-sky-200">20</button>
+                  <button type="button" onclick="setQuickPax(35)"
+                    class="px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-slate-700 font-bold border border-sky-200">35</button>
+                  <button type="button" onclick="setQuickPax(50)"
+                    class="px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-slate-700 font-bold border border-sky-200">50</button>
+                  <button type="button" onclick="setQuickPax(100)"
+                    class="px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-slate-700 font-bold border border-sky-200">100</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Add-on Aktivitas Lain -->
+            <div>
+              <label
+                class="block font-heading font-black text-sm text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+                <span
+                  class="w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs">3</span>
+                Tambah Aktivitas Pendukung (Opsional):
+              </label>
+              <div class="grid sm:grid-cols-2 gap-2.5">
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="paintball" data-price="130000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Paintball War Games</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+130rb</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="flyingfox" data-price="50000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Flying Fox</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+50rb</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="teambuilding" data-price="180000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Team Building Outbound</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+180rb</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="fungames" data-price="120000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Fun Games Kebersamaan</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+120rb</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="offroad" data-price="385000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Offroad 4x4 Mud Trail</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+385rb</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-3 rounded-xl bg-white/60 border border-sky-100 hover:border-sky-300 cursor-pointer transition">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" value="trekking" data-price="190000" onchange="updateCalculator()"
+                      class="calc-addon rounded text-[#0052cc] focus:ring-0">
+                    <span class="text-xs font-bold text-slate-800">Trekking Curug Sentul</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-[#0052cc]">+190rb</span>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- 4. Data Pemesan -->
+            <div class="pt-2">
+              <label
+                class="block font-heading font-black text-sm text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+                <span
+                  class="w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs">4</span>
+                Data Pemesan / Rombongan:
+              </label>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <input type="text" id="calcName" placeholder="Nama Anda / PIC"
+                  class="w-full bg-white/80 border border-sky-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#0052cc] font-medium">
+                <input type="text" id="calcCompany" placeholder="Perusahaan / Instansi / Keluarga"
+                  class="w-full bg-white/80 border border-sky-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#0052cc] font-medium">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Summary Card (Glassmorphism Receipt) -->
+          <div
+            class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-[#002244] text-white rounded-3xl p-6 sm:p-7 shadow-2xl border border-white/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-receipt text-cyan-400"></i>
+                  <span class="font-heading font-black text-sm uppercase tracking-wider">Ringkasan Estimasi</span>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/10 text-cyan-300">Estimasi
+                  Resmi</span>
+              </div>
+
+              <!-- Item Breakdown -->
+              <div class="space-y-3.5 text-xs sm:text-sm">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <div class="font-bold text-white" id="summaryPkgName">Paket B (Rafting Complete 11 KM)</div>
+                    <div class="text-slate-400 text-xs mt-0.5" id="summaryPkgRate">Rp 199.000 × 20 Pax</div>
+                  </div>
+                  <div class="font-heading font-black text-white" id="summaryPkgTotal">Rp 3.980.000</div>
+                </div>
+
+                <div class="flex justify-between items-start pt-2 border-t border-white/10" id="summaryAddonRow">
+                  <div>
+                    <div class="font-bold text-white">Tambahan Aktivitas</div>
+                    <div class="text-slate-400 text-xs mt-0.5" id="summaryAddonCount">0 Aktivitas dipilih</div>
+                  </div>
+                  <div class="font-heading font-black text-cyan-300" id="summaryAddonTotal">Rp 0</div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-[11px] text-slate-300 space-y-1">
+                  <div class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                    <i class="fa-solid fa-circle-check"></i> Termasuk Pemandu BNSP & Asuransi
+                  </div>
+                  <div class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                    <i class="fa-solid fa-circle-check"></i> Termasuk Saung & Kamar Bilas
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grand Total Box & WhatsApp Generator -->
+            <div class="pt-6 border-t border-white/10 mt-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <span class="text-xs uppercase font-extrabold text-slate-400">Total Biaya Per Orang:</span>
+                <span class="font-heading font-black text-sm text-cyan-300" id="summaryPerPax">Rp 199.000 / Pax</span>
+              </div>
+
+              <div class="flex items-baseline justify-between mb-5">
+                <span class="text-sm font-heading font-black uppercase text-white">Estimasi Grand Total:</span>
+                <span class="font-heading font-black text-2xl sm:text-3xl text-amber-300" id="summaryGrandTotal">Rp
+                  3.980.000</span>
+              </div>
+
+              <button type="button" onclick="sendCalculatedBookingToWhatsApp()"
+                class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-heading font-black text-sm py-4 rounded-2xl shadow-xl shadow-emerald-600/30 flex items-center justify-center gap-2.5 transition-all duration-300 cursor-pointer hover:scale-[1.02]">
+                <i class="fa-brands fa-whatsapp text-xl text-white"></i>
+                <span>KIRIM RESERVASI KE WHATSAPP</span>
+              </button>
+              <p class="text-center text-[10px] text-slate-400 mt-2 font-medium">Format pesan WhatsApp akan otomatis
+                tersusun rapi</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOP Keselamatan & Timeline Itinerary Section -->
+  <section id="keamanan" class="py-20 sm:py-24 bg-white/60 border-t border-b border-sky-100 backdrop-blur-md relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 2 Columns: SOP Keselamatan & Alur Rundown Kegiatan -->
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Standar Keselamatan (Safety First) -->
+        <div>
+          <div
+            class="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>PRIORITAS KESELAMATAN #1</span>
+          </div>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900 mb-4">
+            STANDAR KEAMANAN <br><span class="text-[#0052cc]">ARUNG JERAM RESMI</span>
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+            Tidak bisa berenang? <strong>Sama sekali tidak masalah!</strong> Arung jeram di SA Adventure didesain aman
+            untuk semua peserta mulai usia 6 tahun hingga 65 tahun berkat standar SOP ketat kami:
+          </p>
+
+          <div class="space-y-4">
+            <div class="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
+                <i class="fa-solid fa-vest text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-black text-sm text-slate-900">Life Vest (Pelampung) Daya Apung Tinggi</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Sertifikasi ISO/CE dengan daya apung minimal 100 Newton,
+                  menjaga kepala tetap berada di atas permukaan air secara otomatis.</p>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
+                <i class="fa-solid fa-helmet-safety text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-black text-sm text-slate-900">Helm Arung Jeram Khusus (CE Water Sports)
+                </h4>
+                <p class="text-xs text-slate-600 mt-0.5">Melindungi kepala dari benturan dayung maupun batu kali dengan
+                  sistem ventilasi air cepat.</p>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
+                <i class="fa-solid fa-user-shield text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-black text-sm text-slate-900">Skipper BNSP & River Rescue Team Standby</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Setiap perahu didampingi 1 skipper berlisensi BNSP, serta tim
+                  rescue tali lempar (throw bag) siaga di jeram ekstrem.</p>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
+                <i class="fa-solid fa-bullhorn text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-black text-sm text-slate-900">Briefing & Simulasi Penyelamatan Sebelum
+                  Start</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Instruktur memberikan penjelasan komprehensif terkait teknik
+                  mendayung, posisi duduk aman, dan prosedur jika terjatuh ke air.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Rundown / Timeline Kegiatan -->
+        <div>
+          <div
+            class="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200">
+            <i class="fa-solid fa-clock"></i>
+            <span>ALUR KEGIATAN EVENT</span>
+          </div>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900 mb-4">
+            RUNDOWN KEGIATAN <br><span class="text-[#0052cc]">SATU HARI SERU</span>
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+            Alur kegiatan terstruktur untuk kenyamanan rombongan gathering, kantor, maupun keluarga:
+          </p>
+
+          <!-- Timeline Steps -->
+          <div class="relative border-l-2 border-sky-200 ml-4 space-y-6 pl-6">
+
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">
+                1</div>
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider">08.30 – 09.00</div>
+              <h4 class="font-heading font-black text-base text-slate-900 mt-0.5">Kedatangan & Welcome Drink</h4>
+              <p class="text-xs text-slate-600 mt-1">Penyambutan di basecamp SA Adventure tepi sungai, menikmati
+                teh/kopi hangat & snack tradisional.</p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">
+                2</div>
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider">09.00 – 09.30</div>
+              <h4 class="font-heading font-black text-base text-slate-900 mt-0.5">Fitting Gear & Safety Briefing</h4>
+              <p class="text-xs text-slate-600 mt-1">Pembagian pelampung dan helm, fitting ukuran pas, foto rombongan,
+                serta pengarahan instruktur profesional.</p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">
+                3</div>
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider">09.30 – 11.30</div>
+              <h4 class="font-heading font-black text-base text-slate-900 mt-0.5">Start Arung Jeram & Rest Area</h4>
+              <p class="text-xs text-slate-600 mt-1">Mengarungi jeram-jeram ikonik Cisadane, istirahat menikmati kelapa
+                muda segar di saung tepi kali, lalu lanjut menaklukkan Dam 2 Meter.</p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">
+                4</div>
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider">11.30 – 12.30</div>
+              <h4 class="font-heading font-black text-base text-slate-900 mt-0.5">Finish, Bilas Bersih & Kamar Mandi
+              </h4>
+              <p class="text-xs text-slate-600 mt-1">Penjemputan mobil lokal di titik finish kembali ke basecamp untuk
+                mandi dan berganti pakaian bersih.</p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">
+                5</div>
+              <div class="text-xs font-black text-[#0052cc] uppercase tracking-wider">12.30 – Selesai</div>
+              <h4 class="font-heading font-black text-base text-slate-900 mt-0.5">Makan Siang Prasmanan Khas Sunda</h4>
+              <p class="text-xs text-slate-600 mt-1">Santap siang lezat di saung (Ayam goreng, sayur asem, tahu tempe,
+                ikan asin, sambal lalap) & penyerahan dokumentasi.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Activities Section (Aktivitas Outdoor Pendukung) -->
+  <section id="aktivitas" class="py-20 sm:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div
+          class="inline-flex items-center gap-1.5 font-heading font-black text-xs sm:text-sm text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full glass-pill">
+          <i class="fa-solid fa-tree"></i>
+          <span>ADD-ON POPULER</span>
+        </div>
+        <h2
+          class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900 mb-3">
+          AKTIVITAS <span class="text-[#003b95]">OUTDOOR LAINNYA</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Lengkapi petualangan arung jeram Anda dengan kombinasi aktivitas outdoor seru di area basecamp Cisadane Bogor.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+
+        <!-- Activity 1 -->
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/drive_uploads/7.png" alt="Paintball"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute top-3 left-3 bg-slate-950/70 backdrop-blur-md text-white font-extrabold text-[10px] px-2.5 py-1 rounded-lg border border-white/20">
+              FAVORIT GATHERING
+            </span>
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">PAINTBALL</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Rp 130.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">30 Peluru, Goggle & Rompi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/drive_uploads/6.png" alt="Flying Fox"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">FLYING FOX</h3>
+              <div class="font-heading font-black text-sm text-slate-900 mt-0.5 text-[#0052cc]">Rp 50.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Lintas Lembah Sungai</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/offroad.jpg" alt="Offroad 4x4"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute top-3 left-3 bg-slate-950/70 backdrop-blur-md text-white font-extrabold text-[10px] px-2.5 py-1 rounded-lg border border-white/20">
+              EXTREME TRAIL
+            </span>
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-truck-monster"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">OFFROAD 4X4</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Rp 385.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Armada Hardtop Mud Trail</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/drive_uploads/DSCN9684.JPG" alt="Team Building"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">TEAM BUILDING</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Rp 180.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Master Game & Fasilitator</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: 3 More Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/drive_uploads/5.png" alt="Fun Games"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">FUN GAMES</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Rp 120.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Keseruan & Ice Breaking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/drive_uploads/DSCN9782.JPG" alt="Trekking Sentul"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">TREKKING SENTUL</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Rp 190.000/Pax</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Eksplorasi Curug & Hutan Pinus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group border border-white/80">
+          <div class="relative h-44 w-full overflow-hidden bg-slate-100">
+            <img src="images/nasi-box.jpg" alt="Nasi Box & Catering"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4 flex items-center gap-3.5">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-black text-sm text-slate-900 leading-tight">KATERING & PRASMANAN</h3>
+              <div class="font-heading font-black text-sm text-[#0052cc] mt-0.5">Mulai Rp 50.000/Box</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-0.5">Menu Tradisional Khas Sunda</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tentang Kami & Why SA Adventure Section -->
+  <section id="tentang-kami"
+    class="py-20 sm:py-28 relative overflow-hidden bg-gradient-to-b from-white via-sky-50/30 to-white border-t border-sky-100">
+    <!-- Decorative Ambient Glow -->
+    <div class="absolute top-1/4 -left-40 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 -right-40 w-96 h-96 bg-blue-200/25 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Part 1: Tentang Kami Narrative -->
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-20">
+        <div class="lg:col-span-7">
+          <div
+            class="inline-flex items-center gap-2 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-3 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 shadow-sm">
+            <i class="fa-solid fa-compass text-[#0284c7]"></i>
+            <span>EVENT ORGANIZER & OUTDOOR ADVENTURE</span>
+          </div>
+
+          <h2
+            class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900 leading-tight">
+            TENTANG KAMI <br>
+            <span class="text-[#0052cc]">SA ADVENTURE</span>
+          </h2>
+
+          <p class="mt-2 text-base sm:text-lg font-heading font-extrabold text-[#0284c7] italic">
+            &ldquo;Create Moments. Build Memories. Have Fun!&rdquo;
+          </p>
+
+          <div class="mt-5 space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p class="font-semibold text-slate-900">
+              Selamat datang di <strong>SA Adventure</strong> — tempat di mana acara biasa berubah menjadi pengalaman
+              yang luar biasa!
+            </p>
+            <p>
+              <strong>SA Adventure</strong> adalah <strong>Event Organizer</strong> yang hadir untuk membantu Anda
+              menciptakan berbagai kegiatan yang seru, berkesan, profesional, dan pastinya bikin happy.
+            </p>
+            <p>
+              Kami percaya, sebuah acara bukan hanya tentang tempat, rundown, dan dekorasi. Lebih dari itu, acara adalah
+              tentang <strong>pengalaman, kebersamaan, tawa, koneksi, dan cerita</strong> yang akan dibawa pulang.
+            </p>
+            <p>
+              Mulai dari <strong>company gathering, outing, team building, family gathering, fun games, trekking,
+                rafting, wisata, hingga berbagai kegiatan outdoor dan indoor</strong>, SA Adventure siap merancang dan
+              mengelola acara sesuai karakter, kebutuhan, dan budget Anda.
+            </p>
+            <p>
+              Dengan tim yang kreatif, profesional, komunikatif, dan tentunya tidak kaku, kami menggabungkan
+              <strong>konsep yang menarik, aktivitas yang interaktif, pelayanan yang maksimal, serta eksekusi yang
+                terencana</strong> untuk memastikan acara Anda berjalan lancar dari awal sampai akhir.
+            </p>
+          </div>
+
+          <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-sky-50/70 border border-sky-200/80 flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fa-solid fa-circle-check text-sky-200 text-base"></i>
+            </div>
+            <div class="text-xs sm:text-sm text-slate-800">
+              <span class="font-heading font-black text-slate-900 block mb-0.5 uppercase tracking-wide">Prinsip Utama
+                Kami</span>
+              &ldquo;Acara sukses bukan sekadar peserta datang dan pulang, melainkan pulang dengan senyum, cerita
+              berharga, serta kenangan yang tak terlupakan.&rdquo;
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div
+            class="glass-card rounded-3xl p-6 sm:p-8 border border-white/90 shadow-xl relative overflow-hidden bg-white/85">
+            <div class="flex items-center gap-3.5 mb-6 pb-5 border-b border-sky-100">
+              <img src="images/sa-adventure-logo.png" alt="SA Adventure Logo" class="h-12 w-auto object-contain">
+              <div>
+                <h3 class="font-heading font-black text-lg text-slate-900 leading-tight">SA ADVENTURE</h3>
+                <p class="text-xs text-[#0284c7] font-bold">Event Organizer & Outbound Specialist</p>
+              </div>
+            </div>
+
+            <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-500 mb-3.5">
+              Cakupan Layanan Kegiatan Kami:
+            </h4>
+
+            <div class="grid grid-cols-2 gap-2.5">
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-building text-xs"></i>
+                </div>
+                <span class="truncate">Company Gathering</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-water text-xs"></i>
+                </div>
+                <span class="truncate">Rafting Cisadane</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-users text-xs"></i>
+                </div>
+                <span class="truncate">Team Building</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-bullseye text-xs"></i>
+                </div>
+                <span class="truncate">Outing & Outbound</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-heart text-xs"></i>
+                </div>
+                <span class="truncate">Family Gathering</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                </div>
+                <span class="truncate">Fun Games Seru</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-compass text-xs"></i>
+                </div>
+                <span class="truncate">Offroad 4x4 Trail</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-mountain text-xs"></i>
+                </div>
+                <span class="truncate">Trekking Sentul</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-shield-halved text-xs"></i>
+                </div>
+                <span class="truncate">Paintball War Game</span>
+              </div>
+              <div
+                class="flex items-center gap-2.5 p-2.5 rounded-xl bg-sky-50/70 border border-sky-100/90 text-xs font-semibold text-slate-800 hover:bg-sky-100/80 hover:border-sky-200 transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-white text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100 shadow-2xs">
+                  <i class="fa-solid fa-map-location-dot text-xs"></i>
+                </div>
+                <span class="truncate">Wisata Outdoor/Indoor</span>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 pt-4 border-t border-sky-100 flex items-center justify-between text-xs font-bold text-slate-600">
+              <span class="flex items-center gap-1.5 text-slate-700">
+                <i class="fa-solid fa-location-dot text-[#0052cc]"></i>
+                <span>Caringin Bogor & Depok</span>
+              </span>
+              <span class="text-[#0052cc] font-extrabold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Siap Melayani 24/7
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 2: Why SA Adventure -->
+      <div id="keunggulan" class="pt-10 border-t border-sky-100">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div
+            class="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200">
+            <i class="fa-solid fa-award text-[#0052cc]"></i>
+            <span>KEUNGGULAN UTAMA</span>
+          </div>
+          <h3 class="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900">
+            WHY <span class="text-[#0052cc]">SA ADVENTURE ?</span>
+          </h3>
+          <p class="text-slate-600 text-sm mt-2 font-medium">
+            Alasan mengapa ratusan perusahaan, organisasi, dan keluarga mempercayakan momen terbaik mereka bersama kami.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white rounded-3xl p-6 border border-sky-100 shadow-sm hover:shadow-xl hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100 text-[#0052cc] text-lg group-hover:scale-105 group-hover:bg-[#0052cc] group-hover:text-white transition-all duration-300">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span
+                  class="text-[10px] font-heading font-extrabold uppercase px-2.5 py-1 rounded-full border bg-sky-50/80 text-[#0052cc] border-sky-200/80">
+                  CREATIVE & FUN
+                </span>
+              </div>
+              <h4 class="font-heading font-black text-base text-slate-900 mb-2 leading-snug">
+                Konsep Kreatif & Segar
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                Kami menghadirkan konsep acara yang fresh, interaktif, dan berkesan. Karena acara seru tidak harus
+                selalu kaku!
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl p-6 border border-sky-100 shadow-sm hover:shadow-xl hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100 text-[#0052cc] text-lg group-hover:scale-105 group-hover:bg-[#0052cc] group-hover:text-white transition-all duration-300">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <span
+                  class="text-[10px] font-heading font-extrabold uppercase px-2.5 py-1 rounded-full border bg-sky-50/80 text-[#0052cc] border-sky-200/80">
+                  PROFESSIONAL
+                </span>
+              </div>
+              <h4 class="font-heading font-black text-base text-slate-900 mb-2 leading-snug">
+                Tim Berpengalaman & Tanggap
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                Didukung tim yang berpengalaman, komunikatif, dan siap mendampingi Anda dari tahap perencanaan hingga
+                penutupan.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl p-6 border border-sky-100 shadow-sm hover:shadow-xl hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100 text-[#0052cc] text-lg group-hover:scale-105 group-hover:bg-[#0052cc] group-hover:text-white transition-all duration-300">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span
+                  class="text-[10px] font-heading font-extrabold uppercase px-2.5 py-1 rounded-full border bg-sky-50/80 text-[#0052cc] border-sky-200/80">
+                  SAFETY FIRST
+                </span>
+              </div>
+              <h4 class="font-heading font-black text-base text-slate-900 mb-2 leading-snug">
+                Standar Keselamatan CE & BNSP
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                Perlengkapan arung jeram bersertifikasi internasional (CE/ISO), pemandu rescue bersertifikasi BNSP,
+                serta asuransi resmi.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl p-6 border border-sky-100 shadow-sm hover:shadow-xl hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div
+                  class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center border border-sky-100 text-[#0052cc] text-lg group-hover:scale-105 group-hover:bg-[#0052cc] group-hover:text-white transition-all duration-300">
+                  <i class="fa-solid fa-handshake"></i>
+                </div>
+                <span
+                  class="text-[10px] font-heading font-extrabold uppercase px-2.5 py-1 rounded-full border bg-sky-50/80 text-[#0052cc] border-sky-200/80">
+                  FLEXIBLE BUDGET
+                </span>
+              </div>
+              <h4 class="font-heading font-black text-base text-slate-900 mb-2 leading-snug">
+                Sesuai Karakter & Anggaran
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                Siap merancang dan mengelola acara sesuai kebutuhan dan anggaran perusahaan Anda tanpa mengurangi
+                standar mutu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section (Glassmorphic Reviews) -->
+  <section class="py-20 bg-gradient-to-b from-sky-50/40 via-white to-sky-50/20 border-t border-sky-100 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div
+          class="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full glass-pill">
+          <i class="fa-solid fa-star text-amber-400"></i>
+          <span>ULASAN TERVERIFIKASI</span>
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900">
+          APA KATA <span class="text-[#0052cc]">MEREKA?</span>
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">Kesan nyata dari perusahaan, instansi, dan keluarga yang telah mengarungi
+          jeram bersama kami.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="glass-card rounded-2xl p-6 border border-white/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+              "Keren banget! Awalnya banyak teman kantor yang takut karena ga bisa berenang, tapi guide-nya sabar, jago
+              banget, dan bikin suasana cair. Jeram Dam 2 meternya pecah abis!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 mt-5">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-100 text-[#0052cc] font-heading font-black flex items-center justify-center text-sm">
+              BR
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-slate-900">Budi Raharjo</div>
+              <div class="text-[11px] text-slate-500">Gathering Divisi IT BUMN</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass-card rounded-2xl p-6 border border-sky-300 shadow-md flex flex-col justify-between bg-white/85">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+              "Pelayanan top markotop! Kelapa muda di rest area tengah kali bener-bener seger. Makan siang prasmanan
+              Sundanya juga enak banget, ayam goreng dan sambelnya juara."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 mt-5">
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-heading font-black flex items-center justify-center text-sm">
+              DW
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-slate-900">Dina Wulandari</div>
+              <div class="text-[11px] text-slate-500">Family Gathering 40 Pax</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border border-white/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+              "Paket combo Rafting + Paintball worth it banget. Lokasi basecamp deket pintu tol Bocimi jadi ga kena
+              macet ganjil genap Puncak. Recommended provider rafting di Bogor!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 mt-5">
+            <div
+              class="w-10 h-10 rounded-full bg-sky-100 text-[#003b95] font-heading font-black flex items-center justify-center text-sm">
+              FK
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-slate-900">Fajar Kurniawan</div>
+              <div class="text-[11px] text-slate-500">Komunitas Otomotif Jakarta</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Section: CAPTURE THE ADVENTURE SLIDER -->
+  <section id="galeri" class="py-20 sm:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header with Slider Navigation Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <div
+            class="inline-flex items-center gap-1.5 font-heading font-black text-xs sm:text-sm text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full glass-pill">
+            <i class="fa-solid fa-camera"></i>
+            <span>DOKUMENTASI KESERUAN</span>
+          </div>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900">
+            CAPTURE <span class="shimmer-text">THE ADVENTURE</span>
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
+            Momen keceriaan dan kebersamaan tak terlupakan bersama SA Adventure. Geser slider untuk melihat dokumentasi
+            foto dan video aksi.
+          </p>
+        </div>
+
+        <!-- Slider Arrows - Clean Circular Navigation -->
+        <div class="flex items-center gap-2.5 self-start md:self-end">
+          <button id="galleryPrevBtn"
+            class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-slate-50 text-slate-700 hover:text-[#0052cc] border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
+            aria-label="Slide Sebelumnya">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          <button id="galleryNextBtn"
+            class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0052cc] hover:bg-[#0041a8] text-white shadow-sm hover:shadow flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
+            aria-label="Slide Selanjutnya">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider Track Container -->
+      <div class="relative overflow-hidden" id="gallerySliderContainer">
+        <div id="galleryTrack"
+          class="flex gap-5 transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing select-none py-2">
+
+          <!-- Slide 1: Rafting -->
+          <div class="gallery-slide w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[380px] shrink-0" data-index="0">
+            <div
+              class="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-white/80 hover:border-sky-300 transition-all duration-300 group cursor-pointer"
+              onclick="openGalleryModal('images/drive_uploads/DSCN9927.JPG', 'Aksi Arung Jeram Jeram Ombak Cisadane')">
+              <img src="images/drive_uploads/DSCN9927.JPG" alt="Rafting Cisadane"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex flex-col justify-between p-6 text-white">
+                <div
+                  class="self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                </div>
+                <div>
+                  <span
+                    class="inline-block bg-sky-500/30 backdrop-blur-md text-sky-200 border border-sky-300/40 text-[11px] font-heading font-black tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                    RAFTING CISADANE
+                  </span>
+                  <h3 class="font-heading font-black text-xl sm:text-2xl leading-tight drop-shadow">
+                    Petualangan Mengarungi Jeram
+                  </h3>
+                  <p class="text-xs text-slate-200 mt-1">Standar keselamatan internasional & pemandu berpengalaman</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Video Highlight -->
+          <div class="gallery-slide w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[380px] shrink-0" data-index="1">
+            <div
+              class="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border-2 border-sky-400 bg-slate-950 transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+              onclick="openVideoModal()">
+              <img src="images/drive_uploads/29598.jpg" alt="Highlight Video"
+                class="w-full h-full object-cover opacity-65 group-hover:scale-110 transition-transform duration-700">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent flex flex-col items-center justify-center text-center p-6 text-white">
+                <div
+                  class="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-white/95 text-[#0052cc] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform mb-4 backdrop-blur-md">
+                  <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1 text-[#0052cc]"></i>
+                </div>
+                <span
+                  class="bg-sky-500/30 backdrop-blur-md text-sky-200 border border-sky-300/40 text-[11px] font-heading font-black tracking-wider uppercase px-3.5 py-1 rounded-full mb-2">
+                  VIDEO HIGHLIGHT
+                </span>
+                <h3 class="font-heading font-black text-2xl sm:text-3xl uppercase tracking-tight leading-tight">
+                  LET'S MAKE <br><span class="text-sky-300">MEMORIES!</span>
+                </h3>
+                <p class="text-xs text-slate-200 mt-2 font-medium">Klik untuk menonton cuplikan video kegiatan</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Paintball -->
+          <div class="gallery-slide w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[380px] shrink-0" data-index="2">
+            <div
+              class="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-white/80 hover:border-sky-300 transition-all duration-300 group cursor-pointer"
+              onclick="openGalleryModal('images/drive_uploads/7.png', 'Paintball War Games Simulation')">
+              <img src="images/drive_uploads/7.png" alt="Paintball"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex flex-col justify-between p-6 text-white">
+                <div
+                  class="self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                </div>
+                <div>
+                  <span
+                    class="inline-block bg-sky-500/30 backdrop-blur-md text-sky-200 border border-sky-300/40 text-[11px] font-heading font-black tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                    PAINTBALL
+                  </span>
+                  <h3 class="font-heading font-black text-xl sm:text-2xl leading-tight drop-shadow">
+                    Strategi & Adrenalin Tempur
+                  </h3>
+                  <p class="text-xs text-slate-200 mt-1">Uji taktik dan kekompakan tim dalam simulasi tempur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Fun Games -->
+          <div class="gallery-slide w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[380px] shrink-0" data-index="3">
+            <div
+              class="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-white/80 hover:border-sky-300 transition-all duration-300 group cursor-pointer"
+              onclick="openGalleryModal('images/drive_uploads/8.png', 'Fun Games & Color Powder Run')">
+              <img src="images/drive_uploads/8.png" alt="Fun Games"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex flex-col justify-between p-6 text-white">
+                <div
+                  class="self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                </div>
+                <div>
+                  <span
+                    class="inline-block bg-sky-500/30 backdrop-blur-md text-sky-200 border border-sky-300/40 text-[11px] font-heading font-black tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                    FUN GAMES
+                  </span>
+                  <h3 class="font-heading font-black text-xl sm:text-2xl leading-tight drop-shadow">
+                    Tawa & Kekompakan Bersama
+                  </h3>
+                  <p class="text-xs text-slate-200 mt-1">Color powder & games interaktif penuh keceriaan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Corporate Gathering -->
+          <div class="gallery-slide w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[380px] shrink-0" data-index="4">
+            <div
+              class="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-white/80 hover:border-sky-300 transition-all duration-300 group cursor-pointer"
+              onclick="openGalleryModal('images/drive_uploads/DSCN9964.JPG', 'Corporate Gathering Akbar PT Toyota Indonesia')">
+              <img src="images/drive_uploads/DSCN9964.JPG" alt="Corporate Gathering"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex flex-col justify-between p-6 text-white">
+                <div
+                  class="self-end w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                </div>
+                <div>
+                  <span
+                    class="inline-block bg-sky-500/30 backdrop-blur-md text-sky-200 border border-sky-300/40 text-[11px] font-heading font-black tracking-wider uppercase px-3 py-1 rounded-full mb-2">
+                    GATHERING PERUSAHAAN
+                  </span>
+                  <h3 class="font-heading font-black text-xl sm:text-2xl leading-tight drop-shadow">
+                    Momen Kebersamaan Akbar
+                  </h3>
+                  <p class="text-xs text-slate-200 mt-1">Event gathering puluhan hingga ratusan peserta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slider Indicator Dots -->
+      <div class="flex items-center justify-center gap-2 mt-8" id="galleryDots"></div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Gallery Images -->
+  <div id="galleryModal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-opacity">
+    <div
+      class="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl animate-in fade-in zoom-in-95 duration-300">
+      <button onclick="closeGalleryModal()"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center border border-white/30 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="relative max-h-[75vh] flex items-center justify-center bg-black">
+        <img id="galleryModalImg" src="" alt="Detail Dokumentasi" class="max-h-[75vh] w-auto max-w-full object-contain">
+      </div>
+      <div class="p-5 bg-slate-900 border-t border-slate-800 flex items-center justify-between">
+        <p id="galleryModalCaption" class="text-sm font-heading font-bold text-white"></p>
+        <span class="text-xs text-sky-400 font-semibold">SA Adventure Cisadane</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="videoModal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md transition-opacity">
+    <div
+      class="relative max-w-3xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-sky-400/40 shadow-2xl animate-in fade-in zoom-in-95 duration-300">
+      <button onclick="closeVideoModal()"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center border border-white/30 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="p-6 text-center">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0284c7] to-[#0052cc] text-white flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
+          <i class="fa-solid fa-play text-2xl ml-1"></i>
+        </div>
+        <h3 class="font-heading font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mb-2">
+          LET'S MAKE <span class="text-sky-300">MEMORIES!</span>
+        </h3>
+        <p class="text-sm text-slate-300 max-w-md mx-auto mb-6">
+          Cuplikan keseruan rafting, paintball, flying fox, dan gathering bersama SA Adventure di Cisadane Bogor.
+        </p>
+        <div class="rounded-2xl overflow-hidden aspect-video bg-black relative border border-slate-800">
+          <iframe id="videoIframe" class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0" title="Video Keseruan SA Adventure"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Banner Section (Glass Dark Adventure) -->
+  <section
+    class="bg-gradient-to-r from-slate-950 via-[#002244] to-slate-950 text-white py-16 sm:py-20 relative overflow-hidden border-t border-sky-900/50">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <img src="images/drive_uploads/DSCN0068.JPG" alt="CTA Rafting" class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <span class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-2 block">Jadikan Event Anda
+            Berkesan</span>
+          <h2
+            class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight leading-tight mb-3 text-white">
+            SIAP UNTUK <br><span class="text-sky-400">PETUALANGAN BERIKUTNYA?</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-lg">
+            Konsultasikan rencana kegiatan gathering kantor, komunitas, atau liburan keluarga Anda dengan tim SA
+            Adventure. Dapatkan penawaran terbaik dan fleksibilitas jadwal.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col sm:flex-row gap-3.5 justify-lg-end items-center">
+          <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20konsultasi%20paket%20rafting%20dan%20event%20gathering"
+            target="_blank" rel="noreferrer"
+            class="w-full sm:w-auto flex-1 bg-gradient-to-r from-emerald-500 via-[#0284c7] to-[#0052cc] hover:from-emerald-600 hover:to-blue-700 text-white p-4 rounded-2xl flex items-center justify-center gap-3.5 shadow-xl shadow-blue-500/25 transition-all duration-300 hover:scale-[1.02]">
+            <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+            <div class="text-left">
+              <span class="block text-[10px] font-bold uppercase tracking-wider leading-none text-emerald-200">RESERVASI
+                CEPAT</span>
+              <span class="block text-base font-heading font-black leading-none mt-1">0812 9106 8287</span>
+            </div>
+          </a>
+
+          <a href="#kalkulator-booking"
+            class="w-full sm:w-auto flex-1 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md p-4 rounded-2xl flex items-center justify-center gap-2.5 font-heading font-black text-sm shadow-md transition-all duration-300">
+            <i class="fa-solid fa-calculator text-sky-300"></i>
+            <span>HITUNG ESTIMASI</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & FAQ Section -->
+  <section id="kontak" class="py-16 sm:py-20 bg-white/70 backdrop-blur-md text-slate-900 border-t border-sky-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+        <!-- Col 1: HUBUNGI SA ADVENTURE -->
+        <div class="glass-card rounded-2xl p-6 border border-sky-100 shadow-sm">
+          <h3
+            class="font-heading font-black text-base uppercase text-slate-900 pb-3 border-b border-sky-100 mb-5 flex items-center gap-2">
+            <i class="fa-solid fa-address-book text-[#0052cc]"></i>
+            KONTAK RESMI
+          </h3>
+          <div class="space-y-4">
+            <!-- WhatsApp -->
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-500 uppercase">WhatsApp Reservasi</div>
+                <a href="https://wa.me/6281291068287" target="_blank"
+                  class="font-heading font-black text-sm text-[#0052cc] hover:underline block mt-0.5">
+                  0812 9106 8287
+                </a>
+                <small class="text-[10px] text-slate-500 block">Layanan fast response 24/7</small>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-3 pt-3 border-t border-sky-50">
+              <div
+                class="w-9 h-9 rounded-xl bg-sky-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100">
+                <i class="fa-solid fa-envelope text-xs"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-500 uppercase">Email Resmi</div>
+                <a href="mailto:sa.adventure76@gmail.com"
+                  class="text-xs text-slate-800 hover:text-[#0052cc] font-semibold block mt-0.5">
+                  sa.adventure76@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="flex items-start gap-3 pt-3 border-t border-sky-50">
+              <div
+                class="w-9 h-9 rounded-xl bg-sky-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100">
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-500 uppercase">Instagram Resmi</div>
+                <a href="https://www.instagram.com/sa.adventure.ok/" target="_blank"
+                  class="text-xs text-[#0052cc] hover:underline font-bold block mt-0.5">
+                  @sa.adventure.ok &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Basecamp Bogor -->
+            <div class="flex items-start gap-3 pt-3 border-t border-sky-50">
+              <div
+                class="w-9 h-9 rounded-xl bg-sky-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100">
+                <i class="fa-solid fa-location-dot text-xs"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-xs font-bold text-slate-500 uppercase">Basecamp & Kantor Bogor</div>
+                <p class="text-xs text-slate-700 mt-0.5 leading-relaxed font-medium break-words">
+                  Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Bogor Kabupaten, 16730, Jawa Barat, ID
+                </p>
+                <div class="flex flex-wrap items-center gap-2 mt-1.5">
+                  <span class="inline-flex items-center text-[10px] text-sky-700 font-bold bg-sky-50 px-2 py-0.5 rounded border border-sky-100">
+                    <i class="fa-solid fa-road mr-1"></i> Bebas Ganjil Genap (Exit Tol Caringin)
+                  </span>
+                  <a href="https://maps.google.com/?q=Jl.+Raya+Bogor+-+Sukabumi+Desa+No.1,+RT.02/RW.03,+Bogor+Kabupaten,+16730,+Jawa+Barat"
+                    target="_blank" rel="noreferrer"
+                    class="inline-flex items-center gap-1 text-[11px] font-bold text-[#0052cc] hover:underline">
+                    <span>Petunjuk Arah</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Office Depok -->
+            <div class="flex items-start gap-3 pt-3 border-t border-sky-50">
+              <div
+                class="w-9 h-9 rounded-xl bg-sky-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-100">
+                <i class="fa-solid fa-building text-xs"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-500 uppercase">Kantor Depok</div>
+                <p class="text-xs text-slate-700 mt-0.5 leading-relaxed font-medium break-words">
+                  Jl. RADAR AURI RT.03, RW 10 Mekarsari, Kec. Cimanggis, Kota Depok, Jawa Barat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: FAQ ACCORDION -->
+        <div class="glass-card rounded-2xl p-6 border border-sky-100 shadow-sm">
+          <h3
+            class="font-heading font-black text-base uppercase text-slate-900 pb-3 border-b border-sky-100 mb-5 flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-[#0052cc]"></i>
+            PERTANYAAN UMUM (FAQ)
+          </h3>
+          <div class="space-y-3.5 text-xs">
+            <div>
+              <h4 class="font-heading font-bold text-slate-900 mb-0.5 flex items-center gap-1.5 text-[#0052cc]">
+                <i class="fa-solid fa-circle-check text-xs"></i> Tidak bisa berenang apakah aman?
+              </h4>
+              <p class="text-slate-600 leading-relaxed font-medium">
+                100% aman! Seluruh peserta memakai jaket pelampung berdaya apung tinggi dan didampingi skipper
+                bersertifikasi BNSP.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100">
+              <h4 class="font-heading font-bold text-slate-900 mb-0.5 flex items-center gap-1.5 text-[#0052cc]">
+                <i class="fa-solid fa-circle-check text-xs"></i> Berapa batas usia peserta?
+              </h4>
+              <p class="text-slate-600 leading-relaxed font-medium">
+                Mulai usia 6 tahun hingga 65 tahun dalam kondisi sehat jasmani.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100">
+              <h4 class="font-heading font-bold text-slate-900 mb-0.5 flex items-center gap-1.5 text-[#0052cc]">
+                <i class="fa-solid fa-circle-check text-xs"></i> Apa saja yang harus dibawa?
+              </h4>
+              <p class="text-slate-600 leading-relaxed font-medium">
+                Pakaian ganti, sandal gunung/tali, peralatan mandi, dan kantong kresek/waterproof untuk pakaian basah.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: PETA LOKASI -->
+        <div class="glass-card rounded-2xl p-6 border border-sky-100 shadow-sm">
+          <h3
+            class="font-heading font-black text-base uppercase text-slate-900 pb-3 border-b border-sky-100 mb-5 flex items-center gap-2">
+            <i class="fa-solid fa-map-location-dot text-red-500"></i>
+            PETA BASECAMP
+          </h3>
+          <div class="rounded-xl overflow-hidden h-44 border border-slate-200 bg-slate-100 shadow-inner">
+            <iframe
+              src="https://maps.google.com/maps?q=Jl.+Raya+Bogor+-+Sukabumi+Desa+No.1%2C+RT.02%2FRW.03%2C+Bogor+Kabupaten%2C+16730%2C+Jawa+Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-2 font-medium">
+            Hanya 45 menit dari Jakarta via Tol Jagorawi - Tol Bocimi (Keluar Gerbang Tol Caringin).
+          </p>
+          <div class="mt-3">
+            <a href="https://maps.google.com/?q=Jl.+Raya+Bogor+-+Sukabumi+Desa+No.1,+RT.02/RW.03,+Bogor+Kabupaten,+16730,+Jawa+Barat"
+              target="_blank" rel="noreferrer"
+              class="w-full text-center justify-center text-xs font-heading font-black text-white bg-gradient-to-r from-[#0284c7] to-[#0052cc] hover:from-[#0369a1] hover:to-[#003b95] py-2.5 px-4 rounded-xl inline-flex items-center gap-2 shadow-md shadow-blue-500/20 active:scale-95 transition">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Buka di Google Maps & Navigasi</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Glass Dark River Style) -->
+  <footer class="bg-[#0b192c] text-white pt-10 pb-28 sm:py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800/80">
+
+        <!-- Col 1: Brand Info & Motto -->
+        <div class="md:col-span-5">
+          <a href="#home" class="flex items-center gap-3 group mb-3">
+            <img src="images/sa-adventure-logo.png" alt="SA Adventure Logo"
+              class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+            <div>
+              <span class="font-heading font-black text-xl text-white tracking-wider block leading-tight">
+                SA <span class="text-[#0284c7]">ADVENTURE</span>
+              </span>
+              <span class="text-[10px] text-sky-400 font-bold uppercase tracking-wider">
+                Event Organizer & Whitewater Rafting
+              </span>
+            </div>
+          </a>
+
+          <p class="text-xs text-sky-300 italic font-semibold mb-3">
+            &ldquo;Create Moments. Build Memories. Have Fun!&rdquo;
+          </p>
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Event organizer profesional untuk company gathering, outing kantor, outbound team building, family
+            gathering, dan wisata arung jeram Cisadane Bogor.
+          </p>
+        </div>
+
+        <!-- Col 2: Alamat Kantor & Basecamp -->
+        <div class="md:col-span-4 text-xs text-slate-400 space-y-3">
+          <div class="font-heading font-black text-sm text-white uppercase tracking-wider mb-2">
+            Lokasi & Alamat
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot text-sky-400 mt-1"></i>
+            <div>
+              <strong class="text-slate-200 block">Basecamp Bogor:</strong>
+              <span class="break-words">Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Bogor Kabupaten, 16730, Jawa Barat, ID</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-building text-indigo-400 mt-1"></i>
+            <div>
+              <strong class="text-slate-200 block">Kantor Depok:</strong>
+              <span>Jl. RADAR AURI RT.03, RW 10 Mekarsari, Kec. Cimanggis, Kota Depok, Jawa Barat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: Hubungi Kami & Socials -->
+        <div class="md:col-span-3 text-xs text-slate-400 space-y-2.5">
+          <div class="font-heading font-black text-sm text-white uppercase tracking-wider mb-2">
+            Kontak Resmi
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+            <a href="https://wa.me/6281291068287" target="_blank" rel="noreferrer"
+              class="text-slate-200 hover:text-sky-300 transition font-bold">
+              0812 9106 8287
+            </a>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-sky-400"></i>
+            <a href="mailto:sa.adventure76@gmail.com" class="text-slate-300 hover:text-white transition">
+              sa.adventure76@gmail.com
+            </a>
+          </div>
+          <div class="pt-2">
+            <a href="https://www.instagram.com/sa.adventure.ok/" target="_blank" rel="noreferrer"
+              aria-label="Instagram SA Adventure"
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 hover:bg-[#0052cc] border border-slate-700/70 text-slate-200 hover:text-white font-bold text-xs transition shadow-sm">
+              <i class="fa-brands fa-instagram text-sm"></i>
+              <span>@sa.adventure.ok</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <div>
+          &copy; 2026 <strong>SA Adventure</strong>. Seluruh Hak Cipta Dilindungi.
+        </div>
+        <div class="text-slate-400">
+          Cisadane Whitewater Rafting & Outdoor Event Organizer Bogor - Depok.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button (Only on desktop to avoid colliding with mobile bottom bar) -->
+  <div class="hidden lg:block fixed bottom-6 right-6 z-40">
+    <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20tanya%20informasi%20paket%20rafting%20Cisadane"
+      target="_blank" rel="noreferrer"
+      class="w-13 h-13 sm:w-14 sm:h-14 p-3 rounded-full bg-[#25d366] hover:bg-[#1ebc59] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200"
+      aria-label="Chat via WhatsApp">
+      <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Bottom Sticky Quick Action Bar -->
+  <nav
+    class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 px-2 pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom))] shadow-2xl shadow-slate-950/20">
+    <div class="grid grid-cols-4 gap-1 max-w-sm mx-auto items-center">
+      <!-- Beranda -->
+      <a href="#home"
+        class="flex flex-col items-center justify-center py-1.5 px-1 rounded-2xl bg-blue-50/90 text-[#0052cc] font-extrabold shadow-sm ring-1 ring-blue-200/60 transition active:scale-95 text-center">
+        <div class="relative">
+          <i class="fa-solid fa-house text-base mb-0.5"></i>
+          <span class="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-[#0052cc]"></span>
+        </div>
+        <span class="text-[10px] leading-tight tracking-tight">Beranda</span>
+      </a>
+
+      <!-- Paket -->
+      <a href="#paket-rafting"
+        class="flex flex-col items-center justify-center py-1.5 px-1 rounded-2xl text-slate-600 hover:text-slate-900 font-medium transition active:scale-95 text-center">
+        <i class="fa-solid fa-water text-base mb-0.5 text-slate-500"></i>
+        <span class="text-[10px] leading-tight tracking-tight">Paket</span>
+      </a>
+
+      <!-- Simulasi Biaya -->
+      <a href="#kalkulator-booking"
+        class="flex flex-col items-center justify-center py-1.5 px-1 rounded-2xl text-slate-600 hover:text-slate-900 font-medium transition active:scale-95 text-center">
+        <i class="fa-solid fa-calculator text-base mb-0.5 text-slate-500"></i>
+        <span class="text-[10px] leading-tight tracking-tight">Simulasi</span>
+      </a>
+
+      <!-- Chat WA -->
+      <a href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20paket%20rafting"
+        target="_blank" rel="noreferrer"
+        class="flex flex-col items-center justify-center py-1.5 px-1 rounded-2xl bg-gradient-to-r from-emerald-500 to-[#0052cc] text-white font-bold shadow-md shadow-emerald-500/20 transition active:scale-95 text-center">
+        <i class="fa-brands fa-whatsapp text-lg mb-0.5"></i>
+        <span class="text-[10px] leading-tight tracking-tight">Chat WA</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- JavaScript for Interactive Features & Calculator -->
+  <script>
+    // 1. Mobile Drawer Navigation
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const closeBtn = document.getElementById('mobileCloseBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const backdrop = document.getElementById('mobileBackdrop');
+
+    if (menuBtn && drawer && closeBtn && backdrop) {
+      menuBtn.addEventListener('click', () => drawer.classList.remove('hidden'));
+      closeBtn.addEventListener('click', () => drawer.classList.add('hidden'));
+      backdrop.addEventListener('click', () => drawer.classList.add('hidden'));
+    }
+
+    // 2. Smooth Scroll & Active Nav Spy
+    const sections = ['home', 'paket-rafting', 'jeram-cisadane', 'kalkulator-booking', 'aktivitas', 'tentang-kami', 'keamanan', 'galeri', 'kontak'];
+    const navItems = document.querySelectorAll('.nav-item');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    let isManualScrolling = false;
+    let scrollTimeout = null;
+
+    function setActivePill(secId) {
+      navItems.forEach(item => {
+        if (item.getAttribute('href') === `#${secId}`) {
+          item.className = 'nav-item active px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap bg-[#0052cc] text-white shadow-md shadow-blue-600/30 font-black';
+        } else {
+          item.className = 'nav-item px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-slate-600 hover:text-[#0052cc] hover:bg-white/80';
+        }
+      });
+      mobileLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${secId}`) {
+          link.className = 'mobile-nav-link block p-3 rounded-xl bg-[#0052cc] text-white font-black shadow-md shadow-blue-500/25';
+        } else {
+          link.className = 'mobile-nav-link block p-3 rounded-xl text-slate-700 hover:bg-sky-50 hover:text-[#0052cc]';
+        }
+      });
+    }
+
+    function smoothScrollToSection(targetId) {
+      const el = document.getElementById(targetId);
+      if (!el) return;
+
+      setActivePill(targetId);
+      isManualScrolling = true;
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      if (drawer) drawer.classList.add('hidden');
+
+      const headerOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      scrollTimeout = setTimeout(() => {
+        isManualScrolling = false;
+      }, 800);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        if (sections.includes(targetId)) {
+          e.preventDefault();
+          smoothScrollToSection(targetId);
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (isManualScrolling) return;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      if (scrollY < 120) {
+        setActivePill('home');
+        return;
+      }
+      if (scrollY + windowHeight >= docHeight - 100) {
+        setActivePill('kontak');
+        return;
+      }
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const secId = sections[i];
+        const el = document.getElementById(secId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 160 && rect.bottom >= 160) {
+            setActivePill(secId);
+            break;
+          }
+        }
+      }
+    }, { passive: true });
+
+    // 3. Quick Booking Bar Handler
+    function handleQuickBookingSubmit(e) {
+      e.preventDefault();
+      const pkg = document.getElementById('quickPackageSelect').value;
+      const date = document.getElementById('quickDateInput').value;
+      const pax = document.getElementById('quickPaxInput').value || 20;
+
+      let dateText = date ? `tanggal ${date}` : "waktu dekat ini";
+      const text = `Halo SA Adventure, saya ingin cek ketersediaan slot untuk:
+- Paket: ${pkg}
+- Rencana Tanggal: ${dateText}
+- Jumlah Peserta: ${pax} Pax
+
+Mohon info ketersediaan jadwal dan prosedur reservasinya. Terima kasih!`;
+
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/6281291068287?text=${encoded}`, '_blank');
+    }
+
+    // Set Default Date in Quick Booking to 7 days ahead
+    window.addEventListener('DOMContentLoaded', () => {
+      const d = new Date();
+      d.setDate(d.getDate() + 7);
+      const str = d.toISOString().split('T')[0];
+      const dateInput = document.getElementById('quickDateInput');
+      if (dateInput) dateInput.value = str;
+      updateCalculator();
+    });
+
+    // 4. Interactive Booking Calculator Logic
+    function formatRupiah(num) {
+      return 'Rp ' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    function handleSliderChange(val) {
+      document.getElementById('calcPaxValueDisplay').innerText = val;
+      updateCalculator();
+    }
+
+    function setQuickPax(val) {
+      const slider = document.getElementById('calcPaxSlider');
+      slider.value = val;
+      document.getElementById('calcPaxValueDisplay').innerText = val;
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const pkgInputs = document.getElementsByName('calcPkg');
+      let selectedPkg = 'B';
+      for (const r of pkgInputs) {
+        if (r.checked) {
+          selectedPkg = r.value;
+          break;
+        }
+      }
+
+      // Visual highlight radio cards
+      const lblA = document.getElementById('calcPkgLabelA');
+      const lblB = document.getElementById('calcPkgLabelB');
+      if (selectedPkg === 'B') {
+        lblB.classList.add('border-[#0052cc]', 'bg-blue-50/50');
+        lblB.classList.remove('border-slate-200');
+        lblA.classList.remove('border-[#0052cc]', 'bg-blue-50/50');
+        lblA.classList.add('border-slate-200');
+      } else {
+        lblA.classList.add('border-[#0052cc]', 'bg-blue-50/50');
+        lblA.classList.remove('border-slate-200');
+        lblB.classList.remove('border-[#0052cc]', 'bg-blue-50/50');
+        lblB.classList.add('border-slate-200');
+      }
+
+      const pax = parseInt(document.getElementById('calcPaxSlider').value) || 20;
+      const pkgPrice = selectedPkg === 'B' ? 199000 : 168000;
+      const pkgName = selectedPkg === 'B' ? 'Paket B (Rafting Complete 11 KM)' : 'Paket A (Rafting Basic 7 KM)';
+
+      const pkgTotal = pkgPrice * pax;
+
+      // Addons
+      const addonCheckboxes = document.querySelectorAll('.calc-addon');
+      let addonPricePerPax = 0;
+      let addonCount = 0;
+
+      addonCheckboxes.forEach(cb => {
+        if (cb.checked) {
+          addonPricePerPax += parseInt(cb.getAttribute('data-price')) || 0;
+          addonCount++;
+        }
+      });
+
+      const addonTotal = addonPricePerPax * pax;
+      const grandTotal = pkgTotal + addonTotal;
+      const perPaxTotal = pkgPrice + addonPricePerPax;
+
+      // Update UI Summary
+      document.getElementById('summaryPkgName').innerText = pkgName;
+      document.getElementById('summaryPkgRate').innerText = `${formatRupiah(pkgPrice)} × ${pax} Pax`;
+      document.getElementById('summaryPkgTotal').innerText = formatRupiah(pkgTotal);
+
+      document.getElementById('summaryAddonCount').innerText = addonCount > 0 ? `${addonCount} Aktivitas Tambahan (${formatRupiah(addonPricePerPax)}/pax)` : 'Tidak ada tambahan';
+      document.getElementById('summaryAddonTotal').innerText = formatRupiah(addonTotal);
+
+      document.getElementById('summaryPerPax').innerText = `${formatRupiah(perPaxTotal)} / Pax`;
+      document.getElementById('summaryGrandTotal').innerText = formatRupiah(grandTotal);
+    }
+
+    function sendCalculatedBookingToWhatsApp() {
+      const pkgInputs = document.getElementsByName('calcPkg');
+      let selectedPkg = 'B';
+      for (const r of pkgInputs) {
+        if (r.checked) {
+          selectedPkg = r.value;
+          break;
+        }
+      }
+
+      const pkgName = selectedPkg === 'B' ? 'Paket B (Rafting Complete 11 KM - Rp 199k)' : 'Paket A (Rafting Basic 7 KM - Rp 168k)';
+      const pax = parseInt(document.getElementById('calcPaxSlider').value) || 20;
+      const name = document.getElementById('calcName').value.trim() || 'Pelanggan';
+      const company = document.getElementById('calcCompany').value.trim() || '-';
+
+      const addonCheckboxes = document.querySelectorAll('.calc-addon');
+      const chosenAddons = [];
+      addonCheckboxes.forEach(cb => {
+        if (cb.checked) {
+          const parent = cb.closest('label');
+          const title = parent ? parent.querySelector('.text-slate-800').innerText : cb.value;
+          const price = formatRupiah(parseInt(cb.getAttribute('data-price')));
+          chosenAddons.push(`${title} (${price}/pax)`);
+        }
+      });
+
+      const addonText = chosenAddons.length > 0
+        ? chosenAddons.map(a => `   • ${a}`).join('\n')
+        : '   • Tidak ada (Hanya Paket Rafting)';
+
+      const grandTotal = document.getElementById('summaryGrandTotal').innerText;
+      const perPax = document.getElementById('summaryPerPax').innerText;
+
+      const waMsg =
+        `*HALO SA ADVENTURE, SAYA INGIN RESERVASI EVENT RAFTING CISADANE*
+--------------------------------------------------
+*DATA PEMESAN:*
+• Nama PIC: ${name}
+• Rombongan / Instansi: ${company}
+• Jumlah Peserta: ${pax} Pax
+
+*PAKET & AKTIVITAS DIPILIH:*
+• *Paket Utama:* ${pkgName}
+• *Aktivitas Tambahan:*
+${addonText}
+
+*RINCIAN BIAYA:*
+• Estimasi Biaya: ${perPax}
+• *GRAND TOTAL:* *${grandTotal}*
+--------------------------------------------------
+Mohon konfirmasi ketersediaan slot tanggal dan petunjuk booking DP. Terima kasih!`;
+
+      const encoded = encodeURIComponent(waMsg);
+      window.open(`https://wa.me/6281291068287?text=${encoded}`, '_blank');
+    }
+
+    // 5. Gallery Slider Logic
+    const track = document.getElementById('galleryTrack');
+    const slides = document.querySelectorAll('.gallery-slide');
+    const prevBtn = document.getElementById('galleryPrevBtn');
+    const nextBtn = document.getElementById('galleryNextBtn');
+    const dotsContainer = document.getElementById('galleryDots');
+    const sliderContainer = document.getElementById('gallerySliderContainer');
+
+    let currentSlide = 0;
+
+    function getMaxSlideIndex() {
+      const containerWidth = sliderContainer ? sliderContainer.offsetWidth : window.innerWidth;
+      const slideWidth = slides[0] ? slides[0].offsetWidth + 20 : 370;
+      const visibleSlides = Math.max(1, Math.floor(containerWidth / slideWidth));
+      return Math.max(0, slides.length - visibleSlides);
+    }
+
+    function renderGalleryDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const totalDots = slides.length;
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Pindah ke slide ${i + 1}`);
+        dot.className = i === currentSlide
+          ? 'w-8 h-2.5 rounded-full bg-[#0052cc] transition-all duration-300'
+          : 'w-2.5 h-2.5 rounded-full bg-sky-200 hover:bg-sky-400 transition-all duration-300';
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateSlider(animate = true) {
+      if (!track || slides.length === 0) return;
+      const slideWidth = slides[0].offsetWidth + 20;
+      const maxIndex = getMaxSlideIndex();
+
+      if (currentSlide > maxIndex) currentSlide = maxIndex;
+      if (currentSlide < 0) currentSlide = 0;
+
+      const offset = -(currentSlide * slideWidth);
+      track.style.transition = animate ? 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+      track.style.transform = `translateX(${offset}px)`;
+
+      if (dotsContainer) {
+        const dots = dotsContainer.children;
+        for (let i = 0; i < dots.length; i++) {
+          if (i === currentSlide) {
+            dots[i].className = 'w-8 h-2.5 rounded-full bg-[#0052cc] transition-all duration-300';
+          } else {
+            dots[i].className = 'w-2.5 h-2.5 rounded-full bg-sky-200 hover:bg-sky-400 transition-all duration-300';
+          }
+        }
+      }
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlider(true);
+    }
+
+    function nextSlide() {
+      const maxIndex = getMaxSlideIndex();
+      currentSlide = currentSlide >= maxIndex ? 0 : currentSlide + 1;
+      updateSlider(true);
+    }
+
+    function prevSlide() {
+      const maxIndex = getMaxSlideIndex();
+      currentSlide = currentSlide <= 0 ? maxIndex : currentSlide - 1;
+      updateSlider(true);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    renderGalleryDots();
+    updateSlider(false);
+    window.addEventListener('resize', () => {
+      renderGalleryDots();
+      updateSlider(false);
+    });
+
+    // 6. Lightbox Image & Video Modal
+    function openGalleryModal(imgSrc, caption) {
+      const modal = document.getElementById('galleryModal');
+      const img = document.getElementById('galleryModalImg');
+      const cap = document.getElementById('galleryModalCaption');
+      if (modal && img && cap) {
+        img.src = imgSrc;
+        cap.innerText = caption;
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeGalleryModal() {
+      const modal = document.getElementById('galleryModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function openVideoModal() {
+      const modal = document.getElementById('videoModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoIframe');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+      if (iframe) {
+        const s = iframe.src;
+        iframe.src = s; // stop playback
+      }
+    }
+
+    // 7. Mobile Packages Slider Scroll Handler
+    function scrollToPkgSlide(idx) {
+      const slider = document.getElementById('packagesSlider');
+      if (slider && slider.children[idx]) {
+        slider.children[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        updatePkgButtons(idx);
+      }
+    }
+
+    function updatePkgButtons(activeIdx) {
+      const btns = document.querySelectorAll('.pkg-slide-btn');
+      btns.forEach((btn, i) => {
+        if (i === activeIdx) {
+          btn.className = 'pkg-slide-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-[#0052cc] text-white shadow-md shadow-blue-500/25';
+        } else {
+          btn.className = 'pkg-slide-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200';
+        }
+      });
+    }
+
+    const pkgSlider = document.getElementById('packagesSlider');
+    if (pkgSlider) {
+      pkgSlider.addEventListener('scroll', () => {
+        const scrollLeft = pkgSlider.scrollLeft;
+        const cardWidth = pkgSlider.offsetWidth * 0.85;
+        const idx = Math.min(Math.max(Math.round(scrollLeft / (cardWidth || 1)), 0), 2);
+        updatePkgButtons(idx);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
