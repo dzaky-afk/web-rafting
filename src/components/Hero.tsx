@@ -210,9 +210,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             alt="Keseruan Arung Jeram Rafting Cisadane Bogor bersama SA Adventure"
             fill
             priority
-            quality={80}
+            quality={90}
             className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            sizes="100vw"
           />
 
           {/* Transparent Overlay matching prototype */}
