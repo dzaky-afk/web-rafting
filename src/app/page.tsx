@@ -18,7 +18,6 @@ const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: true });
 const CtaBanner = dynamic(() => import("@/components/CtaBanner"), { ssr: true });
 const FaqContact = dynamic(() => import("@/components/FaqContact"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
-const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"), { ssr: false });
 
 const BookingFlowModal = dynamic(() => import("@/components/BookingFlowModal"), {
   ssr: false,
@@ -100,7 +99,6 @@ export default function Home() {
       </main>
 
       <Footer />
-      <FloatingWhatsApp />
       <BookingFlowModal
         isOpen={isBookingFlowOpen}
         onClose={handleCloseBookingFlow}
