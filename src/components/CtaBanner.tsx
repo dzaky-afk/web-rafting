@@ -85,7 +85,7 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
               Safety First
             </span>
             <h3 className="font-serif text-base sm:text-lg text-white font-semibold mb-1">
-              Pemandu Lisensi Resmi FAJI
+              Pemandu Berlisensi Resmi
             </h3>
             <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed font-light m-0">
               River guide berpengalaman 10+ tahun, standar penyelamatan sungai terakreditasi, dan asuransi untuk seluruh peserta.
@@ -164,7 +164,7 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
         <div className="pt-6 border-t border-neutral-900 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-10 text-center font-sans text-[11px] sm:text-xs text-gray-500">
           <div className="flex items-center justify-center gap-2">
             <span className="text-white/60">&bull;</span>
-            <span>Standar Keselamatan FAJI Resmi</span>
+            <span>Standar Keselamatan Teruji Resmi</span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <span className="text-white/60">&bull;</span>
