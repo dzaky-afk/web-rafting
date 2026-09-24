@@ -100,8 +100,17 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </text>
           </svg>
         </h1>
+
+        {/* Tag Pill: ACARA SERU • TEAM HAPPY • KAMI YANG ATUR SEMUA! */}
+        <div className="mt-2 sm:mt-2.5 flex justify-center">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1 rounded-full bg-brand-dark text-white text-[9.5px] sm:text-[11px] font-bold font-sans uppercase tracking-[0.16em] shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+            <span>ACARA SERU &bull; TEAM HAPPY &bull; KAMI YANG ATUR SEMUA!</span>
+          </div>
+        </div>
+
         {/* Handwritten Emotional Slogan from Flyer */}
-        <div className="mt-1 sm:mt-2 inline-block relative max-w-2xl px-2">
+        <div className="mt-2 sm:mt-2.5 inline-block relative max-w-2xl px-2">
           <p className="font-handwriting text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#0b4b6f] font-bold tracking-wide leading-tight">
             Jelajahi Alam, Ciptakan Kenangan, Rayakan Kebersamaan!
           </p>
