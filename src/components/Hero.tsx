@@ -74,8 +74,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       {/* Large Elegant Serif Title */}
       <div className="text-center px-4 max-w-6xl mx-auto shrink-0">
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.08] text-brand-dark tracking-wide uppercase">
-          CISADANE RIVER<br />
-          <span className="mt-0.5 sm:mt-2 block">RAFTING</span>
+          SA ADVENTURE
         </h1>
         <p className="mt-2.5 sm:mt-4 text-gray-500 tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto font-sans font-medium px-2">
           Experience the Ultimate Whitewater Adventure in Bogor
