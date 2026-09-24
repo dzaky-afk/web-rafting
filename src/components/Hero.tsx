@@ -73,8 +73,32 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     <section className="relative w-full bg-white pt-20 sm:pt-24 pb-0 overflow-hidden select-none min-h-[100dvh] sm:min-h-screen flex flex-col justify-between">
       {/* Large Elegant Serif Title */}
       <div className="text-center px-4 max-w-6xl mx-auto shrink-0">
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.08] text-brand-dark tracking-wide uppercase">
-          SA ADVENTURE
+        {/* Large Elegant Serif Title as Scalable SVG */}
+        <h1 className="w-full flex justify-center items-center my-0">
+          <span className="sr-only">SA ADVENTURE - Event Organizer, Outbound &amp; Rafting Cisadane Bogor</span>
+          <svg
+            viewBox="0 0 920 95"
+            className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl h-auto select-none overflow-visible max-h-[46px] sm:max-h-[70px] md:max-h-[85px] lg:max-h-[105px]"
+            aria-hidden="true"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominantBaseline="central"
+              textAnchor="middle"
+              className="font-serif font-bold"
+              style={{
+                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                fontSize: "76px",
+                letterSpacing: "0.14em",
+                fontWeight: 700,
+                fill: "#1a1a1a",
+                textTransform: "uppercase",
+              }}
+            >
+              SA ADVENTURE
+            </text>
+          </svg>
         </h1>
         {/* Handwritten Emotional Slogan from Flyer */}
         <div className="mt-1 sm:mt-2 inline-block relative max-w-2xl px-2">
@@ -85,6 +109,45 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           <svg className="w-full h-2 sm:h-3 -mt-0.5 mx-auto" viewBox="0 0 500 20" fill="none" preserveAspectRatio="none">
             <path d="M 10,14 Q 250,2 490,14" stroke="#f59e0b" strokeWidth="3.5" strokeLinecap="round" />
           </svg>
+        </div>
+
+        {/* Opsi 2: Service Pillars / Mini Pill Badges (EO & Outdoor Specialist) */}
+        <div className="mt-3 sm:mt-4 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 max-w-3xl mx-auto px-2">
+          <a
+            href="#about"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-slate-100 hover:bg-[#0c243f] text-slate-700 hover:text-white border border-slate-200/80 hover:border-[#0c243f] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+          >
+            <span>🎪</span>
+            <span>Event Organizer</span>
+          </a>
+          <a
+            href="#paket-rafting"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-sky-50 hover:bg-[#0284c7] text-[#0369a1] hover:text-white border border-sky-200/80 hover:border-[#0284c7] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+          >
+            <span>🚣</span>
+            <span>Rafting Cisadane</span>
+          </a>
+          <a
+            href="#aktivitas"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-amber-50 hover:bg-[#f59e0b] text-amber-900 hover:text-white border border-amber-200/80 hover:border-[#f59e0b] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+          >
+            <span>🎯</span>
+            <span>Outbound &amp; Team Building</span>
+          </a>
+          <a
+            href="#aktivitas"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-emerald-50 hover:bg-[#10b981] text-emerald-900 hover:text-white border border-emerald-200/80 hover:border-[#10b981] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+          >
+            <span>🚜</span>
+            <span>Paintball &amp; Offroad</span>
+          </a>
+          <a
+            href="#accommodation"
+            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-600 text-indigo-900 hover:text-white border border-indigo-200/80 hover:border-indigo-600 text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+          >
+            <span>🏡</span>
+            <span>Villa &amp; Katering</span>
+          </a>
         </div>
 
       </div>

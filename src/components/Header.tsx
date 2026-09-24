@@ -316,7 +316,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                     SA ADVENTURE
                   </span>
                   <span className="text-[10px] text-gray-500 font-medium font-sans block truncate">
-                    Rafting Cisadane Bogor
+                    Event Organizer &amp; Adventure Bogor
                   </span>
                 </div>
               </div>
