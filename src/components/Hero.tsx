@@ -76,9 +76,16 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.08] text-brand-dark tracking-wide uppercase">
           SA ADVENTURE
         </h1>
-        <p className="mt-2.5 sm:mt-4 text-gray-500 tracking-[0.18em] uppercase text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto font-sans font-medium px-2">
-          Experience the Ultimate Whitewater Adventure in Bogor
-        </p>
+        {/* Handwritten Emotional Slogan from Flyer */}
+        <div className="mt-1 sm:mt-2 inline-block relative max-w-2xl px-2">
+          <p className="font-handwriting text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#0b4b6f] font-bold tracking-wide leading-tight">
+            Jelajahi Alam, Ciptakan Kenangan, Rayakan Kebersamaan!
+          </p>
+          {/* Hand-drawn energetic curved underline matching flyer */}
+          <svg className="w-full h-2 sm:h-3 -mt-0.5 mx-auto" viewBox="0 0 500 20" fill="none" preserveAspectRatio="none">
+            <path d="M 10,14 Q 250,2 490,14" stroke="#f59e0b" strokeWidth="3.5" strokeLinecap="round" />
+          </svg>
+        </div>
 
       </div>
 

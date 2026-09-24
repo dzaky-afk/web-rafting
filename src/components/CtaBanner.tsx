@@ -44,12 +44,17 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Header Tag Pill (Monochrome Minimalist) */}
-        <div className="flex justify-center mb-6">
+        {/* Header Tag Pill (Monochrome Minimalist) with Slogan Promise */}
+        <div className="flex flex-col items-center justify-center gap-2 mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
             <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-gray-300 font-sans">
               SA ADVENTURE &bull; CISADANE EXPEDITION
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#0c243f]/90 border border-sky-400/30 backdrop-blur-md shadow-md">
+            <span className="text-[10.5px] sm:text-xs font-bold text-white font-sans">
+              <span className="text-white">Acara Seru</span> &bull; <span className="text-[#fbbf24]">Team Happy</span> &bull; <span className="text-[#38bdf8]">Kami yang Atur Semua! 😊</span>
             </span>
           </div>
         </div>

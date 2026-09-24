@@ -50,6 +50,7 @@ const config: Config = {
         heading: ["var(--font-playfair)", '"Playfair Display"', "Georgia", "serif"],
         body: ["var(--font-montserrat)", "Montserrat", "sans-serif"],
         editorial: ["var(--font-playfair)", '"Playfair Display"', "Georgia", "serif"],
+        handwriting: ["var(--font-caveat)", "cursive"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -146,6 +146,27 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
             </div>
             {/* Chic Minimalist Corner Element from Reference Prototype */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 border-l-2 border-b-2 border-brand-dark hidden md:block pointer-events-none" />
+
+            {/* Slogan Badge from Flyer: Acara Seru, Team Happy, Kami yang Atur Semua! */}
+            <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-6 z-20 bg-[#0c243f] text-white p-3.5 sm:p-4 rounded-2xl shadow-2xl border-2 border-sky-400/50 rotate-[-2deg] hover:rotate-0 transition-all duration-300 max-w-[210px] sm:max-w-[240px] select-none">
+              <div className="text-center font-sans">
+                <span className="block text-white text-[11px] sm:text-xs font-black tracking-wider leading-tight">
+                  ACARA SERU
+                </span>
+                <span className="block text-[#fbbf24] text-xs sm:text-sm font-black tracking-wide leading-tight my-0.5">
+                  TEAM HAPPY
+                </span>
+                <span className="block text-slate-200 text-[10px] sm:text-[11px] font-bold leading-tight">
+                  KENANGAN ABADI,
+                </span>
+                <span className="block text-slate-200 text-[10px] sm:text-[11px] font-bold leading-tight">
+                  KAMI YANG
+                </span>
+                <span className="inline-flex items-center justify-center gap-1 text-[#38bdf8] text-xs sm:text-sm font-black tracking-wider mt-1 border-t border-white/15 pt-1 w-full">
+                  ATUR SEMUA! <span className="text-sm">😊</span>
+                </span>
+              </div>
+            </div>
           </div>
 
         </div>

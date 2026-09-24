@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Montserrat, Playfair_Display, Caveat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -13,6 +13,13 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   weight: ["400", "700"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
@@ -139,7 +146,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${montserrat.variable} ${playfair.variable}`}>
+    <html lang="id" className={`${montserrat.variable} ${playfair.variable} ${caveat.variable}`}>
       <head>
         {/* Structured Data / Schema.org JSON-LD for Google Rich Results */}
         <script
