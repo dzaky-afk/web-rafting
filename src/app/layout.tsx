@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saadventure.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://web-rafting.vercel.app"),
   title: "Rafting Cisadane Bogor - Paket Arung Jeram & Outbound Terbaik | SA Adventure",
   description:
     "Paket Rafting Cisadane Bogor & Arung Jeram Caringin terlengkap mulai Rp 168rb/pax. Standar safety internasional, guide lisensi BNSP, makan prasmanan Sunda, outbound gathering & paintball.",
