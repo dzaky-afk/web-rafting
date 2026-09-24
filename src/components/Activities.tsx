@@ -48,8 +48,7 @@ const ACTIVITIES_DATA = [
   {
     title: "Trekking Sentul & Curug",
     price: "Rp 190.000 / pax",
-    minPax: "Min. 20 Pax",
-    image: "/images/drive_uploads/DSCN9782.JPG",
+    image: "/images/drive_uploads/DSCN9782.webp",
     icon: Mountain,
     addonId: "trekking",
     desc: "Jelajah susur sungai jernih, persawahan asri, perbukitan, dan air terjun alami.",
