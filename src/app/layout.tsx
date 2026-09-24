@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-jakarta",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-playfair",
+  weight: ["400", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -139,7 +139,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${outfit.variable} ${jakarta.variable}`}>
+    <html lang="id" className={`${montserrat.variable} ${playfair.variable}`}>
       <head>
         {/* Structured Data / Schema.org JSON-LD for Google Rich Results */}
         <script
@@ -157,16 +157,16 @@ export default function RootLayout({
               image: "https://saadventure.com/images/drive_uploads/DSCN9999.JPG",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03",
-                addressLocality: "Bogor Kabupaten",
+                streetAddress: "Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03",
+                addressLocality: "Caringin, Bogor Kabupaten",
                 addressRegion: "Jawa Barat",
                 postalCode: "16730",
                 addressCountry: "ID",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: -6.6746864,
-                longitude: 106.8402094,
+                latitude: -6.7030124,
+                longitude: 106.8263064,
               },
               aggregateRating: {
                 "@type": "AggregateRating",
@@ -247,7 +247,7 @@ export default function RootLayout({
                   name: "Di mana lokasi basecamp rafting Cisadane SA Adventure?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Basecamp SA Adventure berlokasi di Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Caringin, Bogor Kabupaten, Jawa Barat 16730. Mudah dijangkau, dekat exit Tol Caringin (bebas ganjil-genap), dan hanya sekitar 1-1.5 jam dari Jakarta.",
+                    text: "Basecamp SA Adventure berlokasi di Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Caringin, Bogor Kabupaten, Jawa Barat 16730. Mudah dijangkau, dekat exit Tol Caringin (bebas ganjil-genap), dan hanya sekitar 1-1.5 jam dari Jakarta.",
                   },
                 },
                 {
@@ -286,7 +286,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-body bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white">
+      <body className="font-sans bg-white text-slate-900 antialiased selection:bg-black selection:text-white">
         {children}
       </body>
     </html>

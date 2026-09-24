@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Plus, Minus, Check } from "lucide-react";
+import { Plus, Minus, Check, MapPin } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 const ADDONS = [
@@ -112,6 +112,8 @@ export default function BookingCalculator({ selectedAddonFromCard }: CalculatorP
 • Rombongan / Instansi: ${group.trim() || "-"}
 • Tanggal Rencana Kegiatan: ${dateFormatted}
 • Jumlah Peserta: ${pax} Pax
+• Titik Kumpul: Papalidan Outdoor Resto (Basecamp SA Adventure Caringin Bogor)
+• Google Maps: https://maps.app.goo.gl/Papalidan
 
 *PAKET & AKTIVITAS DIPILIH:*
 • *Paket Utama:* ${mainPackageName} (${formatRupiah(mainPackagePrice)}/pax)
@@ -463,6 +465,20 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                     <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
                     <span>Kirim Estimasi ke WhatsApp</span>
                   </button>
+
+                  {/* Location Info */}
+                  <div className="pt-2 text-center text-xs text-slate-500 flex items-center justify-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Titik Kumpul:</span>
+                    <a
+                      href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-semibold text-brand-dark hover:text-emerald-700 underline underline-offset-2 transition"
+                    >
+                      Papalidan Outdoor Resto &rarr;
+                    </a>
+                  </div>
 
                 </div>
 

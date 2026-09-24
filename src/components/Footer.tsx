@@ -1,116 +1,168 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Instagram, Mail, MapPin } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0b192c] text-white pt-10 pb-24 sm:py-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="contact" className="bg-black text-white pt-20 pb-12 px-6 border-t border-neutral-900 relative z-10 scroll-mt-10">
+      <div id="kontak" className="scroll-mt-10" />
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800/80">
+        {/* Col 1: Contact Info */}
+        <div>
+          <h4 className="font-serif text-2xl mb-6 tracking-wide text-white">
+            Contact Us
+          </h4>
+          <div className="font-light text-sm text-gray-400 mb-4 leading-relaxed">
+            <p className="mb-1">
+              <span className="text-white font-medium">Basecamp Cisadane:</span> Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi No. 1, Caringin, Bogor, Jawa Barat 16730
+            </p>
+            <a
+              href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-brand-gold hover:text-white transition-colors mt-0.5"
+            >
+              <MapPin className="w-3.5 h-3.5" />
+              <span>Titik Lokasi Google Maps &rarr;</span>
+            </a>
+          </div>
+          <p className="font-light text-sm text-gray-400 mb-6 leading-relaxed">
+            <span className="text-white font-medium">Kantor Depok:</span> Jl. Radar AURI RT.03/RW.10 Mekarsari, Cimanggis, Depok
+          </p>
           
-          {/* Col 1: Brand Info & Motto */}
-          <div className="md:col-span-5">
-            <Link href="#home" className="flex items-center gap-3 group mb-3">
-              <Image
-                src="/images/sa-adventure-logo.png"
-                alt="SA Adventure Logo"
-                width={80}
-                height={40}
-                className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-              />
+          <div className="space-y-4">
+            <div className="flex items-start gap-3 text-sm text-gray-400">
+              <WhatsAppIcon className="w-4 h-4 fill-current text-white shrink-0 mt-0.5" />
               <div>
-                <span className="font-heading font-black text-xl text-white tracking-wider block leading-tight">
-                  SA <span className="text-[#0284c7]">ADVENTURE</span>
+                <span className="text-[10px] text-gray-400 uppercase tracking-widest block font-bold">
+                  ADMIN 1 (RESERVASI UTAMA):
                 </span>
-                <span className="text-[10px] text-sky-400 font-bold uppercase tracking-wider">
-                  Event Organizer & Whitewater Rafting
+                <a
+                  href="https://wa.me/6281291068287?text=Halo%20Admin%201%20SA%20Adventure,%20saya%20ingin%20konsultasi%20paket%20rafting%20Cisadane"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-gray-300 font-bold text-sm tracking-wide transition-colors"
+                >
+                  +62 812 9106 8287
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-sm text-gray-400">
+              <WhatsAppIcon className="w-4 h-4 fill-current text-white shrink-0 mt-0.5" />
+              <div>
+                <span className="text-[10px] text-gray-400 uppercase tracking-widest block font-bold">
+                  ADMIN 2 (CUSTOMER SERVICE):
                 </span>
-              </div>
-            </Link>
-            
-            <p className="text-xs text-sky-300 italic font-semibold mb-3">
-              &ldquo;Create Moments. Build Memories. Have Fun!&rdquo;
-            </p>
-
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Event organizer profesional untuk company gathering, outing kantor, outbound team building, family gathering, wisata arung jeram Cisadane, serta penyedia akomodasi villa/glamping dan katering prasmanan Sunda.
-            </p>
-          </div>
-
-          {/* Col 2: Alamat Kantor & Basecamp */}
-          <div className="md:col-span-4 text-xs text-slate-400 space-y-3">
-            <div className="font-heading font-black text-sm text-white uppercase tracking-wider mb-2">
-              Lokasi & Alamat
-            </div>
-            <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-slate-200 block">Basecamp Bogor:</strong>
-                <span>Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Bogor Kabupaten, 16730, Jawa Barat, ID</span>
+                <a
+                  href="https://wa.me/62895808755565?text=Halo%20Admin%202%20SA%20Adventure,%20saya%20ingin%20konsultasi%20paket%20rafting%20Cisadane"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-gray-300 font-bold text-sm tracking-wide transition-colors"
+                >
+                  +62 895 8087 55565
+                </a>
               </div>
             </div>
-            <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-slate-200 block">Kantor Depok:</strong>
-                <span>Jl. RADAR AURI RT.03, RW 10 Mekarsari, Kec. Cimanggis, Kota Depok, Jawa Barat</span>
-              </div>
-            </div>
-          </div>
 
-          {/* Col 3: Hubungi Kami & Socials */}
-          <div className="md:col-span-3 text-xs text-slate-400 space-y-2.5">
-            <div className="font-heading font-black text-sm text-white uppercase tracking-wider mb-2">
-              Kontak Resmi
-            </div>
-            <div className="flex items-center gap-2">
-              <WhatsAppIcon className="w-4 h-4 fill-current text-emerald-400 shrink-0" />
-              <a href="https://wa.me/6281291068287" target="_blank" rel="noreferrer" className="text-slate-200 hover:text-sky-300 transition font-bold">
-                0812 9106 8287 <span className="text-[10px] text-emerald-400 font-semibold">(Utama)</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <WhatsAppIcon className="w-4 h-4 fill-current text-emerald-400/80 shrink-0" />
-              <a href="https://wa.me/62895808755565" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-sky-300 transition font-medium">
-                0895 8087 55565 <span className="text-[10px] text-slate-400 font-medium">(Cadangan)</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-3.5 h-3.5 text-sky-400" />
-              <a href="mailto:sa.adventure76@gmail.com" className="text-slate-300 hover:text-white transition">
+            <div className="flex items-center gap-3 text-sm text-gray-400">
+              <Mail className="w-4 h-4 text-white shrink-0" />
+              <a
+                href="mailto:sa.adventure76@gmail.com"
+                className="hover:text-white transition-colors text-sm"
+              >
                 sa.adventure76@gmail.com
               </a>
             </div>
-            <div className="pt-2">
+
+            <div className="flex items-center gap-3 text-sm text-gray-400">
+              <Instagram className="w-4 h-4 text-white shrink-0" />
               <a
                 href="https://www.instagram.com/sa.adventure.ok/"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram SA Adventure"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 hover:bg-[#0052cc] text-slate-200 hover:text-white border border-slate-700/70 font-semibold text-xs transition shadow-sm"
+                className="hover:text-white transition-colors text-sm"
               >
-                <Instagram className="w-3.5 h-3.5 text-sky-400" />
-                <span>@sa.adventure.ok</span>
+                @sa.adventure.ok
               </a>
             </div>
           </div>
-
         </div>
 
-        {/* Bottom Bar: Copyright & Tagline */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <div>
-            &copy; 2026 <strong>SA Adventure</strong>. Seluruh Hak Cipta Dilindungi.
-          </div>
-          <div className="text-slate-400">
-            Cisadane Whitewater Rafting & Outdoor Event Organizer Bogor - Depok.
+        {/* Col 2: Center Logo & Quick Links */}
+        <div className="text-center flex flex-col items-center justify-start">
+          <a
+            href="#home"
+            className="inline-block group mb-3 transition-transform duration-300 hover:scale-105"
+            aria-label="SA Adventure Beranda"
+          >
+            <img
+              src="/images/sa-adventure-logo.png"
+              alt="Logo SA Adventure"
+              className="h-16 md:h-20 w-auto object-contain mx-auto"
+            />
+          </a>
+
+          <h3 className="font-serif text-xl tracking-[0.25em] uppercase mb-4 text-white">
+            CISADANE RAFTING
+          </h3>
+          <p className="text-xs text-gray-400 max-w-xs mb-8 font-light leading-relaxed">
+            Professional Whitewater Rafting, Outbound Team Building, &amp; Nature Retreat in Bogor.
+          </p>
+
+          <div className="flex flex-col items-center gap-3 text-xs font-bold tracking-widest uppercase text-gray-400">
+            <div className="flex items-center justify-center gap-6">
+              <a href="#home" className="hover:text-white transition-colors">HOME</a>
+              <a href="#tentang-kami" className="hover:text-white transition-colors">ABOUT US</a>
+              <a href="#paket-rafting" className="hover:text-white transition-colors">SERVICES</a>
+            </div>
+            <div className="flex items-center justify-center gap-6">
+              <a href="#accommodation" className="hover:text-white transition-colors">ACCOMMODATION</a>
+              <a href="#galeri" className="hover:text-white transition-colors">GALLERY</a>
+            </div>
           </div>
         </div>
 
+        {/* Col 3: Fast Reservation / WhatsApp Inquiry */}
+        <div className="md:text-right flex flex-col md:items-end">
+          <h4 className="font-serif text-2xl mb-4 tracking-wide text-white">
+            Fast Booking
+          </h4>
+          <p className="font-light text-sm text-gray-400 mb-6 max-w-sm leading-relaxed">
+            Tanyakan tanggal tersedia, diskon rombongan, atau minta proposal resmi langsung via WhatsApp Admin kami.
+          </p>
+
+          <div className="w-full flex flex-col gap-3 md:items-end">
+            <a
+              href="https://wa.me/6281291068287?text=Halo%20Admin%201%20SA%20Adventure,%20saya%20ingin%20booking%20paket%20rafting%20Cisadane"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-block border border-white/80 hover:border-white px-6 py-3.5 uppercase tracking-widest text-xs font-bold text-white hover:bg-white hover:text-black transition-colors duration-300 text-center no-underline"
+            >
+              CHAT ADMIN 1 (0812-9106-8287)
+            </a>
+
+            <a
+              href="https://wa.me/62895808755565?text=Halo%20Admin%202%20SA%20Adventure,%20saya%20ingin%20booking%20paket%20rafting%20Cisadane"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-block border border-white/80 hover:border-white px-6 py-3.5 uppercase tracking-widest text-xs font-bold text-white hover:bg-white hover:text-black transition-colors duration-300 text-center no-underline"
+            >
+              CHAT ADMIN 2 (0895-8087-55565)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Bottom Copyright */}
+      <div className="max-w-7xl mx-auto text-center border-t border-neutral-900 pt-8">
+        <p className="text-xs text-gray-600 tracking-widest uppercase">
+          &copy; {new Date().getFullYear()} Cisadane River Rafting • SA Adventure. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

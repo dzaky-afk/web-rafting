@@ -1,115 +1,126 @@
-import { ShieldCheck, LifeBuoy, HardHat, UserCheck, Megaphone, Clock } from "lucide-react";
+import { ShieldCheck, LifeBuoy, HardHat, UserCheck, Megaphone, CheckCircle } from "lucide-react";
 
 export default function SafetyItinerary() {
+  const safetyItems = [
+    {
+      icon: LifeBuoy,
+      title: "Life Vest (Pelampung) Daya Apung Tinggi",
+      desc: "Sertifikasi ISO/CE dengan daya apung minimal 100 Newton, menjaga kepala tetap berada di atas permukaan air secara otomatis.",
+    },
+    {
+      icon: HardHat,
+      title: "Helm Arung Jeram Khusus (CE Water Sports)",
+      desc: "Melindungi kepala dari benturan dayung maupun batu kali dengan sistem ventilasi air cepat.",
+    },
+    {
+      icon: UserCheck,
+      title: "Skipper BNSP & River Rescue Team Standby",
+      desc: "Setiap perahu didampingi 1 skipper berlisensi BNSP, serta tim rescue tali lempar (throw bag) siaga di jeram ekstrem.",
+    },
+    {
+      icon: Megaphone,
+      title: "Briefing & Simulasi Penyelamatan Sebelum Start",
+      desc: "Instruktur memberikan penjelasan komprehensif terkait teknik mendayung, posisi duduk aman, dan prosedur jika terjatuh ke air.",
+    },
+  ];
+
+  const timeline = [
+    { time: "08.30 – 09.00", title: "Kedatangan & Welcome Drink", desc: "Penyambutan di basecamp SA Adventure tepi sungai, menikmati teh/kopi hangat & snack tradisional." },
+    { time: "09.00 – 09.30", title: "Fitting Gear & Safety Briefing", desc: "Pembagian pelampung dan helm, fitting ukuran pas, foto rombongan, serta pengarahan instruktur profesional." },
+    { time: "09.30 – 11.30", title: "Start Arung Jeram & Rest Area", desc: "Mengarungi jeram-jeram ikonik Cisadane, istirahat menikmati kelapa muda segar di saung tepi kali, lalu lanjut menaklukkan Dam 2 Meter." },
+    { time: "11.30 – 12.30", title: "Finish, Bilas Bersih & Kamar Mandi", desc: "Penjemputan mobil lokal di titik finish kembali ke basecamp untuk mandi dan berganti pakaian bersih." },
+    { time: "12.30 – SELESAI", title: "Makan Siang Prasmanan Khas Sunda", desc: "Santap siang lezat di saung (Ayam goreng, sayur asem, tahu tempe, ikan asin, sambal lalap) & penyerahan file dokumentasi." },
+  ];
+
   return (
-    <section id="keamanan" className="py-20 sm:py-24 bg-white/60 border-t border-b border-sky-100 backdrop-blur-md relative">
+    <section id="keamanan" className="py-16 sm:py-24 bg-brand-gray border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
-          {/* Left: Standar Keselamatan */}
-          <div>
-            <div className="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200">
-              <ShieldCheck className="w-4 h-4 text-[#0052cc]" />
-              <span>PRIORITAS KESELAMATAN #1</span>
-            </div>
-            <h2 className="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900 mb-4">
-              STANDAR KEAMANAN <br /><span className="text-[#0052cc]">ARUNG JERAM RESMI</span>
+
+        {/* 2-Column Editorial Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+          {/* Panel Kiri: Safety Standards */}
+          <div className="bg-white border border-gray-200 p-5 sm:p-8 lg:p-10">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block font-sans">
+              SAFETY FIRST
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark mb-4 leading-tight">
+              Safety & Equipment Standards
             </h2>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
-              Tidak bisa berenang? <strong>Sama sekali tidak masalah!</strong> Arung jeram di SA Adventure didesain aman untuk semua peserta mulai usia 6 tahun hingga 65 tahun berkat standar SOP ketat kami:
+            <p className="text-gray-600 text-sm leading-relaxed mb-8 font-sans">
+              Tidak bisa berenang?{" "}
+              <strong className="text-brand-dark font-bold">Sama sekali tidak masalah!</strong>{" "}
+              Arung jeram di SA Adventure didesain aman untuk semua peserta mulai usia 6 tahun hingga 65 tahun berkat standar SOP ketat kami:
             </p>
 
             <div className="space-y-4">
-              <div className="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
-                  <LifeBuoy className="w-5 h-5 text-[#0052cc]" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-black text-sm text-slate-900">Life Vest (Pelampung) Daya Apung Tinggi</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Sertifikasi ISO/CE dengan daya apung minimal 100 Newton, menjaga kepala tetap berada di atas permukaan air secara otomatis.</p>
-                </div>
-              </div>
+              {safetyItems.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="flex items-start gap-4 p-4 border border-gray-100 bg-brand-gray">
+                    <div className="w-10 h-10 border border-brand-dark text-brand-dark flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-sans font-bold text-sm text-brand-dark mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 leading-relaxed font-sans font-light">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
 
-              <div className="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
-                  <HardHat className="w-5 h-5 text-[#0052cc]" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-black text-sm text-slate-900">Helm Arung Jeram Khusus (CE Water Sports)</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Melindungi kepala dari benturan dayung maupun batu kali dengan sistem ventilasi air cepat.</p>
-                </div>
-              </div>
-
-              <div className="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
-                  <UserCheck className="w-5 h-5 text-[#0052cc]" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-black text-sm text-slate-900">Skipper BNSP & River Rescue Team Standby</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Setiap perahu didampingi 1 skipper berlisensi BNSP, serta tim rescue tali lempar (throw bag) siaga di jeram ekstrem.</p>
-                </div>
-              </div>
-
-              <div className="glass-card rounded-2xl p-4 flex items-start gap-4 border border-sky-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shrink-0 border border-sky-200">
-                  <Megaphone className="w-5 h-5 text-[#0052cc]" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-black text-sm text-slate-900">Briefing & Simulasi Penyelamatan Sebelum Start</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Instruktur memberikan penjelasan komprehensif terkait teknik mendayung, posisi duduk aman, dan prosedur jika terjatuh ke air.</p>
-                </div>
-              </div>
+            {/* Footer */}
+            <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-500 font-sans">
+              <span className="flex items-center gap-1.5 font-bold text-brand-dark">
+                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                Termasuk Asuransi Resmi
+              </span>
+              <span>Usia Peserta: 6 - 65 Tahun</span>
             </div>
           </div>
 
-          {/* Right: Rundown / Timeline Kegiatan */}
-          <div>
-            <div className="inline-flex items-center gap-1.5 font-heading font-black text-xs text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200">
-              <Clock className="w-4 h-4 text-[#0052cc]" />
-              <span>ALUR KEGIATAN EVENT</span>
-            </div>
-            <h2 className="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-slate-900 mb-4">
-              RUNDOWN KEGIATAN <br /><span className="text-[#0052cc]">SATU HARI SERU</span>
+          {/* Panel Kanan: Timeline */}
+          <div className="bg-white border border-gray-200 p-5 sm:p-8 lg:p-10">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block font-sans">
+              DAILY ITINERARY
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark mb-4 leading-tight">
+              One-Day Adventure Rundown
             </h2>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+            <p className="text-gray-600 text-sm leading-relaxed mb-8 font-sans">
               Alur kegiatan terstruktur untuk kenyamanan rombongan gathering, kantor, maupun keluarga:
             </p>
 
-            <div className="relative border-l-2 border-sky-200 ml-4 space-y-6 pl-6">
-              <div className="relative">
-                <div className="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">1</div>
-                <div className="text-xs font-black text-[#0052cc] uppercase tracking-wider">08.30 – 09.00</div>
-                <h4 className="font-heading font-black text-base text-slate-900 mt-0.5">Kedatangan & Welcome Drink</h4>
-                <p className="text-xs text-slate-600 mt-1">Penyambutan di basecamp SA Adventure tepi sungai, menikmati teh/kopi hangat & snack tradisional.</p>
-              </div>
+            {/* Timeline */}
+            <div className="relative border-l-2 border-gray-200 ml-4 space-y-6 pl-7">
+              {timeline.map((step, i) => (
+                <div key={i} className="relative">
+                  {/* Dot */}
+                  <div className="absolute -left-[32px] top-1 w-6 h-6 bg-brand-dark text-white flex items-center justify-center text-xs font-bold ring-4 ring-white font-sans">
+                    {i + 1}
+                  </div>
+                  <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-sans">
+                    {step.time}
+                  </div>
+                  <h3 className="font-sans font-bold text-sm text-brand-dark mt-0.5">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-1 leading-relaxed font-sans font-light">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-              <div className="relative">
-                <div className="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">2</div>
-                <div className="text-xs font-black text-[#0052cc] uppercase tracking-wider">09.00 – 09.30</div>
-                <h4 className="font-heading font-black text-base text-slate-900 mt-0.5">Fitting Gear & Safety Briefing</h4>
-                <p className="text-xs text-slate-600 mt-1">Pembagian pelampung dan helm, fitting ukuran pas, foto rombongan, serta pengarahan instruktur profesional.</p>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">3</div>
-                <div className="text-xs font-black text-[#0052cc] uppercase tracking-wider">09.30 – 11.30</div>
-                <h4 className="font-heading font-black text-base text-slate-900 mt-0.5">Start Arung Jeram & Rest Area</h4>
-                <p className="text-xs text-slate-600 mt-1">Mengarungi jeram-jeram ikonik Cisadane, istirahat menikmati kelapa muda segar di saung tepi kali, lalu lanjut menaklukkan Dam 2 Meter.</p>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">4</div>
-                <div className="text-xs font-black text-[#0052cc] uppercase tracking-wider">11.30 – 12.30</div>
-                <h4 className="font-heading font-black text-base text-slate-900 mt-0.5">Finish, Bilas Bersih & Kamar Mandi</h4>
-                <p className="text-xs text-slate-600 mt-1">Penjemputan mobil lokal di titik finish kembali ke basecamp untuk mandi dan berganti pakaian bersih.</p>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-xs font-bold">5</div>
-                <div className="text-xs font-black text-[#0052cc] uppercase tracking-wider">12.30 – Selesai</div>
-                <h4 className="font-heading font-black text-base text-slate-900 mt-0.5">Makan Siang Prasmanan Khas Sunda</h4>
-                <p className="text-xs text-slate-600 mt-1">Santap siang lezat di saung (Ayam goreng, sayur asem, tahu tempe, ikan asin, sambal lalap) & penyerahan file dokumentasi.</p>
-              </div>
+            {/* Footer */}
+            <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs text-gray-500 font-sans">
+              <span className="font-bold text-brand-dark">*Jadwal Fleksibel</span>
+              <span>Dapat disesuaikan dengan agenda rombongan</span>
             </div>
           </div>
 

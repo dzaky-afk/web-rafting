@@ -1,28 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   Home,
   Utensils,
   CheckCircle2,
   Users,
-  Flame,
-  Coffee,
-  Sparkles,
   ChevronRight,
   ChevronLeft,
   MapPin,
-  Tv,
-  Waves,
-  Music,
-  Maximize2,
-  Calendar,
   X,
-  Eye,
-  BookOpen,
-  Layers,
-  Star,
+  Sparkles,
+  ArrowRight,
+  Flame,
+  Coffee,
 } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
@@ -48,19 +40,19 @@ const VILLAS: VillaData[] = [
     id: "mawar",
     name: "Villa Mawar Puncak",
     location: "Kawasan Puncak - Bogor, Jawa Barat",
-    badge: "Paling Favorit untuk Rombongan & Gathering",
+    badge: "Favorit Gathering & Rombongan",
     capacity: "Kapasitas 30 - 70+ Orang",
     description:
       "Villa megah dengan halaman hijau sangat luas dan udara sejuk pegunungan Puncak. Dilengkapi kolam renang privat, rooftop dengan panorama 360° pegunungan, area karaoke, ruang kumpul keluarga/kantor yang lapang, serta gazebo santai.",
     features: [
       "Kolam Renang Privat (Private Swimming Pool)",
-      "Rooftop Panorama View Pegunungan Puncak",
+      "Rooftop Panorama View 360° Pegunungan Puncak",
       "Fasilitas Karaoke & Billiard Seru",
       "Ruang Kumpul & Ruang Tamu Sangat Luas",
       "Kamar Tidur Bersih & Nyaman (Banyak Bed)",
-      "Halaman Rumput Luas untuk Fun Games / BBQ",
+      "Halaman Rumput Luas untuk Fun Games & BBQ",
       "Dapur Lengkap & Alat Masak Rombongan",
-      "Parkir Luas Muat Hingga Mobil & Bus Medium",
+      "Parkir Luas Muat Mobil & Bus Medium",
     ],
     photos: [
       {
@@ -124,11 +116,11 @@ const VILLAS: VillaData[] = [
     description:
       "Villa bernuansa asri dan elegan dengan taman tropis rindang serta kolam renang pribadi yang tenang. Sangat cocok untuk gathering divisi, liburan keluarga besar, atau acara reuni intim yang mengutamakan privasi dan kenyamanan.",
     features: [
-      "Private Swimming Pool dengan Taman Tropis",
+      "Private Swimming Pool dengan Taman Tropis Rindang",
       "Suasana Hening, Asri & Sangat Privat",
-      "Ruang Santai & Living Room Estetik",
+      "Ruang Santai & Living Room Bernuansa Hangat",
       "Kamar Tidur Nyaman dengan Pencahayaan Alami",
-      "Balkon Santai Menghadap View Hijau Rindang",
+      "Balkon Santai Menghadap Hamparan Hijau",
       "Dapur Bersih Lengkap Perlengkapan Memasak",
       "Area Outdoor untuk Santap Bersama & Barbeque",
       "Akses Mudah & Lingkungan Tenang Bebas Bising",
@@ -169,7 +161,6 @@ export interface CateringMenu {
   category: "box" | "sunda" | "tumpeng";
   categoryLabel: string;
   badge: string;
-  badgeColor: string;
   image: string;
   desc: string;
   items: string[];
@@ -182,7 +173,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "sunda",
     categoryLabel: "Tradisional Sunda",
     badge: "Paling Favorit",
-    badgeColor: "bg-amber-500 text-white",
     image: "/images/catering/clean/paket-nasi-liwet-ayam-bakar.jpg",
     desc: "Nasi liwet bakar aroma daun pisang wangi rempah pandan dan kemangi, dipadu ayam bakar empuk juicy berlumur bumbu meresap.",
     items: [
@@ -198,7 +188,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Nasi Box Pilihan",
     badge: "Best Seller",
-    badgeColor: "bg-emerald-600 text-white",
     image: "/images/catering/clean/paket-ayam-bakar-kumplit.jpg",
     desc: "Paket komplit ayam bakar paha/dada dengan olesan bumbu kecap manis gurih medok, tahu tempe goreng, dan sambal pedas nampol.",
     items: [
@@ -214,7 +203,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "sunda",
     categoryLabel: "Tradisional Sunda",
     badge: "Kuah Segar Sunda",
-    badgeColor: "bg-sky-600 text-white",
     image: "/images/catering/clean/paket-sayur-asem.jpg",
     desc: "Kombinasi klasik legendaris Sunda: sayur asem kuah gurih asam segar dipadu ayam goreng rempah bertabur serundeng renyah.",
     items: [
@@ -230,7 +218,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Kemasan Bento",
     badge: "Praktis & Higienis",
-    badgeColor: "bg-indigo-600 text-white",
     image: "/images/catering/clean/paket-bento-ayam-bakar.jpg",
     desc: "Sajian modern dalam kotak bento bersekat higienis. Pilihan favorit gathering kantor, pelatihan, dan acara outbound dinamis.",
     items: [
@@ -246,7 +233,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Nasi Box Pilihan",
     badge: "Bumbu Kuning",
-    badgeColor: "bg-amber-600 text-white",
     image: "/images/catering/clean/paket-ayam-bakar-kuning.jpg",
     desc: "Ayam bakar racikan bumbu kuning kaya kunyit dan rempah alamiah beraroma sedap, gurih meresap dengan lauk pelengkap komplit.",
     items: [
@@ -262,7 +248,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Spesial Daging",
     badge: "Menu Premium",
-    badgeColor: "bg-rose-600 text-white",
     image: "/images/catering/clean/paket-daging-sukiyaki.jpg",
     desc: "Olahan irisan daging sapi sukiyaki lembut dengan saus gurih manis khas, dipadukan sambal goreng kentang balado dan sayuran bergizi.",
     items: [
@@ -276,9 +261,8 @@ export const CATERING_ITEMS: CateringMenu[] = [
     id: "tumpeng-ayam-bekakak",
     name: "Tumpeng Urap Ayam Bekakak",
     category: "tumpeng",
-    categoryLabel: "Tumpeng & Gathering",
-    badge: "Spesial Acara & Syukuran",
-    badgeColor: "bg-amber-700 text-white",
+    categoryLabel: "Tumpeng Syukuran",
+    badge: "Spesial Acara",
     image: "/images/catering/clean/tumpeng-urap-ayam-bekakak.jpg",
     desc: "Nasi tumpeng megah berhias mahkota daun pisang lengkap dengan ayam bekakak utuh panggang bumbu rempah, urap kelapa, dan aneka lauk perayaan.",
     items: [
@@ -294,7 +278,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Pilihan Ikan",
     badge: "Sehat & Lezat",
-    badgeColor: "bg-teal-600 text-white",
     image: "/images/catering/clean/paket-nasi-ikan.jpg",
     desc: "Fillet ikan lembut berbalut saus asam manis lezat, disajikan dengan tumis buncis bakso dan sambal goreng kentang balado gurih.",
     items: [
@@ -310,7 +293,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Pilihan Ikan",
     badge: "Renyah Asam Manis",
-    badgeColor: "bg-emerald-700 text-white",
     image: "/images/catering/clean/paket-ikan-asam-manis.jpg",
     desc: "Ikan goreng tepung renyah berpadu saus asam manis segar, tumis buncis bakso iris, dan sambal goreng kentang balado.",
     items: [
@@ -324,9 +306,8 @@ export const CATERING_ITEMS: CateringMenu[] = [
     id: "nasi-bakar-telur",
     name: "Nasi Bakar Paket Telur",
     category: "sunda",
-    categoryLabel: "Nasi Bakar",
+    categoryLabel: "Tradisional Sunda",
     badge: "Aroma Bakar",
-    badgeColor: "bg-orange-600 text-white",
     image: "/images/catering/clean/nasi-bakar-paket-telur.jpg",
     desc: "Nasi bakar gurih aroma daun pisang bakar dengan isian rempah, lauk telur bumbu sedap, kerupuk renyah dan sambal tomat pedas.",
     items: [
@@ -342,7 +323,6 @@ export const CATERING_ITEMS: CateringMenu[] = [
     category: "box",
     categoryLabel: "Nasi Box Pilihan",
     badge: "Komplit + Buah",
-    badgeColor: "bg-blue-600 text-white",
     image: "/images/catering/clean/paket-nasi-box-ekonomis.jpg",
     desc: "Pilihan praktis bergizi komplit dengan ayam bakar bumbu kecap empuk, tumis jagung wortel bakso, cup sambal, dan 1 buah jeruk manis segar.",
     items: [
@@ -471,32 +451,70 @@ export const GUBUKAN_OPTIONS = [
   "Es Koktail Buah",
 ];
 
-export const NASI_GORENG_OPTIONS = [
-  "Nasi Goreng Seafood",
-  "Nasi Goreng Ayam",
-  "Nasi Goreng Daging Sapi",
-  "Nasi Goreng Bakso",
-];
-
 export default function AccommodationCatering() {
   const [activeVillaId, setActiveVillaId] = useState<"mawar" | "zanara">("mawar");
   const [photoIndex, setPhotoIndex] = useState(0);
-  const [cateringCategory, setCateringCategory] = useState<"all" | "box" | "sunda" | "tumpeng" | "prasmanan">("all");
-  const [activePrasmananTab, setActivePrasmananTab] = useState(0);
-  const [lightboxPhoto, setLightboxPhoto] = useState<{ src: string; title: string; desc: string; category?: string } | null>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+  const [isVillaModalOpen, setIsVillaModalOpen] = useState(false);
+
+  // Catering state
+  const [isCateringMenuOpen, setIsCateringMenuOpen] = useState(false);
+  const [cateringTab, setCateringTab] = useState<"box" | "prasmanan">("box");
+  const [boxSubCategory, setBoxSubCategory] = useState<"all" | "box" | "sunda" | "tumpeng">("all");
+  const [activePrasmananIdx, setActivePrasmananIdx] = useState(0);
+  const [lightboxItem, setLightboxItem] = useState<CateringMenu | null>(null);
+
   const whatsappNumber = "6281291068287";
   const whatsappBackupNumber = "62895808755565";
 
   const currentVilla = VILLAS.find((v) => v.id === activeVillaId) || VILLAS[0];
 
-  // Reset slider index when changing villa
-  const handleSelectVilla = (id: "mawar" | "zanara") => {
+  const handleToggleCateringMenu = () => {
+    setIsCateringMenuOpen((prev) => {
+      const next = !prev;
+      if (next) {
+        setTimeout(() => {
+          const el = document.getElementById("catering-content-area");
+          if (el) {
+            const yOffset = -90;
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }, 150);
+      }
+      return next;
+    });
+  };
+
+  const handleOpenVillaDetail = (id: "mawar" | "zanara") => {
     setActiveVillaId(id);
     setPhotoIndex(0);
+    setIsVillaModalOpen(true);
   };
 
   const handleNextPhoto = () => {
     setPhotoIndex((prev) => (prev + 1) % currentVilla.photos.length);
+  };
+
+  const handlePhotoTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handlePhotoTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handlePhotoTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 30) {
+      if (diff > 0) {
+        handleNextPhoto();
+      } else {
+        handlePrevPhoto();
+      }
+    }
   };
 
   const handlePrevPhoto = () => {
@@ -505,670 +523,758 @@ export default function AccommodationCatering() {
     );
   };
 
+  // Close modals on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsVillaModalOpen(false);
+        setLightboxItem(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   const activePhoto = currentVilla.photos[photoIndex];
+
+  const filteredBoxItems = CATERING_ITEMS.filter((item) => {
+    if (boxSubCategory === "all") return true;
+    return item.category === boxSubCategory;
+  });
 
   return (
     <section
-      id="akomodasi-katering"
-      className="py-20 sm:py-28 bg-slate-50/70 border-t border-sky-100 relative overflow-hidden"
+      id="accommodation"
+      className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-gray-100 relative overflow-hidden scroll-mt-20"
     >
-      {/* Background Decorative Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-sky-200/20 via-blue-200/15 to-emerald-200/20 blur-3xl -z-10 rounded-full pointer-events-none" />
+      <div id="villa" className="scroll-mt-20" />
+      <div id="pemilihan-villa" className="scroll-mt-20" />
+      <div id="akomodasi" className="scroll-mt-20" />
+      <div id="akomodasi-katering" className="scroll-mt-20" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 font-heading font-black text-xs sm:text-sm text-[#0052cc] tracking-wider uppercase mb-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200">
-            <Sparkles className="w-3.5 h-3.5 text-sky-500" />
-            <span>Fasilitas Lengkap One-Stop Service</span>
-          </span>
-          <h2 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-slate-900 mb-3">
-            PILIHAN <span className="text-[#0052cc]">AKOMODASI VILLA</span> & KATERING
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
-            Lengkapi liburan dan gathering Anda dengan menginap di villa pilihan terbaik serta sajian katering prasmanan Sunda dan kambing guling istimewa.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto">
+        {/* ================= PART 1: EDITORIAL HEADER ================= */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-16 mb-20">
 
-        {/* ========================================================================= */}
-        {/* VILLA SHOWCASE SLIDER WITH 2 CHOICES */}
-        {/* ========================================================================= */}
-        <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden mb-16">
-          
-          {/* Villa Selector Header Tabs */}
-          <div className="bg-slate-900 text-white p-4 sm:p-6 border-b border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div className="text-[11px] font-bold text-sky-400 uppercase tracking-wider flex items-center gap-1.5 mb-1">
-                <Home className="w-4 h-4 text-sky-400" />
-                <span>Pilih Opsi Villa Penginapan</span>
-              </div>
-              <h3 className="font-heading font-black text-xl sm:text-2xl text-white">
-                Galeri Foto & Fasilitas Villa
-              </h3>
-            </div>
+          {/* Right Text Column */}
+          <div className="w-full md:w-1/2 pl-0 md:pl-8">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block font-sans">
+              REST & RECHARGE
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6 leading-tight">
+              Stay in the Heart<br />of Nature
+            </h2>
+            <p className="text-gray-600 mb-6 leading-relaxed font-light text-sm sm:text-base font-sans">
+              Setelah seharian memacu adrenalin menaklukkan jeram Cisadane, nikmati kenyamanan istirahat di villa eksklusif berhawa sejuk di kawasan Puncak & Bogor. Sangat cocok untuk rombongan kantor, komunitas, maupun keluarga besar.
+            </p>
+            <ul className="space-y-4 mb-8 font-sans">
+              <li className="flex items-start text-gray-600 font-light text-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-dark mr-3 mt-2 shrink-0" />
+                <span>Villa Eksklusif Privat: Villa Mawar (30-70+ orang) & Villa Zanara (20-45 orang)</span>
+              </li>
+              <li className="flex items-start text-gray-600 font-light text-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-dark mr-3 mt-2 shrink-0" />
+                <span>Fasilitas Lengkap: Private Swimming Pool, Rooftop View Gunung, Karaoke & Halaman BBQ</span>
+              </li>
+              <li className="flex items-start text-gray-600 font-light text-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-dark mr-3 mt-2 shrink-0" />
+                <span>Tersedia Layanan Katering Prasmanan Sunda Tradisional & Kambing Guling Hangat</span>
+              </li>
+            </ul>
 
-            {/* 2 Villa Choice Buttons */}
-            <div className="flex items-center gap-2.5 bg-slate-800/90 p-1.5 rounded-2xl border border-slate-700 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 font-sans w-full sm:w-auto">
               <button
-                onClick={() => handleSelectVilla("mawar")}
-                className={`flex-1 sm:flex-initial px-5 py-2.5 rounded-xl font-heading font-black text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
-                  activeVillaId === "mawar"
-                    ? "bg-[#0052cc] text-white shadow-md shadow-blue-500/30 scale-[1.02]"
-                    : "text-slate-300 hover:text-white hover:bg-slate-700/50"
-                }`}
+                type="button"
+                onClick={() => handleOpenVillaDetail("mawar")}
+                className="w-full sm:w-auto text-center justify-center inline-block bg-brand-dark text-white px-8 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-neutral-800 transition-colors duration-300 cursor-pointer shadow-sm"
               >
-                <Home className="w-4 h-4" />
-                <span>Villa Mawar Puncak</span>
+                Buka Galeri & Fasilitas Villa
               </button>
-
-              <button
-                onClick={() => handleSelectVilla("zanara")}
-                className={`flex-1 sm:flex-initial px-5 py-2.5 rounded-xl font-heading font-black text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
-                  activeVillaId === "zanara"
-                    ? "bg-[#0052cc] text-white shadow-md shadow-blue-500/30 scale-[1.02]"
-                    : "text-slate-300 hover:text-white hover:bg-slate-700/50"
-                }`}
+              <a
+                href="#menu-katering"
+                className="w-full sm:w-auto text-center justify-center inline-block border border-brand-dark text-brand-dark px-8 py-3.5 uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors duration-300 cursor-pointer"
               >
-                <Home className="w-4 h-4" />
-                <span>Villa Zanara</span>
-              </button>
+                Lihat Menu Katering
+              </a>
             </div>
           </div>
 
-          {/* Villa Details & Interactive Photo Slider */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            
-            {/* Left Col (Slider & Thumbnails) - 7 cols */}
-            <div className="lg:col-span-7 p-4 sm:p-6 lg:p-8 bg-slate-950 flex flex-col justify-between">
-              
-              {/* Main Photo Slider Viewport */}
-              <div className="relative h-72 sm:h-96 md:h-[420px] w-full rounded-2xl overflow-hidden shadow-2xl bg-black">
-                <Image
-                  src={activePhoto.src}
-                  alt={activePhoto.title}
-                  fill
-                  priority
-                  className="object-cover object-center transition-all duration-500"
-                />
-
-                {/* Dark Gradient Overlay for Caption */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
-
-                {/* Counter & Category Pill */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                  <span className="px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white font-heading font-bold text-xs border border-white/20">
-                    {currentVilla.name}
-                  </span>
-                  <span className="px-3 py-1 rounded-full bg-sky-500/80 backdrop-blur-md text-white font-heading font-black text-xs">
-                    {photoIndex + 1} / {currentVilla.photos.length} Foto
-                  </span>
-                </div>
-
-                {/* Slider Nav Prev Button */}
-                <button
-                  onClick={handlePrevPhoto}
-                  aria-label="Foto Sebelumnya"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition hover:scale-110 active:scale-95 cursor-pointer z-10"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-
-                {/* Slider Nav Next Button */}
-                <button
-                  onClick={handleNextPhoto}
-                  aria-label="Foto Selanjutnya"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition hover:scale-110 active:scale-95 cursor-pointer z-10"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-
-                {/* Bottom Slide Caption */}
-                <div className="absolute bottom-4 left-4 right-4 text-white z-10 pointer-events-none">
-                  <h4 className="font-heading font-bold text-base sm:text-lg text-white drop-shadow">
-                    {activePhoto.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-slate-300 mt-0.5 line-clamp-2">
-                    {activePhoto.caption}
-                  </p>
-                </div>
-              </div>
-
-              {/* Thumbnail Strip Selector */}
-              <div className="mt-4 flex items-center gap-2.5 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-                {currentVilla.photos.map((photo, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setPhotoIndex(idx)}
-                    className={`relative w-16 sm:w-20 h-12 sm:h-14 rounded-xl overflow-hidden shrink-0 transition-all cursor-pointer ${
-                      photoIndex === idx
-                        ? "ring-2 ring-sky-400 scale-105 opacity-100 shadow-md"
-                        : "opacity-50 hover:opacity-80"
-                    }`}
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={photo.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
+          {/* Left: Overlapping Photo Collage with Editorial Accent */}
+          <div className="w-full md:w-1/2 relative h-[260px] sm:h-[340px] md:h-[440px]">
+            <div className="absolute top-0 left-0 w-3/4 h-3/4 bg-gray-100 shadow-md overflow-hidden">
+              <Image
+                src="/images/villas/mawar/mawar1.jpg"
+                alt="Villa Mawar Puncak"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
             </div>
+            <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gray-200 shadow-xl overflow-hidden border-4 border-white">
+              <Image
+                src="/images/villas/zanara/zanara2.jpg"
+                alt="Villa Zanara Kolam Renang"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-28 h-28 border-l-2 border-b-2 border-brand-dark hidden md:block pointer-events-none" />
+          </div>
 
-            {/* Right Col (Specs, Features, WhatsApp CTA) - 5 cols */}
-            <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white">
-              <div>
-                {/* Badge & Name */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-[#0052cc] text-xs font-heading font-bold border border-sky-200 mb-3">
-                  <Sparkles className="w-3.5 h-3.5 text-sky-500" />
-                  <span>{currentVilla.badge}</span>
-                </div>
+        </div>
 
-                <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 leading-tight mb-2">
-                  {currentVilla.name}
-                </h3>
+        {/* ================= PART 2: 2 ELEGANT VILLA PREVIEW CARDS ================= */}
+        <div className="pt-12 border-t border-gray-100 mb-24">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-2 block font-sans">
+              ACCOMMODATION OPTIONS
+            </span>
+            <h3 className="font-serif text-3xl sm:text-4xl text-brand-dark">
+              Pilihan Villa Rombongan
+            </h3>
+            <p className="text-gray-500 text-sm mt-3 font-light leading-relaxed font-sans">
+              Klik salah satu villa untuk melihat galeri foto lengkap, denah fasilitas, dan informasi ketersediaan.
+            </p>
+          </div>
 
-                <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-semibold mb-4">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-[#0052cc]" />
-                    {currentVilla.location}
-                  </span>
-                  <span>•</span>
-                  <span className="flex items-center gap-1 text-slate-800 font-bold bg-slate-100 px-2.5 py-0.5 rounded-md">
-                    <Users className="w-3.5 h-3.5 text-sky-600" />
-                    {currentVilla.capacity}
-                  </span>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+            {VILLAS.map((villa) => (
+              <div
+                key={villa.id}
+                className="bg-white border border-gray-200 hover:border-gray-400 transition-all duration-300 flex flex-col group shadow-sm hover:shadow-md"
+              >
+                {/* Image Container with Editorial Badge */}
+                <div
+                  onClick={() => handleOpenVillaDetail(villa.id)}
+                  className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 cursor-pointer"
+                >
+                  <Image
+                    src={villa.photos[0].src}
+                    alt={villa.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300" />
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                  {currentVilla.description}
-                </p>
+                  {/* Top Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-white/95 backdrop-blur-xs text-brand-dark text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 shadow-sm font-sans">
+                      {villa.badge}
+                    </span>
+                  </div>
 
-                {/* Features List */}
-                <div className="mb-6">
-                  <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">
-                    Fasilitas Unggulan Villa:
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
-                    {currentVilla.features.map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
+                  {/* Photo Count */}
+                  <div className="absolute bottom-4 right-4">
+                    <span className="bg-brand-dark/85 backdrop-blur-xs text-white text-[11px] font-sans font-bold px-3 py-1 shadow-sm">
+                      {villa.photos.length} Foto Galeri
+                    </span>
                   </div>
                 </div>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="pt-4 border-t border-slate-100 space-y-3">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    `Halo SA Adventure, saya ingin cek ketersediaan tanggal dan harga sewa untuk ${currentVilla.name} (${currentVilla.capacity}). Mohon informasinya.`
-                  )}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full bg-gradient-to-r from-sky-500 to-[#0052cc] hover:from-sky-600 hover:to-blue-700 text-white font-heading font-black text-sm py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2.5 shadow-md shadow-blue-500/20 transition-all hover:scale-[1.01] active:scale-[0.98]"
-                >
-                  <WhatsAppIcon className="w-5 h-5 fill-current" />
-                  <span>Cek Jadwal & Harga {currentVilla.name}</span>
-                </a>
+                {/* Content */}
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 font-sans mb-3">
+                      <span className="flex items-center gap-1 font-medium text-gray-700">
+                        <MapPin className="w-3.5 h-3.5 text-gray-400" />
+                        {villa.location}
+                      </span>
+                      <span>•</span>
+                      <span className="flex items-center gap-1 font-bold text-brand-dark">
+                        <Users className="w-3.5 h-3.5 text-gray-400" />
+                        {villa.capacity}
+                      </span>
+                    </div>
 
-                <div className="flex items-center justify-center gap-4 text-[11px] text-slate-500 text-center font-medium">
-                  <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> Konfirmasi Langsung</span>
-                  <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> Bisa Survey Lokasi</span>
-                  <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" /> Layanan 24 Jam</span>
+                    <h4 className="font-serif text-2xl text-brand-dark mb-3">
+                      {villa.name}
+                    </h4>
+
+                    <p className="text-gray-600 text-sm font-light leading-relaxed mb-6 font-sans line-clamp-3">
+                      {villa.description}
+                    </p>
+
+                    {/* Features Preview (4 items) */}
+                    <ul className="space-y-2 mb-8 font-sans text-xs text-gray-700">
+                      {villa.features.slice(0, 4).map((feat, idx) => (
+                        <li key={idx} className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 font-sans">
+                    <button
+                      type="button"
+                      onClick={() => handleOpenVillaDetail(villa.id)}
+                      className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-neutral-600 transition-colors cursor-pointer group-hover:translate-x-1 duration-300 py-1"
+                    >
+                      <span>Lihat Galeri & Fasilitas</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+
+                    <a
+                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                        `Halo SA Adventure, saya ingin cek ketersediaan tanggal dan harga sewa untuk ${villa.name} (${villa.capacity}). Mohon informasinya.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-xs text-center"
+                    >
+                      Cek Jadwal
+                    </a>
+                  </div>
+
                 </div>
-
-                <div className="text-center text-[11px] text-slate-500 pt-1">
-                  Admin Utama lambat merespons?{" "}
-                  <a
-                    href={`https://wa.me/${whatsappBackupNumber}?text=${encodeURIComponent(
-                      `Halo SA Adventure, saya ingin cek ketersediaan tanggal dan harga sewa untuk ${currentVilla.name} (${currentVilla.capacity}). Mohon informasinya.`
-                    )}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-emerald-700 font-semibold underline hover:text-emerald-800"
-                  >
-                    Hubungi WA Cadangan (0895-8087-55565)
-                  </a>
-                </div>
               </div>
-
-            </div>
-
+            ))}
           </div>
         </div>
 
-        {/* ========================================================================= */}
-        {/* KATERING & JAMUAN KULINER SHOWCASE */}
-        {/* ========================================================================= */}
-        <div className="mt-14 pt-12 border-t border-slate-200/80">
-          
-          {/* Section Sub-Header */}
-          <div className="text-center max-w-3xl mx-auto mb-9">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-heading font-bold tracking-wide border border-emerald-200/80 mb-2.5 shadow-2xs">
-              <Utensils className="w-3.5 h-3.5 text-emerald-600" />
-              <span>KULINER & KATERING SA ADVENTURE BOGOR</span>
-            </div>
-            <h3 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-2.5">
-              Pilihan Menu <span className="text-emerald-600">Nasi Box, Bento & Prasmanan</span>
+        {/* ================= PART 3: KULINER & KATERING SECTION ================= */}
+        <div id="menu-katering" className="pt-16 border-t border-gray-200">
+
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-2 block font-sans">
+              KULINER & KATERING SA ADVENTURE
+            </span>
+            <h3 className="font-serif text-3xl sm:text-4xl text-brand-dark">
+              Pilihan Nasi Box, Bento & Prasmanan
             </h3>
-            <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-normal">
-              Diracik dari bahan segar dan bumbu rempah otentik khas Sunda & Nusantara. Siap disajikan hangat di basecamp rafting maupun di villa.
+            <p className="text-gray-500 text-sm mt-3 font-light leading-relaxed font-sans max-w-xl mx-auto">
+              Diracik dari bahan segar dan bumbu rempah otentik khas Sunda & Nusantara. Siap disajikan hangat di saung basecamp arung jeram maupun di villa rombongan Anda.
             </p>
 
-            {/* Format Sajian Switcher: Nasi Box & Bento vs Prasmanan */}
-            <div className="inline-flex p-1 sm:p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 shadow-inner mt-6 max-w-md w-full justify-center">
+            {/* Toggle Button to Reveal/Hide Catering Menu */}
+            <div className="mt-6 sm:mt-8 flex justify-center">
               <button
+                id="btn-toggle-catering"
                 type="button"
-                onClick={() => setCateringCategory("all")}
-                className={`flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-heading font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 ${
-                  cateringCategory !== "prasmanan"
-                    ? "bg-emerald-600 text-white shadow-md"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
-                }`}
+                onClick={handleToggleCateringMenu}
+                aria-expanded={isCateringMenuOpen}
+                aria-controls="catering-content-area"
+                className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-3.5 bg-brand-dark hover:bg-neutral-800 text-white font-sans font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 cursor-pointer"
               >
-                <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>Nasi Box & Bento ({CATERING_ITEMS.length})</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setCateringCategory("prasmanan")}
-                className={`flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-heading font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 ${
-                  cateringCategory === "prasmanan"
-                    ? "bg-slate-900 text-white shadow-md"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
-                }`}
-              >
-                <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
-                <span>Prasmanan ({PRASMANAN_MENUS.length} Menu)</span>
+                <Utensils className="w-4 h-4 text-amber-400" />
+                <span>{isCateringMenuOpen ? "Sembunyikan Menu" : "Lihat Pilihan Menu Katering"}</span>
+                <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${isCateringMenuOpen ? "-rotate-90" : "rotate-90"}`} />
               </button>
             </div>
-
-            {/* Sub-Filters for Nasi Box */}
-            {cateringCategory !== "prasmanan" && (
-              <div className="flex flex-wrap items-center justify-center gap-2 mt-4 animate-in fade-in duration-200">
-                {[
-                  { id: "all", label: `Semua Menu (${CATERING_ITEMS.length})` },
-                  { id: "box", label: `Nasi Box & Bento (${CATERING_ITEMS.filter((i) => i.category === "box").length})` },
-                  { id: "sunda", label: `Tradisional Sunda (${CATERING_ITEMS.filter((i) => i.category === "sunda").length})` },
-                  { id: "tumpeng", label: `Tumpeng Syukuran (${CATERING_ITEMS.filter((i) => i.category === "tumpeng").length})` },
-                ].map((tab) => (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setCateringCategory(tab.id as any)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-heading font-bold tracking-wide transition-all cursor-pointer ${
-                      cateringCategory === tab.id
-                        ? "bg-slate-900 text-white shadow-sm scale-105"
-                        : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200"
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
-          {/* CATERING ITEMS GRID (When on Nasi Box & Bento) */}
-          {cateringCategory !== "prasmanan" ? (
-            <>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5 mb-8">
-                {CATERING_ITEMS.filter(
-                  (item) => cateringCategory === "all" || item.category === cateringCategory
-                ).map((item) => (
-                  <div
-                    key={item.id}
-                    className="bg-white rounded-2xl overflow-hidden border border-slate-200/70 shadow-xs hover:shadow-lg hover:border-emerald-300/80 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
+          {/* Collapsible Catering Content */}
+          {isCateringMenuOpen && (
+            <div id="catering-content-area" className="scroll-mt-24 transition-opacity duration-300">
+              <div className="text-center mb-6 sm:mb-8">
+                {/* Segmented Switcher: Nasi Box vs Prasmanan */}
+                <div className="inline-flex border border-gray-300 p-1 bg-white mt-4 sm:mt-6 font-sans">
+                  <button
+                    type="button"
+                    onClick={() => setCateringTab("box")}
+                    className={`px-3 sm:px-6 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-1.5 ${cateringTab === "box"
+                        ? "bg-brand-dark text-white shadow-xs"
+                        : "text-gray-600 hover:text-black"
+                      }`}
                   >
-                    {/* Photo with 4:3 Aspect Ratio */}
+                    <Utensils className="w-3.5 h-3.5 shrink-0" />
+                    <span>Nasi Box & Bento ({CATERING_ITEMS.length})</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCateringTab("prasmanan")}
+                    className={`px-3 sm:px-6 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-1.5 ${cateringTab === "prasmanan"
+                        ? "bg-brand-dark text-white shadow-xs"
+                        : "text-gray-600 hover:text-black"
+                      }`}
+                  >
+                    <Flame className="w-3.5 h-3.5 shrink-0" />
+                    <span>Prasmanan Sunda ({PRASMANAN_MENUS.length} Menu)</span>
+                  </button>
+                </div>
+
+                {/* Sub-Filters for Nasi Box */}
+                {cateringTab === "box" && (
+                  <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3 font-sans text-[11px] sm:text-xs">
+                    {[
+                      { id: "all", label: `Semua (${CATERING_ITEMS.length})` },
+                      { id: "box", label: "Nasi Box & Bento" },
+                      { id: "sunda", label: "Tradisional Sunda" },
+                      { id: "tumpeng", label: "Tumpeng Syukuran" },
+                    ].map((f) => (
+                      <button
+                        key={f.id}
+                        type="button"
+                        onClick={() => setBoxSubCategory(f.id as any)}
+                        className={`px-2.5 sm:px-4 py-1 sm:py-1.5 transition-colors cursor-pointer ${boxSubCategory === f.id
+                            ? "border-b-2 border-brand-dark text-brand-dark font-bold"
+                            : "text-gray-500 hover:text-black font-medium"
+                          }`}
+                      >
+                        {f.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* VIEW A: NASI BOX & BENTO GRID */}
+              {cateringTab === "box" && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 font-sans mb-12">
+                  {filteredBoxItems.map((item) => (
                     <div
-                      onClick={() =>
-                        setLightboxPhoto({
-                          src: item.image,
-                          title: item.name,
-                          desc: item.desc,
-                          category: item.categoryLabel,
-                        })
-                      }
-                      className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 cursor-pointer"
+                      key={item.id}
+                      className="bg-white border border-gray-200 hover:border-gray-400 transition-all duration-300 flex flex-col group shadow-2xs hover:shadow-sm"
                     >
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-3 py-1 rounded-full bg-slate-900/85 text-white text-[10px] font-heading font-bold tracking-wide backdrop-blur-sm flex items-center gap-1 shadow-md">
-                          <Eye className="w-3 h-3 text-emerald-400" />
-                          <span>Perbesar</span>
-                        </span>
+                      {/* Photo with Click to Lightbox */}
+                      <div
+                        onClick={() => setLightboxItem(item)}
+                        className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100 cursor-pointer"
+                      >
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-brand-dark/90 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 shadow-sm">
+                            Lihat Foto Detail
+                          </span>
+                        </div>
+
+                        <div className="absolute top-3 left-3">
+                          <span className="bg-white/95 text-brand-dark text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 shadow-2xs">
+                            {item.badge}
+                          </span>
+                        </div>
                       </div>
-                      {/* Badge */}
-                      <div className="absolute top-2.5 left-2.5">
-                        <span
-                          className={`text-[9px] sm:text-[10px] font-heading font-bold tracking-wide px-2.5 py-0.5 rounded-full shadow-xs backdrop-blur-xs ${item.badgeColor}`}
-                        >
-                          {item.badge}
-                        </span>
+
+                      {/* Content */}
+                      <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">
+                            {item.categoryLabel}
+                          </span>
+                          <h5 className="font-serif text-lg text-brand-dark mb-2 leading-snug">
+                            {item.name}
+                          </h5>
+                          <p className="text-gray-500 text-xs font-light leading-relaxed mb-4 line-clamp-2">
+                            {item.desc}
+                          </p>
+
+                          <ul className="space-y-1 mb-5 text-[11px] text-gray-600">
+                            {item.items.slice(0, 3).map((it, idx) => (
+                              <li key={idx} className="flex items-start gap-1.5">
+                                <span className="text-emerald-600 shrink-0 font-bold">•</span>
+                                <span className="truncate">{it}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setLightboxItem(item)}
+                            className="text-xs font-bold text-gray-700 hover:text-black uppercase tracking-wider cursor-pointer"
+                          >
+                            Detail Menu
+                          </button>
+
+                          <a
+                            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                              `Halo SA Adventure, saya ingin pesan katering "${item.name}". Mohon info harga & minimal pemesanannya.`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-2xs"
+                          >
+                            Pesan Menu
+                          </a>
+                        </div>
                       </div>
                     </div>
+                  ))}
+                </div>
+              )}
 
-                    {/* Card Body */}
-                    <div className="p-3 sm:p-3.5 flex-1 flex flex-col justify-between">
-                      <div>
-                        <div className="text-[10px] font-heading font-bold text-emerald-600 uppercase tracking-wider mb-1">
-                          {item.categoryLabel}
+              {/* VIEW B: PRASMANAN SUNDA SHOWCASE */}
+              {cateringTab === "prasmanan" && (
+                <div className="space-y-8 font-sans mb-12">
+
+                  {/* 6 Prasmanan Menu Tabs */}
+                  <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-gray-200 scrollbar-none">
+                    {PRASMANAN_MENUS.map((m, idx) => (
+                      <button
+                        key={m.id}
+                        type="button"
+                        onClick={() => setActivePrasmananIdx(idx)}
+                        className={`px-5 py-3 text-xs uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${activePrasmananIdx === idx
+                            ? "border-b-2 border-brand-dark text-brand-dark font-bold bg-[#fafafa]"
+                            : "text-gray-500 hover:text-black font-medium"
+                          }`}
+                      >
+                        {m.title}
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Active Prasmanan Menu Details */}
+                  {(() => {
+                    const activeMenu = PRASMANAN_MENUS[activePrasmananIdx];
+                    return (
+                      <div className="bg-[#fafafa] border border-gray-200 p-6 sm:p-8">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-gray-200 mb-6 gap-2">
+                          <div>
+                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 block">
+                              SAJIAN PRASMANAN
+                            </span>
+                            <h4 className="font-serif text-2xl text-brand-dark">
+                              {activeMenu.title}: {activeMenu.subtitle}
+                            </h4>
+                          </div>
+                          <span className="self-start sm:self-auto bg-white border border-gray-300 text-gray-700 text-xs font-bold uppercase tracking-wider px-3 py-1">
+                            10 Menu Komplit
+                          </span>
                         </div>
-                        <h4 className="font-heading font-bold text-xs sm:text-sm text-slate-900 line-clamp-1 group-hover:text-emerald-700 transition-colors">
-                          {item.name}
-                        </h4>
-                        <p className="text-[11px] text-slate-500 line-clamp-2 mt-1 leading-relaxed font-normal">
-                          {item.desc}
-                        </p>
 
-                        {/* Item list bullets */}
-                        <div className="mt-2.5 pt-2 border-t border-slate-100 space-y-1">
-                          {item.items.slice(0, 3).map((dish, idx) => (
-                            <div key={idx} className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-600">
-                              <CheckCircle2 className="w-3 h-3 text-emerald-500 shrink-0" />
-                              <span className="truncate">{dish}</span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                          {activeMenu.items.map((dish, dIdx) => (
+                            <div
+                              key={dIdx}
+                              className="flex items-center gap-3 p-3 bg-white border border-gray-200 text-xs text-gray-700 font-medium"
+                            >
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                              <span>{dish}</span>
                             </div>
                           ))}
                         </div>
+
+                        {/* Live Stall Gubukan & Kambing Guling */}
+                        <div className="p-5 bg-white border border-gray-200">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Flame className="w-4 h-4 text-amber-500" />
+                            <h5 className="font-serif text-base text-brand-dark font-bold">
+                              Pilihan Pondokan / Live Stall Gubukan:
+                            </h5>
+                          </div>
+                          <div className="flex flex-wrap gap-2 text-xs">
+                            {GUBUKAN_OPTIONS.map((gubuk, gIdx) => (
+                              <span
+                                key={gIdx}
+                                className="px-3 py-1 bg-gray-100 border border-gray-200 text-gray-700 font-medium"
+                              >
+                                {gubuk}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* CTA Box */}
+                        <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                          <div className="text-xs text-gray-600 font-light text-center sm:text-left">
+                            Prasmanan mulai <strong className="text-brand-dark font-bold">Rp 45.000 / pax</strong>. Tersedia hidangan Kambing Guling utuh & Barbeque Night.
+                          </div>
+
+                          <a
+                            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                              `Halo SA Adventure, saya ingin konsultasi paket katering prasmanan (${activeMenu.title}: ${activeMenu.subtitle}) untuk acara kami.`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-colors shadow-xs"
+                          >
+                            <WhatsAppIcon className="w-4 h-4 fill-current" />
+                            <span>Konsultasi Menu Prasmanan</span>
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })()}
+
+                </div>
+              )}
+
+            </div>
+          )}
+
+        </div>
+
+        {/* ================= PART 4: VILLA DETAIL MODAL (EDITORIAL THEME) ================= */}
+        {isVillaModalOpen && (
+          <div
+            onClick={() => setIsVillaModalOpen(false)}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 transition-all animate-in fade-in duration-200"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-5xl w-full bg-white rounded-none border border-gray-200 shadow-2xl flex flex-col max-h-[94vh] overflow-hidden animate-in zoom-in-95 duration-200"
+            >
+              {/* Modal Top Bar */}
+              <div className="p-5 sm:p-6 border-b border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#fcfcfc]">
+                <div>
+                  <span className="text-[11px] font-bold tracking-[0.2em] text-gray-400 uppercase block font-sans">
+                    FASILITAS & GALERI VILLA
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-brand-dark mt-0.5">
+                    {currentVilla.name}
+                  </h3>
+                </div>
+
+                {/* Minimalist Switcher & Close */}
+                <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                  <div className="flex items-center border border-gray-300 p-0.5 bg-white">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setActiveVillaId("mawar");
+                        setPhotoIndex(0);
+                      }}
+                      className={`px-4 py-2 text-xs font-bold font-sans uppercase tracking-wider transition-colors cursor-pointer ${activeVillaId === "mawar"
+                          ? "bg-brand-dark text-white"
+                          : "text-gray-600 hover:text-black"
+                        }`}
+                    >
+                      Villa Mawar
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setActiveVillaId("zanara");
+                        setPhotoIndex(0);
+                      }}
+                      className={`px-4 py-2 text-xs font-bold font-sans uppercase tracking-wider transition-colors cursor-pointer ${activeVillaId === "zanara"
+                          ? "bg-brand-dark text-white"
+                          : "text-gray-600 hover:text-black"
+                        }`}
+                    >
+                      Villa Zanara
+                    </button>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setIsVillaModalOpen(false)}
+                    className="p-2 text-gray-400 hover:text-black hover:bg-gray-100 transition-colors cursor-pointer"
+                    aria-label="Tutup"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Modal Content Scrollable Area */}
+              <div className="overflow-y-auto p-5 sm:p-8 flex-1">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                  {/* Left Column: Photo Viewer & Thumbnails (7 Cols) */}
+                  <div className="lg:col-span-7 flex flex-col gap-3">
+
+                    {/* Main Image Frame */}
+                    <div className="relative aspect-[16/10] w-full bg-neutral-900 overflow-hidden shadow-sm select-none" onTouchStart={handlePhotoTouchStart} onTouchMove={handlePhotoTouchMove} onTouchEnd={handlePhotoTouchEnd}>
+                      <Image
+                        src={activePhoto.src}
+                        alt={activePhoto.title}
+                        fill
+                        priority
+                        className="object-cover transition-opacity duration-300"
+                      />
+
+                      {/* Gradient overlay for text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+
+                      {/* Photo Counter */}
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-black/60 backdrop-blur-xs text-white text-xs font-sans font-bold px-3 py-1">
+                          {photoIndex + 1} / {currentVilla.photos.length}
+                        </span>
                       </div>
 
-                      {/* Order Button */}
-                      <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
+                      {/* Mobile touch guidance */}
+                      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-xs text-white text-[10px] font-sans px-2.5 py-1 rounded sm:hidden pointer-events-none">
+                        Swipe &larr; &rarr; untuk ganti foto
+                      </div>
+                      {/* Navigation Chevrons */}
+                      <button
+                        type="button"
+                        onClick={handlePrevPhoto}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/80 text-white flex items-center justify-center transition-colors cursor-pointer"
+                        aria-label="Foto Sebelumnya"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleNextPhoto}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/80 text-white flex items-center justify-center transition-colors cursor-pointer"
+                        aria-label="Foto Selanjutnya"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+
+                      {/* Caption */}
+                      <div className="absolute bottom-4 left-4 right-4 text-white pointer-events-none">
+                        <h5 className="font-serif text-base sm:text-lg">
+                          {activePhoto.title}
+                        </h5>
+                        <p className="text-xs text-gray-300 font-sans font-light mt-0.5 line-clamp-2">
+                          {activePhoto.caption}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Thumbnail Selector */}
+                    <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                      {currentVilla.photos.map((photo, idx) => (
                         <button
+                          key={idx}
                           type="button"
-                          onClick={() =>
-                            setLightboxPhoto({
-                              src: item.image,
-                              title: item.name,
-                              desc: item.desc,
-                              category: item.categoryLabel,
-                            })
-                          }
-                          className="text-[11px] text-slate-500 hover:text-slate-800 font-heading font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                          onClick={() => setPhotoIndex(idx)}
+                          className={`relative w-16 sm:w-20 aspect-[16/10] overflow-hidden shrink-0 transition-all cursor-pointer ${photoIndex === idx
+                              ? "border-2 border-brand-dark opacity-100"
+                              : "border border-gray-200 opacity-60 hover:opacity-100"
+                            }`}
                         >
-                          <Eye className="w-3 h-3" />
-                          <span>Rincian</span>
+                          <Image
+                            src={photo.src}
+                            alt={photo.title}
+                            fill
+                            className="object-cover"
+                          />
                         </button>
+                      ))}
+                    </div>
+
+                  </div>
+
+                  {/* Right Column: Details, Features, CTA (5 Cols) */}
+                  <div className="lg:col-span-5 flex flex-col justify-between h-full font-sans">
+                    <div>
+                      {/* Meta Info */}
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-3 font-medium">
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3.5 h-3.5 text-gray-400" />
+                          {currentVilla.location}
+                        </span>
+                        <span>•</span>
+                        <span className="font-bold text-brand-dark">
+                          {currentVilla.capacity}
+                        </span>
+                      </div>
+
+                      <p className="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                        {currentVilla.description}
+                      </p>
+
+                      <div className="mb-6">
+                        <span className="text-xs font-bold tracking-wider text-gray-400 uppercase block mb-3">
+                          Fasilitas Unggulan:
+                        </span>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-gray-700">
+                          {currentVilla.features.map((feat, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                              <span>{feat}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* CTA Box */}
+                    <div className="pt-6 border-t border-gray-200 space-y-3">
+                      <a
+                        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                          `Halo SA Adventure, saya ingin cek ketersediaan tanggal dan harga sewa untuk ${currentVilla.name} (${currentVilla.capacity}). Mohon informasinya.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white uppercase tracking-widest text-xs font-bold py-3.5 px-5 flex items-center justify-center gap-2 transition-colors duration-300 shadow-sm"
+                      >
+                        <WhatsAppIcon className="w-4 h-4 fill-current" />
+                        <span>Cek Jadwal & Harga {currentVilla.name}</span>
+                      </a>
+
+                      <div className="text-center text-[11px] text-gray-500">
+                        Admin Utama lambat merespons?{" "}
                         <a
-                          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                            `Halo SA Adventure, saya tertarik memesan katering: ${item.name}`
+                          href={`https://wa.me/${whatsappBackupNumber}?text=${encodeURIComponent(
+                            `Halo SA Adventure, saya ingin cek ketersediaan tanggal dan harga sewa untuk ${currentVilla.name} (${currentVilla.capacity}). Mohon informasinya.`
                           )}`}
                           target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 hover:text-emerald-900 font-heading font-bold text-[11px] px-2.5 py-1 rounded-lg border border-emerald-200 transition-all cursor-pointer"
+                          rel="noopener noreferrer"
+                          className="text-emerald-700 font-semibold underline hover:text-emerald-800"
                         >
-                          <WhatsAppIcon className="w-3 h-3 fill-current" />
-                          <span>Pesan</span>
+                          Hubungi WA Cadangan (0895-8087-55565)
                         </a>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
 
-              {/* Callout Card to Prasmanan */}
-              <div className="mb-14 bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-                <div>
-                  <div className="text-xs sm:text-sm font-heading font-bold text-emerald-950 flex items-center justify-center sm:justify-start gap-1.5">
-                    <Flame className="w-4 h-4 text-amber-500" />
-                    <span>Butuh Sajian Prasmanan (Buffet) & Live Stall untuk Rombongan?</span>
                   </div>
-                  <div className="text-xs text-emerald-700 mt-1 font-normal">
-                    Tersedia Paket Prasmanan Menu 1 s/d 6 mulai Rp 45.000/pax, kambing guling utuh & aneka gubukan.
-                  </div>
+
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setCateringCategory("prasmanan")}
-                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs shadow-sm transition-all shrink-0 cursor-pointer flex items-center gap-1.5"
-                >
-                  <span>Buka Pilihan Prasmanan (1-6)</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </>
-          ) : (
-            /* ========================================================================= */
-            /* PRASMANAN (BUFFET) & GUBUKAN SECTION */
-            /* ========================================================================= */
-            <div className="animate-in fade-in duration-200">
-              <div className="mb-4 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={() => setCateringCategory("all")}
-                  className="inline-flex items-center gap-1.5 text-xs text-emerald-700 hover:text-emerald-900 font-heading font-bold transition-colors cursor-pointer bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs"
-                >
-                  <ChevronLeft className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Lihat Pilihan Nasi Box & Bento</span>
-                </button>
-                <span className="text-[11px] text-slate-500 font-medium">
-                  Format Jamuan: Prasmanan Rombongan
-                </span>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 rounded-2xl p-5 sm:p-7 lg:p-9 text-white shadow-xl mb-10">
-                <div className="max-w-4xl mx-auto">
-              
-              {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/15">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-heading font-bold tracking-wide border border-emerald-400/30 mb-2">
-                    <Utensils className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Layanan Prasmanan & Live Stall</span>
-                  </div>
-                  <h4 className="font-heading font-extrabold text-xl sm:text-2xl text-white tracking-tight">
-                    Paket Prasmanan Lengkap (Menu 1 s/d 6)
-                  </h4>
-                  <p className="text-slate-300 text-xs sm:text-sm font-normal mt-1 leading-relaxed">
-                    Sajian prasmanan prasmanan khas Parahyangan untuk Company Gathering, Outbound, & Reuni.
-                  </p>
-                </div>
-
-                <button
-                  onClick={() =>
-                    setLightboxPhoto({
-                      src: "/images/catering/clean/daftar-menu-prasmanan-lengkap.jpg",
-                      title: "Daftar Menu Prasmanan & Gubukan Lengkap",
-                      desc: "Brosur resmi pilihan Menu 1 s/d 6, aneka gubukan, dan varian nasi goreng.",
-                      category: "Brosur Resmi",
-                    })
-                  }
-                  className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-heading font-bold tracking-wide border border-white/20 transition-all cursor-pointer shrink-0"
-                >
-                  <Eye className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Lihat Brosur Menu Lengkap</span>
-                </button>
-              </div>
-
-              {/* Prasmanan Tabs 1 - 6 (Modern Segmented Bar) */}
-              <div className="bg-slate-950/80 p-1.5 rounded-2xl border border-white/10 mb-6 backdrop-blur-sm shadow-inner">
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
-                  {PRASMANAN_MENUS.map((menu, idx) => {
-                    const isActive = activePrasmananTab === idx;
-                    return (
-                      <button
-                        key={menu.id}
-                        onClick={() => setActivePrasmananTab(idx)}
-                        className={`py-2 px-2.5 rounded-xl text-xs font-heading font-bold tracking-wide transition-all cursor-pointer flex items-center justify-center text-center ${
-                          isActive
-                            ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-md shadow-emerald-900/40 border border-emerald-400/50"
-                            : "text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent"
-                        }`}
-                      >
-                        <span>{menu.title}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Active Menu Detail Card */}
-              {(() => {
-                const activeMenu = PRASMANAN_MENUS[activePrasmananTab];
-                return (
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 mb-6 backdrop-blur-xs">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 mb-3.5 pb-2.5 border-b border-white/10">
-                      <div>
-                        <span className="text-[10px] font-heading font-bold text-emerald-400 uppercase tracking-wider">
-                          Pilihan {activeMenu.title}
-                        </span>
-                        <h5 className="font-heading font-bold text-base sm:text-lg text-white tracking-tight">
-                          {activeMenu.subtitle}
-                        </h5>
-                      </div>
-                      <span className="text-[11px] font-medium text-slate-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10 self-start sm:self-auto">
-                        10 Sajian Lengkap
-                      </span>
-                    </div>
-
-                    {/* Grid of Dishes */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
-                      {activeMenu.items.map((dish, dIdx) => (
-                        <div
-                          key={dIdx}
-                          className="flex items-center gap-2 p-2 rounded-lg bg-white/5 font-medium"
-                        >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                          <span className="text-xs text-slate-100">{dish}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })()}
-
-              {/* Pilihan Gubukan & Nasi Goreng Extra */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
-                {/* Gubukan */}
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-1.5 text-emerald-400 font-heading font-bold text-xs uppercase tracking-wider mb-2.5">
-                    <Flame className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Pilihan Menu Gubukan (Live Stall)</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {GUBUKAN_OPTIONS.map((gubuk, gIdx) => (
-                      <span
-                        key={gIdx}
-                        className="text-[11px] px-2.5 py-1 rounded-lg bg-slate-800/90 text-slate-200 border border-slate-700/80 font-medium tracking-wide"
-                      >
-                        {gubuk}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Pilihan Nasi Goreng */}
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-1.5 text-sky-400 font-heading font-bold text-xs uppercase tracking-wider mb-2.5">
-                    <Utensils className="w-3.5 h-3.5 text-sky-400" />
-                    <span>Pilihan Varian Nasi Goreng</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {NASI_GORENG_OPTIONS.map((nasgor, nIdx) => (
-                      <span
-                        key={nIdx}
-                        className="text-[11px] px-2.5 py-1 rounded-lg bg-slate-800/90 text-slate-200 border border-slate-700/80 font-medium tracking-wide"
-                      >
-                        {nasgor}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="mt-7 pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-3.5">
-                <div className="text-xs text-slate-300 font-normal text-center sm:text-left leading-relaxed">
-                  Prasmanan mulai <strong className="text-white font-semibold">Rp 45.000 / pax</strong>. Tersedia Kambing Guling utuh & Barbeque Night.
-                </div>
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "Halo SA Adventure, saya ingin konsultasi paket katering prasmanan (Menu 1-6) dan live stall gubukan untuk acara gathering kami."
-                  )}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-heading font-bold text-xs py-2.5 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md shadow-emerald-500/20 transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0"
-                >
-                  <WhatsAppIcon className="w-4 h-4 fill-current" />
-                  <span>Konsultasi via WhatsApp</span>
-                </a>
               </div>
 
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-    </div>
-
-        {/* ========================================================================= */}
-        {/* LIGHTBOX MODAL (FOR HIGH-RES FULL VIEW) */}
-        {/* ========================================================================= */}
-        {lightboxPhoto && (
+        {/* ================= PART 5: LIGHTBOX MODAL (FOR HIGH-RES FOOD PHOTO) ================= */}
+        {lightboxItem && (
           <div
-            onClick={() => setLightboxPhoto(null)}
-            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 transition-all animate-in fade-in duration-200"
+            onClick={() => setLightboxItem(null)}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 transition-all animate-in fade-in duration-200 font-sans"
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col max-h-[92vh]"
+              className="relative max-w-2xl w-full bg-white border border-gray-200 shadow-2xl flex flex-col max-h-[92vh] overflow-hidden"
             >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 bg-slate-950/60">
+              {/* Header */}
+              <div className="p-4 sm:p-5 border-b border-gray-200 flex items-center justify-between bg-[#fbfbfb]">
                 <div>
-                  {lightboxPhoto.category && (
-                    <span className="text-[10px] sm:text-xs font-heading font-bold text-emerald-400 uppercase tracking-wider block">
-                      {lightboxPhoto.category}
-                    </span>
-                  )}
-                  <h4 className="font-heading font-black text-base sm:text-xl text-white">
-                    {lightboxPhoto.title}
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                    {lightboxItem.categoryLabel}
+                  </span>
+                  <h4 className="font-serif text-xl text-brand-dark">
+                    {lightboxItem.name}
                   </h4>
                 </div>
                 <button
-                  onClick={() => setLightboxPhoto(null)}
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer"
+                  type="button"
+                  onClick={() => setLightboxItem(null)}
+                  className="p-1.5 text-gray-400 hover:text-black cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Photo Area */}
-              <div className="relative flex-1 min-h-[320px] sm:min-h-[480px] bg-black">
+              {/* Photo */}
+              <div className="relative aspect-[4/3] w-full bg-gray-100">
                 <Image
-                  src={lightboxPhoto.src}
-                  alt={lightboxPhoto.title}
+                  src={lightboxItem.image}
+                  alt={lightboxItem.name}
                   fill
-                  className="object-contain"
-                  priority
+                  className="object-cover"
                 />
               </div>
 
-              {/* Modal Footer */}
-              <div className="p-4 sm:p-5 bg-slate-950/90 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <p className="text-xs sm:text-sm text-slate-300 max-w-xl text-center sm:text-left">
-                  {lightboxPhoto.desc}
+              {/* Footer */}
+              <div className="p-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p className="text-xs text-gray-600 font-light max-w-sm text-center sm:text-left">
+                  {lightboxItem.desc}
                 </p>
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    `Halo SA Adventure, saya ingin memesan "${lightboxPhoto.title}". Mohon info harga dan minimal pemesanannya.`
+                    `Halo SA Adventure, saya ingin memesan "${lightboxItem.name}". Mohon info harga dan minimal pemesanannya.`
                   )}`}
                   target="_blank"
-                  rel="noreferrer"
-                  className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-heading font-black text-xs py-2.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-colors text-center shrink-0"
                 >
-                  <WhatsAppIcon className="w-4 h-4 fill-current" />
-                  <span>Pesan Menu Ini</span>
+                  Pesan Menu Ini
                 </a>
               </div>
             </div>

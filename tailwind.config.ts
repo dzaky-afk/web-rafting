@@ -9,9 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'brand-dark': '#1a1a1a',
+        'brand-gray': '#f8f9fa',
         brand: {
           navy: "#07182c",
-          dark: "#040e1b",
+          dark: "#1a1a1a",
           deep: "#0c243f",
           card: "#0f2c4c",
         },
@@ -43,8 +45,11 @@ const config: Config = {
         }
       },
       fontFamily: {
-        heading: ["var(--font-outfit)", "sans-serif"],
-        body: ["var(--font-jakarta)", "sans-serif"],
+        sans: ["var(--font-montserrat)", "Montserrat", "sans-serif"],
+        serif: ["var(--font-playfair)", '"Playfair Display"', "Georgia", "serif"],
+        heading: ["var(--font-playfair)", '"Playfair Display"', "Georgia", "serif"],
+        body: ["var(--font-montserrat)", "Montserrat", "sans-serif"],
+        editorial: ["var(--font-playfair)", '"Playfair Display"', "Georgia", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
