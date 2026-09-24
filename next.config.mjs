@@ -4,8 +4,8 @@ const nextConfig = {
 
   // Optimalkan gambar untuk hosting
   images: {
-    unoptimized: true, // Aktif agar bisa deploy ke Vercel/Netlify/static host
-    formats: ["image/webp"],
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 2592000,
   },
 
   // Kompres output
@@ -24,7 +24,6 @@ const nextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "X-XSS-Protection", value: "1; mode=block" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Cache-Control", value: "no-store, no-cache, must-revalidate" },
         ],
       },
       {

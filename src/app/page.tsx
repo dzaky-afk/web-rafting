@@ -17,7 +17,11 @@ import CtaBanner from "@/components/CtaBanner";
 import FaqContact from "@/components/FaqContact";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import BookingFlowModal from "@/components/BookingFlowModal";
+import dynamic from "next/dynamic";
+
+const BookingFlowModal = dynamic(() => import("@/components/BookingFlowModal"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [isBookingFlowOpen, setIsBookingFlowOpen] = useState(false);

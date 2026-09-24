@@ -1079,7 +1079,6 @@ export default function AccommodationCatering() {
                         src={activePhoto.src}
                         alt={activePhoto.title}
                         fill
-                        priority
                         className="object-cover transition-opacity duration-300"
                       />
 
