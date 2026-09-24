@@ -111,41 +111,66 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           </svg>
         </div>
 
-        {/* Opsi 2: Service Pillars / Mini Pill Badges (EO & Outdoor Specialist) */}
+        {/* Opsi 2: Service Pillars / Mini Pill Badges with Professional Vector SVGs */}
         <div className="mt-3 sm:mt-4 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 max-w-3xl mx-auto px-2">
           <a
             href="#about"
-            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-slate-100 hover:bg-[#0c243f] text-slate-700 hover:text-white border border-slate-200/80 hover:border-[#0c243f] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="group inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white hover:bg-[#0c243f] text-slate-800 hover:text-white border border-gray-200/90 hover:border-[#0c243f] text-[11px] sm:text-xs font-semibold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
           >
-            <span>🎪</span>
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-600 group-hover:text-purple-300 transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/>
+              <path d="M5 3v4"/>
+              <path d="M19 17v4"/>
+            </svg>
             <span>Event Organizer</span>
           </a>
+
           <a
             href="#paket-rafting"
-            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-sky-50 hover:bg-[#0284c7] text-[#0369a1] hover:text-white border border-sky-200/80 hover:border-[#0284c7] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="group inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white hover:bg-[#0284c7] text-slate-800 hover:text-white border border-gray-200/90 hover:border-[#0284c7] text-[11px] sm:text-xs font-semibold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
           >
-            <span>🚣</span>
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-600 group-hover:text-sky-200 transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+              <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+              <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+            </svg>
             <span>Rafting Cisadane</span>
           </a>
+
           <a
             href="#aktivitas"
-            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-amber-50 hover:bg-[#f59e0b] text-amber-900 hover:text-white border border-amber-200/80 hover:border-[#f59e0b] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="group inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white hover:bg-[#d97706] text-slate-800 hover:text-white border border-gray-200/90 hover:border-[#d97706] text-[11px] sm:text-xs font-semibold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
           >
-            <span>🎯</span>
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600 group-hover:text-amber-200 transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2" fill="currentColor"/>
+            </svg>
             <span>Outbound &amp; Team Building</span>
           </a>
+
           <a
             href="#aktivitas"
-            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-emerald-50 hover:bg-[#10b981] text-emerald-900 hover:text-white border border-emerald-200/80 hover:border-[#10b981] text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="group inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white hover:bg-[#059669] text-slate-800 hover:text-white border border-gray-200/90 hover:border-[#059669] text-[11px] sm:text-xs font-semibold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
           >
-            <span>🚜</span>
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 group-hover:text-emerald-200 transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="22" y1="12" x2="18" y2="12"/>
+              <line x1="6" y1="12" x2="2" y2="12"/>
+              <line x1="12" y1="6" x2="12" y2="2"/>
+              <line x1="12" y1="22" x2="12" y2="18"/>
+            </svg>
             <span>Paintball &amp; Offroad</span>
           </a>
+
           <a
             href="#accommodation"
-            className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-600 text-indigo-900 hover:text-white border border-indigo-200/80 hover:border-indigo-600 text-[10px] sm:text-xs font-bold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="group inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white hover:bg-[#4f46e5] text-slate-800 hover:text-white border border-gray-200/90 hover:border-[#4f46e5] text-[11px] sm:text-xs font-semibold font-sans tracking-wide transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
           >
-            <span>🏡</span>
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 group-hover:text-indigo-200 transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
             <span>Villa &amp; Katering</span>
           </a>
         </div>
