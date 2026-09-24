@@ -82,12 +82,11 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
               {/* Card Photo with Zoom Hover */}
               <div className="h-56 overflow-hidden relative">
                 <Image
-                  src="/images/drive_uploads/3.png"
+                  src="/images/drive_uploads/3.webp"
                   alt="Rafting Basic 7 KM"
                   fill
                   sizes="(max-width: 768px) 86vw, 370px"
-                  quality={75}
-                  loading="lazy"
+                  quality={80}
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
@@ -180,11 +179,11 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
               {/* Card Photo */}
               <div className="h-56 overflow-hidden relative">
                 <Image
-                  src="/images/drive_uploads/DSCN9927.JPG"
+                  src="/images/drive_uploads/DSCN9927.webp"
                   alt="Rafting Complete 11 KM"
                   fill
                   sizes="(max-width: 768px) 86vw, 370px"
-                  quality={75}
+                  quality={80}
                   loading="lazy"
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
@@ -265,11 +264,11 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
               {/* Card Photo */}
               <div className="h-56 overflow-hidden relative">
                 <Image
-                  src="/images/drive_uploads/7.png"
+                  src="/images/drive_uploads/7.webp"
                   alt="Rafting and Paintball Combo"
                   fill
                   sizes="(max-width: 768px) 86vw, 370px"
-                  quality={75}
+                  quality={80}
                   loading="lazy"
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />

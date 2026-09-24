@@ -1,23 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import WhyUs from "@/components/WhyUs";
 import PricingCards from "@/components/PricingCards";
 import RapidsShowcase from "@/components/RapidsShowcase";
-import Activities from "@/components/Activities";
-import AccommodationCatering from "@/components/AccommodationCatering";
 
-import SafetyItinerary from "@/components/SafetyItinerary";
-import EventCategories from "@/components/EventCategories";
-import Gallery from "@/components/Gallery";
-import CtaBanner from "@/components/CtaBanner";
-import FaqContact from "@/components/FaqContact";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import dynamic from "next/dynamic";
+// Code-split below-the-fold components to reduce initial JS execution and TBT
+const Activities = dynamic(() => import("@/components/Activities"), { ssr: true });
+const AccommodationCatering = dynamic(() => import("@/components/AccommodationCatering"), { ssr: true });
+const SafetyItinerary = dynamic(() => import("@/components/SafetyItinerary"), { ssr: true });
+const EventCategories = dynamic(() => import("@/components/EventCategories"), { ssr: true });
+const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: true });
+const CtaBanner = dynamic(() => import("@/components/CtaBanner"), { ssr: true });
+const FaqContact = dynamic(() => import("@/components/FaqContact"), { ssr: true });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
+const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"), { ssr: false });
 
 const BookingFlowModal = dynamic(() => import("@/components/BookingFlowModal"), {
   ssr: false,

@@ -27,10 +27,10 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
       {/* 1. Atmospheric Rafting Photo with Monochromatic Overlay */}
       <div className="absolute inset-0 opacity-15 pointer-events-none overflow-hidden">
         <Image
-          src="/images/drive_uploads/DSCN0068.JPG"
+          src="/images/drive_uploads/DSCN0068.webp"
           alt="Background Rafting Cisadane SA Adventure"
           fill
-          quality={50}
+          quality={60}
           sizes="100vw"
           loading="lazy"
           className="object-cover object-[center_45%] grayscale scale-105 pointer-events-none"

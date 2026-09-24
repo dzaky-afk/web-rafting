@@ -207,11 +207,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         {/* Hero Photo Container - Absolute inset-0 guarantees full coverage without black background gaps */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/images/drive_uploads/hero-new.png"
+            src="/images/drive_uploads/hero-new.webp"
             alt="Keseruan Arung Jeram Rafting Cisadane Bogor bersama SA Adventure"
             fill
             priority
-            quality={75}
+            quality={80}
             className="object-cover object-center"
             sizes="(max-width: 768px) 100vw, 1200px"
           />

@@ -218,7 +218,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           aria-label="SA Adventure Beranda"
         >
           <Image
-            src="/images/sa-adventure-logo.png"
+            src="/images/sa-adventure-logo.webp"
             alt="SA Adventure Logo"
             width={160}
             height={44}
@@ -304,7 +304,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             <div className="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between gap-3 shrink-0">
               <div className="flex items-center gap-2.5 min-w-0">
                 <Image
-                  src="/images/sa-adventure-logo.png"
+                  src="/images/sa-adventure-logo.webp"
                   alt="SA Adventure Logo"
                   width={40}
                   height={36}

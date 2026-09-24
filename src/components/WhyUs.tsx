@@ -136,12 +136,11 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
           <div className="w-full md:w-1/2 relative">
             <div className="aspect-[4/3] sm:aspect-[4/5] bg-gray-100 overflow-hidden relative shadow-lg">
               <Image
-                src="/images/drive_uploads/whyus-new.png"
+                src="/images/drive_uploads/whyus-new.webp"
                 alt="Peserta Rafting Cisadane SA Adventure bergaya di sungai Bogor"
                 fill
-                quality={75}
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
                 className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-in-out"
               />
             </div>

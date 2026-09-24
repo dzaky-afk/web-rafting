@@ -101,7 +101,7 @@ export default function Footer() {
             aria-label="SA Adventure Beranda"
           >
             <Image
-              src="/images/sa-adventure-logo.png"
+              src="/images/sa-adventure-logo.webp"
               alt="Logo SA Adventure"
               width={200}
               height={70}
