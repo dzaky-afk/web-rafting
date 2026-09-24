@@ -38,8 +38,8 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
     {
       icon: ShieldCheck,
       tag: "SAFETY FIRST",
-      title: "Standar Keselamatan CE & BNSP",
-      desc: "Perlengkapan arung jeram bersertifikasi internasional (CE/ISO), pemandu rescue berlisensi BNSP, serta proteksi asuransi resmi.",
+      title: "Standar Keselamatan Teruji",
+      desc: "Perlengkapan arung jeram bersertifikasi internasional (CE/ISO), pemandu rescue berpengalaman, serta proteksi asuransi resmi.",
     },
     {
       icon: HeartHandshake,
@@ -87,7 +87,7 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
               Sungai Cisadane di Caringin Bogor adalah surga arung jeram alami terbaik di Jawa Barat dengan debit air yang stabil sepanjang tahun. Basecamp <strong>SA Adventure</strong> berdiri tepat di tepi sungai, menjadi titik awal petualangan outdoor paling mendebarkan untuk rombongan gathering, kantor, dan keluarga.
             </p>
             <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed font-light text-sm sm:text-base font-sans">
-              Dengan pengalaman lebih dari 10 tahun dan pemandu bersertifikasi resmi <strong>BNSP</strong>, kami menjamin pengalaman arung jeram yang aman, nyaman, dan tak terlupakan, dilengkapi fasilitas lengkap mulai dari saung istirahat hingga makan siang prasmanan Sunda khas pedesaan.
+              Dengan pengalaman lebih dari 10 tahun dan pemandu profesional bersertifikasi, kami menjamin pengalaman arung jeram yang aman, nyaman, dan tak terlupakan, dilengkapi fasilitas lengkap mulai dari saung istirahat hingga makan siang prasmanan Sunda khas pedesaan.
             </p>
             
             {/* Direct Admin Contact Buttons */}

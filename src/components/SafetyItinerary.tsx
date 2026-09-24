@@ -1,4 +1,4 @@
-import { ShieldCheck, LifeBuoy, HardHat, UserCheck, Megaphone, CheckCircle } from "lucide-react";
+import { ShieldCheck, LifeBuoy, HardHat, Megaphone, CheckCircle } from "lucide-react";
 
 export default function SafetyItinerary() {
   const safetyItems = [
@@ -13,11 +13,6 @@ export default function SafetyItinerary() {
       desc: "Melindungi kepala dari benturan dayung maupun batu kali dengan sistem ventilasi air cepat.",
     },
     {
-      icon: UserCheck,
-      title: "Skipper BNSP & River Rescue Team Standby",
-      desc: "Setiap perahu didampingi 1 skipper berlisensi BNSP, serta tim rescue tali lempar (throw bag) siaga di jeram ekstrem.",
-    },
-    {
       icon: Megaphone,
       title: "Briefing & Simulasi Penyelamatan Sebelum Start",
       desc: "Instruktur memberikan penjelasan komprehensif terkait teknik mendayung, posisi duduk aman, dan prosedur jika terjatuh ke air.",
@@ -27,7 +22,7 @@ export default function SafetyItinerary() {
   const timeline = [
     { time: "08.30 – 09.00", title: "Kedatangan & Welcome Drink", desc: "Penyambutan di basecamp SA Adventure tepi sungai, menikmati teh/kopi hangat & snack tradisional." },
     { time: "09.00 – 09.30", title: "Fitting Gear & Safety Briefing", desc: "Pembagian pelampung dan helm, fitting ukuran pas, foto rombongan, serta pengarahan instruktur profesional." },
-    { time: "09.30 – 11.30", title: "Start Arung Jeram & Rest Area", desc: "Mengarungi jeram-jeram ikonik Cisadane, istirahat menikmati kelapa muda segar di saung tepi kali, lalu lanjut menaklukkan Dam 2 Meter." },
+    { time: "09.30 – 11.30", title: "Start Arung Jeram & Rest Area", desc: "Mengarungi jeram-jeram ikonik Cisadane, istirahat menikmati kelapa muda segar di saung tepi kali, lalu lanjut menaklukkan Dam 3 Meter." },
     { time: "11.30 – 12.30", title: "Finish, Bilas Bersih & Kamar Mandi", desc: "Penjemputan mobil lokal di titik finish kembali ke basecamp untuk mandi dan berganti pakaian bersih." },
     { time: "12.30 – SELESAI", title: "Makan Siang Prasmanan Khas Sunda", desc: "Santap siang lezat di saung (Ayam goreng, sayur asem, tahu tempe, ikan asin, sambal lalap) & penyerahan file dokumentasi." },
   ];

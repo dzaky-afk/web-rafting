@@ -22,10 +22,10 @@ export default function RapidsShowcase() {
   const rapidCenter = {
     id: "05",
     name: "Dam Jeram Pelangi",
-    subtitle: "Sensasi Terjun Dam 2 Meter",
-    grade: "The Climax Drop 2 Meter",
-    gradeShort: "Drop 2M",
-    desc: "Sensasi paling ditunggu di Cisadane! Perahu akan meluncur di kemiringan dam air terjun setinggi 2 meter. Sangat aman berkat bantalan air hidrolik dan penjagaan ketat tim rescue profesional di tepi kolam luncur.",
+    subtitle: "Sensasi Terjun Dam 3 Meter",
+    grade: "The Climax Drop 3 Meter",
+    gradeShort: "Drop 3M",
+    desc: "Sensasi paling ditunggu di Cisadane! Perahu akan meluncur di kemiringan dam air terjun setinggi 3 meter. Sangat aman berkat bantalan air hidrolik dan penjagaan ketat tim rescue profesional di tepi kolam luncur.",
     safety: "Rescue Standby • 100% Aman",
   };
 

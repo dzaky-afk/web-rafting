@@ -135,13 +135,13 @@ export default function BookingPage() {
                 href={
                   "https://wa.me/6281291068287?text=" +
                   encodeURIComponent(
-                    "Halo SA Adventure, saya ingin reservasi Paket Combo (Rafting 11 KM + Paintball - Rp 295.000/pax)."
+                    "Halo SA Adventure, saya ingin reservasi Paket Combo (Rafting 11 KM + Paintball - Rp 340.000/pax)."
                   )
                 }
                 className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:border-brand-dark hover:bg-slate-50 transition no-underline text-slate-800"
               >
                 <span className="font-semibold">Paket Combo (Rafting + Paintball)</span>
-                <span className="text-emerald-700 font-bold">Rp 295.000</span>
+                <span className="text-emerald-700 font-bold">Rp 340.000</span>
               </a>
             </div>
           </div>

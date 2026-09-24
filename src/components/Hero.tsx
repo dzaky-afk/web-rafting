@@ -44,12 +44,12 @@ const WAYPOINTS: RouteWaypoint[] = [
   },
   {
     id: "dam",
-    name: "DAM 2 METER DROP",
+    name: "DAM 3 METER DROP",
     sub: "ADRENALINE RUSH",
     cx: 730,
     cy: 28,
     labelY: 13,
-    desc: "Sensasi meluncur terjun dam air setinggi 2 meter",
+    desc: "Sensasi meluncur terjun dam air setinggi 3 meter",
   },
   {
     id: "finish",
@@ -148,7 +148,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </text>
           </g>
 
-          {/* Point 4: Dam 2 Meter Drop */}
+          {/* Point 4: Dam 3 Meter Drop */}
           <g
             className="cursor-pointer group"
             onMouseEnter={() => setActiveWaypoint(WAYPOINTS[3])}
@@ -157,7 +157,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           >
             <circle cx="730" cy="95" r="3.5" fill="#555" />
             <text x="730" y="80" className="point-label font-bold text-[10px] sm:text-[9px] transition-colors group-hover:fill-[#0052cc]" textAnchor="middle">
-              Dam 2 Meter Drop
+              Dam 3 Meter Drop
             </text>
             <text x="730" y="115" className="font-sans font-semibold text-[8.5px] sm:text-[7.5px] fill-gray-500 tracking-wider uppercase" textAnchor="middle">
               Adrenaline

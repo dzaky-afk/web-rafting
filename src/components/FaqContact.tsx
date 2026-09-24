@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
-import WhatsAppIcon from "./WhatsAppIcon";
+import { MapPin, ChevronDown, HelpCircle } from "lucide-react";
 
 const FAQS = [
   {
@@ -11,7 +10,7 @@ const FAQS = [
   },
   {
     q: "Apakah aman untuk pemula atau yang tidak bisa berenang?",
-    a: "Sangat aman! Setiap peserta wajib memakai pelampung keselamatan (life jacket) berstandar internasional yang menjaga tubuh mengapung otomatis, helm pelindung, didampingi skipper bersertifikasi BNSP, dan dipantau rescue river guard.",
+    a: "Sangat aman! Setiap peserta wajib memakai pelampung keselamatan (life jacket) berstandar internasional yang menjaga tubuh mengapung otomatis, helm pelindung, didampingi skipper profesional berpengalaman, dan dipantau rescue river guard.",
   },
   {
     q: "Apa saja perlengkapan yang perlu dibawa?",
@@ -47,74 +46,10 @@ export default function FaqContact() {
           </p>
         </div>
 
-        {/* 3-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-start">
+        {/* 2-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           
-          {/* Column 1: Kontak SA Adventure */}
-          <div className="bg-white border border-gray-200 p-5 sm:p-8 shadow-sm">
-            <h3 className="font-serif text-xl text-brand-dark pb-3 border-b border-gray-100 mb-6 flex items-center gap-3">
-              <div className="w-8 h-8 border border-brand-dark text-brand-dark flex items-center justify-center">
-                <MessageCircle className="w-4 h-4" />
-              </div>
-              <span>Hubungi Kami</span>
-            </h3>
-
-            {/* Phone / WhatsApp */}
-            <div className="mb-6 pb-6 border-b border-gray-100 space-y-4">
-              <div>
-                <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-2">
-                  Layanan WhatsApp Resmi
-                </span>
-                <div className="space-y-3">
-                  <a
-                    href="https://wa.me/6281291068287"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2.5 text-sm font-bold text-brand-dark hover:text-gray-600 transition"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-current text-brand-dark" />
-                    <span>0812 9106 8287</span>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 font-normal">(Utama)</span>
-                  </a>
-                  <a
-                    href="https://wa.me/62895808755565"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2.5 text-sm font-medium text-gray-600 hover:text-brand-dark transition"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-current text-gray-500" />
-                    <span>0895 8087 55565</span>
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 font-normal">(Cadangan)</span>
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">
-                  Email Resmi
-                </span>
-                <a
-                  href="mailto:sa.adventure76@gmail.com"
-                  className="text-xs text-gray-600 hover:text-brand-dark transition font-light"
-                >
-                  sa.adventure76@gmail.com
-                </a>
-              </div>
-            </div>
-
-            {/* Jam Operasional */}
-            <div>
-              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">
-                Waktu Pelayanan
-              </span>
-              <p className="text-xs text-gray-600 font-light leading-relaxed">
-                Setiap Hari: 07.00 – 21.00 WIB<br />
-                Trip Rafting: Sesi Pagi (08.30) & Sesi Siang (13.00)
-              </p>
-            </div>
-          </div>
-
-          {/* Column 2: FAQ Accordion */}
+          {/* Column 1: FAQ Accordion */}
           <div className="bg-white border border-gray-200 p-5 sm:p-8 shadow-sm">
             <h3 className="font-serif text-xl text-brand-dark pb-3 border-b border-gray-100 mb-6 flex items-center gap-3">
               <div className="w-8 h-8 border border-brand-dark text-brand-dark flex items-center justify-center">

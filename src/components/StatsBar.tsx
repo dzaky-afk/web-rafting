@@ -10,7 +10,7 @@ export default function StatsBar() {
     {
       icon: Shield,
       title: "100%",
-      desc: "Standar Keselamatan CE & BNSP",
+      desc: "Standar Keselamatan Teruji CE/ISO",
     },
     {
       icon: Compass,

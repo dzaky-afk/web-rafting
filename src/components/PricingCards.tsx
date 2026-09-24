@@ -54,7 +54,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             Our Rafting Packages
           </h2>
           <p className="mt-4 text-gray-500 font-light text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-sans">
-            Pilihan paket petualangan arung jeram Cisadane berstandar keamanan internasional, pemandu BNSP berpengalaman, dan kuliner tradisional Sunda.
+            Pilihan paket petualangan arung jeram Cisadane berstandar keamanan internasional, pemandu profesional berpengalaman, dan kuliner tradisional Sunda.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
-                    <span>Pemandu (Skipper) berlisensi BNSP</span>
+                    <span>Pemandu (Skipper) berpengalaman</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
@@ -203,7 +203,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   Rafting Complete
                 </h3>
                 <p className="text-gray-500 font-light text-xs sm:text-sm leading-relaxed mb-4">
-                  Pengarungan jeram terpanjang melintasi seluruh jeram ikonik &amp; Dam 2 Meter.
+                  Pengarungan jeram terpanjang melintasi seluruh jeram ikonik &amp; Dam 3 Meter.
                 </p>
                 <div className="pt-2 flex items-baseline justify-center gap-1">
                   <span className="text-xs uppercase font-medium text-gray-400 tracking-wider">Mulai</span>
@@ -292,13 +292,13 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   Paket Rafting + Paintball
                 </h3>
                 <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed mb-6">
-                  Kombinasi terfavorit untuk gathering perusahaan: serunya arung jeram Cisadane dilanjutkan simulasi perang paintball di hutan pinus.
+                  Kombinasi terfavorit untuk gathering perusahaan: serunya arung jeram Cisadane dilanjutkan simulasi perang paintball.
                 </p>
 
                 {/* Price Display */}
                 <div className="mb-6 pb-6 border-b border-gray-100 flex items-baseline gap-1">
                   <span className="text-xs text-gray-400 font-medium">Mulai</span>
-                  <span className="font-serif text-3xl font-bold text-brand-dark">Rp 295.000</span>
+                  <span className="font-serif text-3xl font-bold text-brand-dark">Rp 340.000</span>
                   <span className="text-xs text-gray-400 font-light">/ Orang</span>
                 </div>
 
@@ -327,7 +327,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             {/* CTA */}
             <div className="p-6 sm:p-8 pt-0 font-sans">
               <a
-                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket Combo (Rafting 11 KM + Paintball - Rp 295.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
+                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket Combo (Rafting 11 KM + Paintball - Rp 340.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block text-center border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white uppercase tracking-widest text-xs font-bold py-3.5 transition-colors duration-300 cursor-pointer no-underline"
