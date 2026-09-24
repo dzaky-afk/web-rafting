@@ -651,6 +651,9 @@ export default function AccommodationCatering() {
                     src={villa.photos[0].src}
                     alt={villa.name}
                     fill
+                    sizes="(max-width: 768px) 92vw, 600px"
+                    quality={75}
+                    loading="lazy"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300" />
@@ -1079,6 +1082,8 @@ export default function AccommodationCatering() {
                         src={activePhoto.src}
                         alt={activePhoto.title}
                         fill
+                        sizes="(max-width: 768px) 95vw, 700px"
+                        quality={80}
                         className="object-cover transition-opacity duration-300"
                       />
 
@@ -1141,6 +1146,9 @@ export default function AccommodationCatering() {
                             src={photo.src}
                             alt={photo.title}
                             fill
+                            sizes="80px"
+                            quality={60}
+                            loading="lazy"
                             className="object-cover"
                           />
                         </button>

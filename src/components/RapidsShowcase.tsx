@@ -49,7 +49,15 @@ export default function RapidsShowcase() {
   return (
     <section id="jeram-cisadane" className="py-20 sm:py-24 bg-brand-dark text-white relative overflow-hidden border-t border-neutral-800">
       <div className="absolute inset-0 z-0 opacity-15">
-        <Image src="/images/drive_uploads/29598.jpg" alt="Rapids Texture" fill className="object-cover" />
+        <Image
+          src="/images/drive_uploads/29598.jpg"
+          alt="Rapids Texture"
+          fill
+          sizes="100vw"
+          quality={50}
+          loading="lazy"
+          className="object-cover"
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

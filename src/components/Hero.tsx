@@ -191,21 +191,17 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
       {/* Hero Image Container with SVG Brush Mask */}
       <div className="relative w-full flex-1 min-h-[280px] sm:min-h-[340px] md:min-h-[400px] overflow-hidden">
-        {/* Exact SVG Brush Mask with Organic Fractal Turbulence Filter */}
+        {/* Optimized Pure Vector SVG Brush Mask without expensive shader filters */}
         <svg
-          className="brush-mask-top absolute top-[-2px] left-0 w-full h-[45px] sm:h-[60px] md:h-[75px] z-10 pointer-events-none"
-          viewBox="0 0 1200 100"
+          className="brush-mask-top absolute top-[-2px] left-0 w-full h-[36px] sm:h-[50px] md:h-[65px] z-10 pointer-events-none"
+          viewBox="0 0 1200 60"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <defs>
-            <filter id="rough-edge-top" x="-10%" y="-10%" width="120%" height="120%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.08 0.03" numOctaves={4} result="noise" />
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale={25} xChannelSelector="R" yChannelSelector="G" />
-              <feGaussianBlur stdDeviation="0.5" result="smoothed" />
-            </filter>
-          </defs>
-          <path d="M 0,0 L 1200,0 L 1200,50 Q 900,60 600,45 T 0,55 Z" fill="#ffffff" filter="url(#rough-edge-top)" />
+          <path
+            d="M 0,0 L 1200,0 L 1200,28 C 1140,42 1080,18 1020,34 C 960,50 900,22 840,38 C 780,54 720,20 660,36 C 600,52 540,19 480,38 C 420,57 360,24 300,42 C 240,60 180,22 120,40 C 70,55 30,30 0,38 Z"
+            fill="#ffffff"
+          />
         </svg>
 
         {/* Hero Photo Container - Absolute inset-0 guarantees full coverage without black background gaps */}
@@ -215,8 +211,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             alt="Keseruan Arung Jeram Rafting Cisadane Bogor bersama SA Adventure"
             fill
             priority
-            quality={85}
-            className="object-cover object-center filter brightness-[1.02] contrast-[1.05]"
+            quality={75}
+            className="object-cover object-center"
             sizes="(max-width: 768px) 100vw, 1200px"
           />
 

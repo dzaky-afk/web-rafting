@@ -144,6 +144,9 @@ export default function Activities({ onAddActivity }: ActivitiesProps) {
                       src={act.image}
                       alt={act.title}
                       fill
+                      sizes="(max-width: 768px) 78vw, 340px"
+                      quality={75}
+                      loading="lazy"
                       className="service-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>

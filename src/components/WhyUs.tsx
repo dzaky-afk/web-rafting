@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Sparkles,
   Users2,
@@ -134,10 +135,14 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
           {/* Right: Large Vertical Image with Chic Editorial Corner Border Accent */}
           <div className="w-full md:w-1/2 relative">
             <div className="aspect-[4/3] sm:aspect-[4/5] bg-gray-100 overflow-hidden relative shadow-lg">
-              <img
+              <Image
                 src="/images/drive_uploads/whyus-new.png"
                 alt="Peserta Rafting Cisadane SA Adventure bergaya di sungai Bogor"
-                className="object-cover object-top w-full h-full hover:scale-105 transition-transform duration-700 ease-in-out"
+                fill
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
+                className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-in-out"
               />
             </div>
             {/* Chic Minimalist Corner Element from Reference Prototype */}

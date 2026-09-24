@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Mail, MapPin } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
@@ -99,9 +100,12 @@ export default function Footer() {
             className="inline-block group mb-3 transition-transform duration-300 hover:scale-105"
             aria-label="SA Adventure Beranda"
           >
-            <img
+            <Image
               src="/images/sa-adventure-logo.png"
               alt="Logo SA Adventure"
+              width={200}
+              height={70}
+              loading="lazy"
               className="h-16 md:h-20 w-auto object-contain mx-auto"
             />
           </a>

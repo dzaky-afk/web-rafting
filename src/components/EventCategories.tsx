@@ -43,6 +43,9 @@ export default function EventCategories() {
                   src={event.img}
                   alt={event.label}
                   fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 160px"
+                  quality={75}
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

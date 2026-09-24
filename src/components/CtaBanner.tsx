@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 interface CtaBannerProps {
@@ -24,13 +25,17 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
       className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 overflow-hidden border-t border-neutral-800"
     >
       {/* 1. Atmospheric Rafting Photo with Monochromatic Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center grayscale opacity-15 pointer-events-none scale-105"
-        style={{
-          backgroundImage: "url('/images/drive_uploads/DSCN0068.JPG')",
-          backgroundPosition: "center 45%",
-        }}
-      />
+      <div className="absolute inset-0 opacity-15 pointer-events-none overflow-hidden">
+        <Image
+          src="/images/drive_uploads/DSCN0068.JPG"
+          alt="Background Rafting Cisadane SA Adventure"
+          fill
+          quality={50}
+          sizes="100vw"
+          loading="lazy"
+          className="object-cover object-[center_45%] grayscale scale-105 pointer-events-none"
+        />
+      </div>
 
       {/* 2. Deep Gradient Vignette for Subtle Editorial Mood */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black pointer-events-none" />

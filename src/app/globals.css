@@ -263,10 +263,17 @@
   transform: scaleX(0);
 }
 
-/* SVG Route Path Animation */
-.route-path {
-  stroke-dasharray: 6 6;
-  animation: dash 40s linear infinite;
+/* SVG Route Path Animation - Run only on desktop to prevent mobile CPU/GPU thermal throttle */
+@media (min-width: 768px) {
+  .route-path {
+    stroke-dasharray: 6 6;
+    animation: dash 40s linear infinite;
+  }
+}
+@media (max-width: 767px) {
+  .route-path {
+    stroke-dasharray: 6 6;
+  }
 }
 @keyframes dash {
   to { stroke-dashoffset: -1000; }

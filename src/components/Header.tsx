@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import { Menu, X, Calendar } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
@@ -204,8 +205,8 @@ export default function Header({ onOpenBooking }: HeaderProps) {
         isVisible || isMobileOpen ? "translate-y-0" : "-translate-y-full"
       } ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-md shadow-slate-900/5 py-2.5"
-          : "bg-white/90 backdrop-blur-md border-b border-slate-100 py-3.5"
+          ? "bg-white/95 md:backdrop-blur-xl border-b border-slate-200/80 shadow-md shadow-slate-900/5 py-2.5"
+          : "bg-white/95 md:backdrop-blur-md border-b border-slate-100 py-3.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -216,9 +217,12 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           className="flex items-center group shrink-0"
           aria-label="SA Adventure Beranda"
         >
-          <img
+          <Image
             src="/images/sa-adventure-logo.png"
             alt="SA Adventure Logo"
+            width={160}
+            height={44}
+            priority
             className="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </a>
@@ -299,9 +303,11 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             {/* Header (Pinned Top) */}
             <div className="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between gap-3 shrink-0">
               <div className="flex items-center gap-2.5 min-w-0">
-                <img
+                <Image
                   src="/images/sa-adventure-logo.png"
                   alt="SA Adventure Logo"
+                  width={40}
+                  height={36}
                   className="h-9 w-auto max-h-[36px] max-w-[42px] object-contain shrink-0"
                   style={{ height: "36px", width: "auto" }}
                 />

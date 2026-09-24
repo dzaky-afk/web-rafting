@@ -85,6 +85,9 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   src="/images/drive_uploads/3.png"
                   alt="Rafting Basic 7 KM"
                   fill
+                  sizes="(max-width: 768px) 86vw, 370px"
+                  quality={75}
+                  loading="lazy"
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
@@ -180,6 +183,9 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   src="/images/drive_uploads/DSCN9927.JPG"
                   alt="Rafting Complete 11 KM"
                   fill
+                  sizes="(max-width: 768px) 86vw, 370px"
+                  quality={75}
+                  loading="lazy"
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
@@ -262,6 +268,9 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                   src="/images/drive_uploads/7.png"
                   alt="Rafting and Paintball Combo"
                   fill
+                  sizes="(max-width: 768px) 86vw, 370px"
+                  quality={75}
+                  loading="lazy"
                   className="service-img w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
