@@ -54,7 +54,7 @@ export default function CtaBanner({ onOpenBooking }: CtaBannerProps) {
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#0c243f]/90 border border-sky-400/30 backdrop-blur-md shadow-md">
             <span className="text-[10.5px] sm:text-xs font-bold text-white font-sans">
-              <span className="text-white">Acara Seru</span> &bull; <span className="text-[#fbbf24]">Team Happy</span> &bull; <span className="text-[#38bdf8]">Kami yang Atur Semua! 😊</span>
+              <span className="text-white">Acara Seru</span> &bull; <span className="text-[#fbbf24]">Team Happy</span> &bull; <span className="text-[#38bdf8]">Kami yang Atur Semua!</span>
             </span>
           </div>
         </div>

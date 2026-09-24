@@ -162,8 +162,8 @@ export default function WhyUs({ onOpenBooking }: WhyUsProps) {
                 <span className="block text-slate-200 text-[10px] sm:text-[11px] font-bold leading-tight">
                   KAMI YANG
                 </span>
-                <span className="inline-flex items-center justify-center gap-1 text-[#38bdf8] text-xs sm:text-sm font-black tracking-wider mt-1 border-t border-white/15 pt-1 w-full">
-                  ATUR SEMUA! <span className="text-sm">😊</span>
+                <span className="block text-[#38bdf8] text-xs sm:text-sm font-black tracking-wider mt-1 border-t border-white/15 pt-1 w-full text-center">
+                  ATUR SEMUA!
                 </span>
               </div>
             </div>

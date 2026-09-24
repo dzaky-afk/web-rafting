@@ -609,7 +609,7 @@ Mohon konfirmasi ketersediaan perahu dan panduan pembayaran DP untuk nomor booki
                       </span>
                       {paxCount >= 50 && (
                         <span className="text-emerald-700 font-bold bg-emerald-50 px-2.5 py-1">
-                          🎉 Rombongan Besar: Termasuk Banner Dokumentasi Gratis
+                          Rombongan Besar: Termasuk Banner Dokumentasi Gratis
                         </span>
                       )}
                     </div>
