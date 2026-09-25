@@ -138,6 +138,9 @@ export const metadata: Metadata = {
     shortcut: "/images/sa-adventure-logo.png",
     apple: "/images/sa-adventure-logo.png",
   },
+  verification: {
+    google: "google851967cf85c0902d",
+  },
 };
 
 export default function RootLayout({
@@ -148,6 +151,8 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${montserrat.variable} ${playfair.variable} ${caveat.variable}`}>
       <head>
+        {/* Google Search Console Verification Meta */}
+        <meta name="google-site-verification" content="google851967cf85c0902d" />
         {/* Structured Data / Schema.org JSON-LD for Google Rich Results */}
         <script
           type="application/ld+json"
