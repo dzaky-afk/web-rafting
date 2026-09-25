@@ -228,7 +228,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
         </a>
 
         {/* Desktop Navigation Links (Hanya di layar besar) */}
-        <nav className="hidden lg:flex items-center gap-7 xl:gap-8 font-sans">
+        <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 font-sans">
           {DESKTOP_NAV_ITEMS.map((item) => {
             const isActive =
               activeSection === item.id ||
@@ -241,7 +241,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleSmoothScroll(e, item.id)}
-                className={`nav-link text-xs uppercase tracking-widest font-semibold transition-colors duration-200 no-underline ${
+                className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline ${
                   isActive ? "text-brand-dark font-bold active" : "text-gray-600 hover:text-black"
                 }`}
               >
