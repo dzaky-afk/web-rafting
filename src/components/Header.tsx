@@ -209,9 +209,9 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           : "bg-white/95 md:backdrop-blur-md border-b border-slate-100 py-3.5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
-        {/* Brand Logo (Left Col) */}
-        <div className="flex items-center justify-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        {/* Left Side: Brand Logo + Desktop Nav Links (Dekat dengan logo) */}
+        <div className="flex items-center gap-7 xl:gap-9">
           <a
             href="#home"
             onClick={(e) => handleSmoothScroll(e, "home")}
@@ -227,33 +227,33 @@ export default function Header({ onOpenBooking }: HeaderProps) {
               className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </a>
+
+          {/* Desktop Navigation Links (Posisi dekat dengan logo) */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-5 font-sans">
+            {DESKTOP_NAV_ITEMS.map((item) => {
+              const isActive =
+                activeSection === item.id ||
+                (item.id === "home" && (activeSection === "" || activeSection === "home")) ||
+                (item.id === "about" && (activeSection === "about" || activeSection === "tentang-kami")) ||
+                (item.id === "paket-rafting" && (activeSection === "paket-rafting" || activeSection === "jeram-cisadane" || activeSection === "aktivitas"));
+
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(e) => handleSmoothScroll(e, item.id)}
+                  className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline py-1.5 ${
+                    isActive ? "text-brand-dark font-bold active" : "text-gray-600 hover:text-black"
+                  }`}
+                >
+                  <span>{item.label}</span>
+                </a>
+              );
+            })}
+          </nav>
         </div>
 
-        {/* Desktop Navigation Links (Center Col - Mathematically Centered) */}
-        <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 font-sans">
-          {DESKTOP_NAV_ITEMS.map((item) => {
-            const isActive =
-              activeSection === item.id ||
-              (item.id === "home" && (activeSection === "" || activeSection === "home")) ||
-              (item.id === "about" && (activeSection === "about" || activeSection === "tentang-kami")) ||
-              (item.id === "paket-rafting" && (activeSection === "paket-rafting" || activeSection === "jeram-cisadane" || activeSection === "aktivitas"));
-
-            return (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleSmoothScroll(e, item.id)}
-                className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline py-1.5 ${
-                  isActive ? "text-brand-dark font-bold active" : "text-gray-600 hover:text-black"
-                }`}
-              >
-                <span>{item.label}</span>
-              </a>
-            );
-          })}
-        </nav>
-
-        {/* Right Corner (Right Col): Desktop Booking, WA Admin & Mobile Hamburger */}
+        {/* Right Corner: Desktop Booking, WA Admin & Mobile Hamburger */}
         <div className="flex items-center justify-end gap-2.5 sm:gap-3.5 xl:gap-4 font-sans">
           <a
             href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20booking%20tiket%20rafting%20Cisadane.%20Mohon%20informasi%20jadwal%20dan%20ketersediaan%20slot."
