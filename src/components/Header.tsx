@@ -15,7 +15,7 @@ const DESKTOP_NAV_ITEMS = [
   { id: "home", label: "Home", shortLabel: "Home" },
   { id: "about", label: "About Us", shortLabel: "About" },
   { id: "paket-rafting", label: "Pilihan Paket", shortLabel: "Paket" },
-  { id: "accommodation", label: "Pemilihan Villa & Akomodasi", shortLabel: "Villa" },
+  { id: "accommodation", label: "Villa & Akomodasi", shortLabel: "Villa" },
   { id: "galeri", label: "Gallery", shortLabel: "Galeri" },
   { id: "kontak", label: "Contact", shortLabel: "Kontak" },
 ];
@@ -209,26 +209,28 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           : "bg-white/95 md:backdrop-blur-md border-b border-slate-100 py-3.5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a
-          href="#home"
-          onClick={(e) => handleSmoothScroll(e, "home")}
-          className="flex items-center group shrink-0"
-          aria-label="SA Adventure Beranda"
-        >
-          <Image
-            src="/images/sa-adventure-logo.webp"
-            alt="SA Adventure Logo"
-            width={160}
-            height={44}
-            priority
-            className="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-          />
-        </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        {/* Brand Logo (Left Col) */}
+        <div className="flex items-center justify-start">
+          <a
+            href="#home"
+            onClick={(e) => handleSmoothScroll(e, "home")}
+            className="flex items-center group shrink-0"
+            aria-label="SA Adventure Beranda"
+          >
+            <Image
+              src="/images/sa-adventure-logo.webp"
+              alt="SA Adventure Logo"
+              width={160}
+              height={44}
+              priority
+              className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+        </div>
 
-        {/* Desktop Navigation Links (Hanya di layar besar) */}
-        <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 font-sans">
+        {/* Desktop Navigation Links (Center Col - Mathematically Centered) */}
+        <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 font-sans">
           {DESKTOP_NAV_ITEMS.map((item) => {
             const isActive =
               activeSection === item.id ||
@@ -241,7 +243,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleSmoothScroll(e, item.id)}
-                className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline ${
+                className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline py-1.5 ${
                   isActive ? "text-brand-dark font-bold active" : "text-gray-600 hover:text-black"
                 }`}
               >
@@ -251,13 +253,13 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           })}
         </nav>
 
-        {/* Right Corner: Desktop Booking & Garis Tiga (Hamburger) di Pojok Kanan Atas */}
-        <div className="flex items-center gap-2 sm:gap-4 font-sans">
+        {/* Right Corner (Right Col): Desktop Booking, WA Admin & Mobile Hamburger */}
+        <div className="flex items-center justify-end gap-2.5 sm:gap-3.5 xl:gap-4 font-sans">
           <a
             href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20booking%20tiket%20rafting%20Cisadane.%20Mohon%20informasi%20jadwal%20dan%20ketersediaan%20slot."
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-slate-800 hover:text-black py-1 border-b border-transparent hover:border-black transition-all cursor-pointer no-underline"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-slate-800 hover:text-black py-1.5 border-b border-transparent hover:border-black transition-all cursor-pointer no-underline"
             title="Booking Online via WhatsApp"
           >
             <Calendar className="w-3.5 h-3.5 text-sky-600 shrink-0" />
@@ -268,7 +270,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20paket%20rafting"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase bg-[#10b981] hover:bg-[#059669] text-white px-3.5 py-1.5 rounded-full shadow-xs transition active:scale-95 no-underline"
+            className="hidden md:inline-flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase bg-[#10b981] hover:bg-[#059669] text-white px-3.5 py-1.5 rounded-full shadow-xs transition active:scale-95 no-underline"
             title="Hubungi Kami"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 fill-current text-white shrink-0" />
