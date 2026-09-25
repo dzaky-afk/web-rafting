@@ -24,7 +24,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://web-rafting.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://saadventure.web.id"),
   title: "Rafting Cisadane Bogor - Paket Arung Jeram & Outbound Terbaik | SA Adventure",
   description:
     "Paket Rafting Cisadane Bogor & Arung Jeram Caringin terlengkap mulai Rp 168rb/pax. Standar safety internasional, guide lisensi BNSP, makan prasmanan Sunda, outbound gathering & paintball.",
@@ -92,11 +92,11 @@ export const metadata: Metadata = {
     "sa adventure bogor",
     "sa adventure cisadane",
   ],
-  authors: [{ name: "SA Adventure", url: "https://saadventure.com" }],
+  authors: [{ name: "SA Adventure", url: "https://saadventure.web.id" }],
   creator: "SA Adventure",
   publisher: "SA Adventure",
   alternates: {
-    canonical: "https://saadventure.com",
+    canonical: "https://saadventure.web.id",
   },
   robots: {
     index: true,
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     title: "Rafting Cisadane Bogor - Paket Arung Jeram & Outbound Seru | SA Adventure",
     description:
       "Taklukkan jeram alami Cisadane Caringin Bogor! Paket Rafting mulai Rp 168.000/Pax lengkap saung, makan siang prasmanan Sunda, guide BNSP & asuransi resmi.",
-    url: "https://saadventure.com",
+    url: "https://saadventure.web.id",
     siteName: "SA Adventure Rafting Cisadane",
     images: [
       {
@@ -158,10 +158,10 @@ export default function RootLayout({
               name: "SA Adventure - Rafting Cisadane Bogor",
               description:
                 "Wisata arung jeram dan event organizer profesional untuk paket rafting Cisadane Bogor, outbound, paintball, offroad, dan family gathering di Caringin Bogor.",
-              url: "https://saadventure.com",
+              url: "https://saadventure.web.id",
               telephone: "+6281291068287",
               priceRange: "Rp 168.000 - Rp 345.000",
-              image: "https://saadventure.com/images/drive_uploads/DSCN9999.JPG",
+              image: "https://saadventure.web.id/images/drive_uploads/DSCN9999.JPG",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03",
