@@ -210,8 +210,8 @@ export default function Header({ onOpenBooking }: HeaderProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Left Side: Brand Logo + Desktop Nav Links (Dekat dengan logo) */}
-        <div className="flex items-center gap-7 xl:gap-9">
+        {/* Left Side: Brand Logo + Architectural Hairline Divider + Desktop Nav Links */}
+        <div className="flex items-center gap-5 xl:gap-7">
           <a
             href="#home"
             onClick={(e) => handleSmoothScroll(e, "home")}
@@ -228,8 +228,11 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             />
           </a>
 
-          {/* Desktop Navigation Links (Posisi dekat dengan logo) */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-5 font-sans">
+          {/* Elegant Divider between Logo and Nav */}
+          <div className="hidden lg:block h-5 w-px bg-slate-200/90" aria-hidden="true" />
+
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 font-sans">
             {DESKTOP_NAV_ITEMS.map((item) => {
               const isActive =
                 activeSection === item.id ||
@@ -242,9 +245,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={(e) => handleSmoothScroll(e, item.id)}
-                  className={`nav-link text-xs uppercase tracking-wider font-semibold transition-colors duration-200 no-underline py-1.5 ${
-                    isActive ? "text-brand-dark font-bold active" : "text-gray-600 hover:text-black"
-                  }`}
+                  className={`nav-link ${isActive ? "active" : ""}`}
                 >
                   <span>{item.label}</span>
                 </a>
@@ -253,13 +254,13 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           </nav>
         </div>
 
-        {/* Right Corner: Desktop Booking, WA Admin & Mobile Hamburger */}
-        <div className="flex items-center justify-end gap-2.5 sm:gap-3.5 xl:gap-4 font-sans">
+        {/* Right Corner: Desktop Booking & WhatsApp Action Duo */}
+        <div className="flex items-center justify-end gap-3 sm:gap-3.5 font-sans">
           <a
             href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20booking%20tiket%20rafting%20Cisadane.%20Mohon%20informasi%20jadwal%20dan%20ketersediaan%20slot."
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-slate-800 hover:text-black py-1.5 border-b border-transparent hover:border-black transition-all cursor-pointer no-underline"
+            className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 px-3.5 py-1.5 rounded-full shadow-2xs transition-all duration-200 cursor-pointer no-underline active:scale-95"
             title="Booking Online via WhatsApp"
           >
             <Calendar className="w-3.5 h-3.5 text-sky-600 shrink-0" />
@@ -270,8 +271,8 @@ export default function Header({ onOpenBooking }: HeaderProps) {
             href="https://wa.me/6281291068287?text=Halo%20SA%20Adventure,%20saya%20ingin%20reservasi%20paket%20rafting"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase bg-[#10b981] hover:bg-[#059669] text-white px-3.5 py-1.5 rounded-full shadow-xs transition active:scale-95 no-underline"
-            title="Hubungi Kami"
+            className="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-1.5 rounded-full shadow-xs hover:shadow-sm transition-all duration-200 cursor-pointer no-underline active:scale-95"
+            title="Hubungi Kami via WhatsApp"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 fill-current text-white shrink-0" />
             <span>WA Admin</span>
