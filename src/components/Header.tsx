@@ -211,7 +211,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Left Side: Brand Logo + Architectural Hairline Divider + Desktop Nav Links */}
-        <div className="flex items-center gap-5 xl:gap-7">
+        <div className="flex items-center gap-6 xl:gap-8">
           <a
             href="#home"
             onClick={(e) => handleSmoothScroll(e, "home")}
@@ -231,8 +231,8 @@ export default function Header({ onOpenBooking }: HeaderProps) {
           {/* Elegant Divider between Logo and Nav */}
           <div className="hidden lg:block h-5 w-px bg-slate-200/90" aria-hidden="true" />
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 font-sans">
+          {/* Desktop Navigation Links (Lebih proporsional dan tidak terlalu kosong) */}
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 font-sans">
             {DESKTOP_NAV_ITEMS.map((item) => {
               const isActive =
                 activeSection === item.id ||
