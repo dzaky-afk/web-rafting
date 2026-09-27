@@ -28,15 +28,15 @@ export default function Home() {
   const [initialBookingPkg, setInitialBookingPkg] = useState("paket-b");
 
   const handleOpenBookingFlow = (pkgId = "paket-b") => {
-    let pkgName = "Paket B (Rafting Complete 11 KM - Rp 199.000/pax)";
+    let pkgName = "Paket B (Rafting Complete - Rp 199.000/pax)";
     if (pkgId.toLowerCase().includes("11") || pkgId.toLowerCase().includes("complete") || pkgId === "paket-b") {
-      pkgName = "Paket B (Rafting Complete 11 KM - Rp 199.000/pax)";
+      pkgName = "Paket B (Rafting Complete - Rp 199.000/pax)";
     } else if (pkgId.toLowerCase().includes("7") || pkgId.toLowerCase().includes("explore") || pkgId === "paket-a") {
-      pkgName = "Paket A (Rafting Explorer 7 KM - Rp 168.000/pax)";
+      pkgName = "Paket A (Rafting Basic - Rp 168.000/pax)";
     } else if (pkgId.toLowerCase().includes("combo") || pkgId.toLowerCase().includes("paintball")) {
-      pkgName = "Paket Combo (Rafting 11 KM + Paintball)";
+      pkgName = "Paket Combo (Rafting + Paintball)";
     } else if (pkgId.toLowerCase().includes("5") || pkgId.toLowerCase().includes("family") || pkgId === "paket-c") {
-      pkgName = "Paket C (Family & Fun 5 KM - Rp 145.000/pax)";
+      pkgName = "Paket C (Family & Fun - Rp 145.000/pax)";
     }
 
     const message = `Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: ${pkgName}\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!`;

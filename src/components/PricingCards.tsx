@@ -91,7 +91,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-brand-dark shadow-sm font-sans">
-                  7 KM / ~1.5 Jam
+                  ~1.5 Jam
                 </div>
               </div>
 
@@ -158,12 +158,12 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             {/* CTA */}
             <div className="p-6 sm:p-8 pt-0 font-sans">
               <a
-                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket A (Rafting Explorer 7 KM - Rp 168.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
+                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket A (Rafting Basic - Rp 168.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block text-center border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white uppercase tracking-widest text-xs font-bold py-3.5 transition-colors duration-300 cursor-pointer no-underline"
               >
-                Booking Online - Paket A (7 KM)
+                Booking Online - Paket A
               </a>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-300"></div>
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-brand-dark shadow-sm font-sans">
-                  11 KM / ~2 Jam
+                  ~2 Jam
                 </div>
               </div>
 
@@ -219,7 +219,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                 <ul className="space-y-3 text-xs sm:text-sm text-gray-600 font-light">
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
-                    <span className="font-medium text-brand-dark">Jarak tempuh maksimal 11 KM (Jeram Komplit)</span>
+                    <span className="font-medium text-brand-dark">Pengarungan Jeram Komplit &amp; Dam 3 Meter</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
@@ -248,12 +248,12 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             {/* CTA */}
             <div className="p-6 sm:p-8 pt-0 font-sans">
               <a
-                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket B (Rafting Complete 11 KM - Rp 199.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
+                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket B (Rafting Complete - Rp 199.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block text-center bg-brand-dark text-white hover:bg-neutral-800 uppercase tracking-widest text-xs font-bold py-3.5 transition-colors duration-300 shadow-md cursor-pointer no-underline"
               >
-                Booking Online - Paket B (11 KM)
+                Booking Online - Paket B
               </a>
             </div>
           </div>
@@ -305,7 +305,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
                 <ul className="space-y-3 text-xs sm:text-sm text-gray-600 font-sans mb-6">
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
-                    <span>Rafting Cisadane 7 KM + Paintball Wargame</span>
+                    <span>Rafting Cisadane + Paintball Wargame</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-brand-dark shrink-0 mt-0.5" />
@@ -326,7 +326,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             {/* CTA */}
             <div className="p-6 sm:p-8 pt-0 font-sans">
               <a
-                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket Combo (Rafting 11 KM + Paintball - Rp 340.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
+                href={`https://wa.me/6281291068287?text=${encodeURIComponent("Halo SA Adventure, saya ingin reservasi / booking tiket:\n• Pilihan: Paket Combo (Rafting + Paintball - Rp 340.000/pax)\n\nMohon informasi jadwal yang tersedia dan panduan reservasi. Terima kasih!")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block text-center border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white uppercase tracking-widest text-xs font-bold py-3.5 transition-colors duration-300 cursor-pointer no-underline"
@@ -340,8 +340,8 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
         {/* Mobile Slide Indicator: Garis Saja */}
         <div className="flex md:hidden justify-center items-center gap-2 mb-10 px-4">
           {[
-            { label: "Paket A (7 KM)" },
-            { label: "Paket B (11 KM)" },
+            { label: "Paket A" },
+            { label: "Paket B" },
             { label: "Paket Combo" },
           ].map((item, idx) => (
             <button
