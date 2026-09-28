@@ -111,31 +111,31 @@ export default function BookingPage() {
                 href={
                   "https://wa.me/6281291068287?text=" +
                   encodeURIComponent(
-                    "Halo SA Adventure, saya ingin reservasi Paket B (Rafting Complete 11 KM - Rp 199.000/pax)."
+                    "Halo SA Adventure, saya ingin reservasi Paket B (Rafting Complete - Rp 199.000/pax)."
                   )
                 }
                 className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:border-brand-dark hover:bg-slate-50 transition no-underline text-slate-800"
               >
-                <span className="font-semibold">Paket B - 11 KM (Best Seller)</span>
+                <span className="font-semibold">Paket B - Rafting Complete (Best Seller)</span>
                 <span className="text-emerald-700 font-bold">Rp 199.000</span>
               </a>
               <a
                 href={
                   "https://wa.me/6281291068287?text=" +
                   encodeURIComponent(
-                    "Halo SA Adventure, saya ingin reservasi Paket A (Rafting Explorer 7 KM - Rp 168.000/pax)."
+                    "Halo SA Adventure, saya ingin reservasi Paket A (Rafting Explorer - Rp 168.000/pax)."
                   )
                 }
                 className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:border-brand-dark hover:bg-slate-50 transition no-underline text-slate-800"
               >
-                <span className="font-semibold">Paket A - 7 KM (Explorer)</span>
+                <span className="font-semibold">Paket A - Rafting Explorer</span>
                 <span className="text-emerald-700 font-bold">Rp 168.000</span>
               </a>
               <a
                 href={
                   "https://wa.me/6281291068287?text=" +
                   encodeURIComponent(
-                    "Halo SA Adventure, saya ingin reservasi Paket Combo (Rafting 11 KM + Paintball - Rp 340.000/pax)."
+                    "Halo SA Adventure, saya ingin reservasi Paket Combo (Rafting + Paintball - Rp 340.000/pax)."
                   )
                 }
                 className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:border-brand-dark hover:bg-slate-50 transition no-underline text-slate-800"

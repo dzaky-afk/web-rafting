@@ -209,20 +209,20 @@ export default function RootLayout({
                 itemListElement: [
                   {
                     "@type": "Offer",
-                    itemOffered: { "@type": "Service", name: "Paket A - Rafting Short 7 KM" },
+                    itemOffered: { "@type": "Service", name: "Paket A - Rafting Basic" },
                     price: "168000",
                     priceCurrency: "IDR",
                   },
                   {
                     "@type": "Offer",
-                    itemOffered: { "@type": "Service", name: "Paket B - Rafting Complete 11 KM" },
+                    itemOffered: { "@type": "Service", name: "Paket B - Rafting Complete" },
                     price: "199000",
                     priceCurrency: "IDR",
                   },
                   {
                     "@type": "Offer",
-                    itemOffered: { "@type": "Service", name: "Paket C - Rafting + Outbound Lengkap" },
-                    price: "345000",
+                    itemOffered: { "@type": "Service", name: "Paket Combo - Rafting + Paintball" },
+                    price: "340000",
                     priceCurrency: "IDR",
                   },
                 ],
@@ -243,7 +243,7 @@ export default function RootLayout({
                   name: "Berapa harga paket rafting Cisadane Bogor?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Harga paket rafting Cisadane Bogor di SA Adventure mulai dari Rp 168.000 per pax untuk Paket A (7 KM), Rp 199.000 per pax untuk Paket B (11 KM Complete), dan Rp 345.000 per pax untuk Paket C (Rafting + Outbound Lengkap). Sudah termasuk makan siang prasmanan Sunda, pemandu berlisensi BNSP, dan asuransi.",
+                    text: "Harga paket rafting Cisadane Bogor di SA Adventure mulai dari Rp 168.000 per pax untuk Paket A (Basic), Rp 199.000 per pax untuk Paket B (Complete), dan Rp 340.000 per pax untuk Paket Combo (Rafting + Paintball). Sudah termasuk makan siang prasmanan Sunda, pemandu berlisensi BNSP, dan asuransi resmi.",
                   },
                 },
                 {

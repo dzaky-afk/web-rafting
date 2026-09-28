@@ -76,14 +76,14 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
           onScroll={handleScroll}
           className="flex md:grid md:grid-cols-3 gap-8 items-stretch mb-10 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
         >
-          {/* Card 1: Paket A (7 KM) */}
+          {/* Card 1: Paket A */}
           <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col justify-between">
             <div>
               {/* Card Photo with Zoom Hover */}
               <div className="h-56 overflow-hidden relative">
                 <Image
                   src="/images/drive_uploads/3.webp"
-                  alt="Rafting Basic 7 KM"
+                  alt="Rafting Basic"
                   fill
                   sizes="(max-width: 768px) 86vw, 370px"
                   quality={80}
@@ -168,7 +168,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
             </div>
           </div>
 
-          {/* Card 2: Paket B (11 KM) - BEST SELLER */}
+          {/* Card 2: Paket B - BEST SELLER */}
           <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-brand-dark flex flex-col justify-between relative md:-translate-y-2">
             <div className="absolute top-0 right-0 bg-brand-dark text-white text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 z-20 flex items-center gap-1.5 font-sans">
               <Flame className="w-3.5 h-3.5 text-amber-400" />
@@ -180,7 +180,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
               <div className="h-56 overflow-hidden relative">
                 <Image
                   src="/images/drive_uploads/DSCN9927.webp"
-                  alt="Rafting Complete 11 KM"
+                  alt="Rafting Complete"
                   fill
                   sizes="(max-width: 768px) 86vw, 370px"
                   quality={80}

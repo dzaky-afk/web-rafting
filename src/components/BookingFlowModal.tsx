@@ -33,7 +33,6 @@ export interface BookingFlowModalProps {
 interface PackageOption {
   id: string;
   name: string;
-  distance: string;
   duration: string;
   pricePerPax: number;
   badge?: string;
@@ -44,7 +43,6 @@ const PACKAGES: PackageOption[] = [
   {
     id: "paket-b",
     name: "Paket B (Rafting Complete)",
-    distance: "11 KM",
     duration: "2 - 2.5 Jam",
     pricePerPax: 199000,
     badge: "Paling Populer & Lengkap",
@@ -53,7 +51,6 @@ const PACKAGES: PackageOption[] = [
   {
     id: "paket-a",
     name: "Paket A (Rafting Explorer)",
-    distance: "7 KM",
     duration: "1.5 - 2 Jam",
     pricePerPax: 168000,
     badge: "Best Value",
@@ -62,7 +59,6 @@ const PACKAGES: PackageOption[] = [
   {
     id: "paket-c",
     name: "Paket C (Family & Fun)",
-    distance: "5 KM",
     duration: "1 Jam",
     pricePerPax: 145000,
     desc: "Cocok untuk rombongan keluarga, pemula, dan anak-anak dengan jeram aman berbusa.",
@@ -279,7 +275,7 @@ export default function BookingFlowModal({
 • Google Maps  : https://maps.app.goo.gl/Papalidan
 
 *3. RINCIAN PAKET & PESERTA:*
-• Paket Utama  : ${currentPackage.name} (${currentPackage.distance})
+• Paket Utama  : ${currentPackage.name}
 • Tarif Paket  : ${formatRupiah(currentPackage.pricePerPax)} / Pax
 • Jumlah Peserta: ${paxCount} Orang (~${boatsEstimate} Perahu Rafting)
 • Subtotal Paket: ${formatRupiah(packageTotal)}
@@ -500,7 +496,7 @@ Mohon konfirmasi ketersediaan perahu dan panduan pembayaran DP untuk nomor booki
                       Langkah 2: Pilih Paket Rafting & Jumlah Peserta
                     </h4>
                     <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed">
-                      Sesuaikan jarak tempuh arung jeram dan jumlah peserta yang akan ikut.
+                      Pilih paket arung jeram dan tentukan jumlah peserta yang akan ikut.
                     </p>
                   </div>
 
@@ -533,9 +529,7 @@ Mohon konfirmasi ketersediaan perahu dan panduan pembayaran DP untuk nomor booki
                               {pkg.desc}
                             </p>
                             <div className="flex items-center gap-3 text-xs text-gray-600 font-medium">
-                              <span>Jarak: <strong>{pkg.distance}</strong></span>
-                              <span>•</span>
-                              <span>Durasi: <strong>{pkg.duration}</strong></span>
+                              <span>Durasi Pengarungan: <strong>{pkg.duration}</strong></span>
                             </div>
                           </div>
 
