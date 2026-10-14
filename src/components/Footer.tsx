@@ -18,10 +18,10 @@ export default function Footer() {
           </h4>
           <div className="font-light text-sm text-gray-400 mb-4 leading-relaxed">
             <p className="mb-1">
-              <span className="text-white font-medium">Basecamp Cisadane:</span> Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi No. 1, Caringin, Bogor, Jawa Barat 16730
+              <span className="text-white font-medium">Basecamp Cisadane:</span> SA Adventure - Rafting &amp; Outbound Bogor, Jl. Raya Bogor - Sukabumi No. 1, Caringin, Bogor, Jawa Barat 16730
             </p>
             <a
-              href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+              href="https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-brand-gold hover:text-white transition-colors mt-0.5"

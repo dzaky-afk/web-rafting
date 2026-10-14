@@ -271,8 +271,8 @@ export default function BookingFlowModal({
 *2. JADWAL & TRIP:*
 • Tanggal Trip : ${formattedDate}
 • Sesi Waktu   : ${selectedSlot} WIB
-• Titik Kumpul : Papalidan Outdoor Resto (Basecamp SA Adventure Caringin Bogor)
-• Google Maps  : https://maps.app.goo.gl/Papalidan
+• Titik Kumpul : SA Adventure - Rafting & Outbound Bogor (Basecamp Caringin Bogor)
+• Google Maps  : https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j
 
 *3. RINCIAN PAKET & PESERTA:*
 • Paket Utama  : ${currentPackage.name}
@@ -470,11 +470,11 @@ Mohon konfirmasi ketersediaan perahu dan panduan pembayaran DP untuk nomor booki
                   <div className="p-4 bg-gray-50 border border-gray-200 text-xs text-gray-600 flex items-start gap-3">
                     <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-brand-dark block mb-0.5">Titik Kumpul: Papalidan Outdoor Resto (Basecamp SA Adventure)</strong>
+                      <strong className="text-brand-dark block mb-0.5">Titik Kumpul: SA Adventure - Rafting &amp; Outbound Bogor</strong>
                       <span>Fasilitas parkir luas mobil &amp; bus besar, saung istirahat, kamar bilas bersih terawat, serta musholla tersedia lengkap.</span>
                       <div className="mt-2">
                         <a
-                          href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+                          href="https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j"
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-1.5 font-bold text-brand-dark hover:text-emerald-700 transition"

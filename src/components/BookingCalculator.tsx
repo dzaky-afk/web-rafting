@@ -104,16 +104,16 @@ export default function BookingCalculator({ selectedAddonFromCard }: CalculatorP
         ? chosenAddonsList.map((str) => `   • ${str}`).join("\n")
         : "Tidak ada (Hanya Paket Rafting)";
 
-    const waText = 
-`*HALO SA ADVENTURE, SAYA INGIN RESERVASI RAFTING & OUTBOUND*
+    const waText =
+      `*HALO SA ADVENTURE, SAYA INGIN RESERVASI RAFTING & OUTBOUND*
 --------------------------------------------------
 *DATA PEMESAN:*
 • Nama PIC: ${name.trim() || "Pelanggan"}
 • Rombongan / Instansi: ${group.trim() || "-"}
 • Tanggal Rencana Kegiatan: ${dateFormatted}
 • Jumlah Peserta: ${pax} Pax
-• Titik Kumpul: Papalidan Outdoor Resto (Basecamp SA Adventure Caringin Bogor)
-• Google Maps: https://maps.app.goo.gl/Papalidan
+• Titik Kumpul: SA Adventure - Rafting & Outbound Bogor (Basecamp Caringin Bogor)
+• Google Maps: https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j
 
 *PAKET & AKTIVITAS DIPILIH:*
 • *Paket Utama:* ${mainPackageName} (${formatRupiah(mainPackagePrice)}/pax)
@@ -133,10 +133,10 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
   return (
     <section id="kalkulator-booking" className="py-16 sm:py-24 bg-slate-50/50 text-slate-900 border-t border-slate-200/80 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Card Container */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm border border-slate-200/80">
-          
+
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#0052cc] bg-blue-50 px-3.5 py-1 rounded-full border border-blue-100 mb-3">
@@ -152,10 +152,10 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
 
           <form onSubmit={handleSendToWhatsApp}>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              
+
               {/* Left Column: Paket & Peserta */}
               <div className="space-y-6">
-                
+
                 {/* Step 1: Pilih Paket */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
@@ -171,20 +171,18 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                     {/* Paket B */}
                     <div
                       onClick={() => setSelectedPkg("B")}
-                      className={`p-4 rounded-xl border transition-all cursor-pointer ${
-                        selectedPkg === "B"
+                      className={`p-4 rounded-xl border transition-all cursor-pointer ${selectedPkg === "B"
                           ? "border-[#0052cc] bg-blue-50/40 ring-1 ring-[#0052cc]"
                           : "border-slate-200 hover:border-slate-300 bg-white"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-start justify-between gap-2 mb-1.5">
                         <div className="flex items-center gap-2">
                           <div
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
-                              selectedPkg === "B"
+                            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${selectedPkg === "B"
                                 ? "border-[#0052cc] bg-[#0052cc]"
                                 : "border-slate-300 bg-white"
-                            }`}
+                              }`}
                           >
                             {selectedPkg === "B" && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                           </div>
@@ -207,20 +205,18 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                     {/* Paket A */}
                     <div
                       onClick={() => setSelectedPkg("A")}
-                      className={`p-4 rounded-xl border transition-all cursor-pointer ${
-                        selectedPkg === "A"
+                      className={`p-4 rounded-xl border transition-all cursor-pointer ${selectedPkg === "A"
                           ? "border-[#0052cc] bg-blue-50/40 ring-1 ring-[#0052cc]"
                           : "border-slate-200 hover:border-slate-300 bg-white"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-start justify-between gap-2 mb-1.5">
                         <div className="flex items-center gap-2">
                           <div
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
-                              selectedPkg === "A"
+                            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${selectedPkg === "A"
                                 ? "border-[#0052cc] bg-[#0052cc]"
                                 : "border-slate-300 bg-white"
-                            }`}
+                              }`}
                           >
                             {selectedPkg === "A" && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                           </div>
@@ -333,7 +329,7 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
 
               {/* Right Column: Addons & Live Summary */}
               <div className="space-y-4 flex flex-col justify-between h-full">
-                
+
                 {/* Step 3: Addons (Simple & Compact) */}
                 <div>
                   <div className="flex items-center justify-between mb-1">
@@ -362,19 +358,17 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                         <div
                           key={addon.id}
                           onClick={() => handleToggleAddon(addon.id)}
-                          className={`px-3 py-2 rounded-xl border transition-all cursor-pointer flex items-center justify-between gap-2 ${
-                            isChecked
+                          className={`px-3 py-2 rounded-xl border transition-all cursor-pointer flex items-center justify-between gap-2 ${isChecked
                               ? "border-[#0052cc] bg-blue-50/70 text-slate-900 ring-1 ring-[#0052cc]/30"
                               : "border-slate-200 bg-white hover:border-slate-300 text-slate-700"
-                          }`}
+                            }`}
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
                             <div
-                              className={`w-4 h-4 rounded flex items-center justify-center border shrink-0 transition-colors ${
-                                isChecked
+                              className={`w-4 h-4 rounded flex items-center justify-center border shrink-0 transition-colors ${isChecked
                                   ? "bg-[#0052cc] border-[#0052cc] text-white"
                                   : "border-slate-300 bg-white"
-                              }`}
+                                }`}
                             >
                               {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
                             </div>
@@ -393,7 +387,7 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
 
                 {/* Summary Card (Simple, Compact & Clean) */}
                 <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/90 space-y-3">
-                  
+
                   {/* Breakdown */}
                   <div className="space-y-1 text-xs sm:text-sm">
                     <div className="flex justify-between items-center text-slate-600">
@@ -435,22 +429,20 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                       <button
                         type="button"
                         onClick={() => setTargetWa("utama")}
-                        className={`py-1.5 px-2.5 rounded-lg text-center transition-all cursor-pointer ${
-                          targetWa === "utama"
+                        className={`py-1.5 px-2.5 rounded-lg text-center transition-all cursor-pointer ${targetWa === "utama"
                             ? "bg-[#0052cc] text-white shadow-sm"
                             : "text-slate-600 hover:bg-slate-50"
-                        }`}
+                          }`}
                       >
                         Admin Utama
                       </button>
                       <button
                         type="button"
                         onClick={() => setTargetWa("cadangan")}
-                        className={`py-1.5 px-2.5 rounded-lg text-center transition-all cursor-pointer ${
-                          targetWa === "cadangan"
+                        className={`py-1.5 px-2.5 rounded-lg text-center transition-all cursor-pointer ${targetWa === "cadangan"
                             ? "bg-[#0052cc] text-white shadow-sm"
                             : "text-slate-600 hover:bg-slate-50"
-                        }`}
+                          }`}
                       >
                         Admin Cadangan
                       </button>
@@ -471,12 +463,12 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                     <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                     <span>Titik Kumpul:</span>
                     <a
-                      href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+                      href="https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j"
                       target="_blank"
                       rel="noreferrer"
                       className="font-semibold text-brand-dark hover:text-emerald-700 underline underline-offset-2 transition"
                     >
-                      Papalidan Outdoor Resto &rarr;
+                      SA Adventure Basecamp &rarr;
                     </a>
                   </div>
 

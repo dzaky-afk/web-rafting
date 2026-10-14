@@ -169,7 +169,7 @@ export default function RootLayout({
               image: "https://saadventure.web.id/images/drive_uploads/DSCN9999.JPG",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03",
+                streetAddress: "SA Adventure - Rafting & Outbound Bogor, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03",
                 addressLocality: "Caringin, Bogor Kabupaten",
                 addressRegion: "Jawa Barat",
                 postalCode: "16730",
@@ -259,7 +259,7 @@ export default function RootLayout({
                   name: "Di mana lokasi basecamp rafting Cisadane SA Adventure?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Basecamp SA Adventure berlokasi di Papalidan Outdoor Resto, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Caringin, Bogor Kabupaten, Jawa Barat 16730. Mudah dijangkau, dekat exit Tol Caringin (bebas ganjil-genap), dan hanya sekitar 1-1.5 jam dari Jakarta.",
+                    text: "Basecamp SA Adventure berlokasi di Caringin Bogor (SA Adventure - Rafting & Outbound Bogor, Jl. Raya Bogor - Sukabumi Desa No.1, RT.02/RW.03, Caringin, Bogor Kabupaten, Jawa Barat 16730). Mudah dijangkau, dekat exit Tol Caringin (bebas ganjil-genap), dan hanya sekitar 1-1.5 jam dari Jakarta.",
                   },
                 },
                 {

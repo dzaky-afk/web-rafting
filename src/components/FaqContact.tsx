@@ -102,19 +102,19 @@ export default function FaqContact() {
               
               <div className="overflow-hidden border border-gray-200 relative h-48 w-full bg-gray-100 mb-4 rounded-sm">
                 <iframe
-                  src="https://maps.google.com/maps?q=Papalidan+Outdoor+Resto&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=SA+Adventure+-+Rafting+%26+Outbound+Bogor&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Titik Lokasi Papalidan Outdoor Resto di Google Maps"
+                  title="Titik Lokasi SA Adventure - Rafting &amp; Outbound Bogor di Google Maps"
                 ></iframe>
               </div>
 
               <div className="text-xs text-gray-600 font-light leading-relaxed space-y-1">
                 <p className="font-semibold text-brand-dark">
-                  Papalidan Outdoor Resto
+                  SA Adventure - Rafting &amp; Outbound Bogor
                 </p>
                 <p className="text-gray-500">
                   Basecamp SA Adventure Rafting Cisadane • Jl. Raya Bogor - Sukabumi No.1, RT.02/RW.03, Caringin, Kec. Caringin, Kabupaten Bogor, Jawa Barat 16730.
@@ -127,7 +127,7 @@ export default function FaqContact() {
 
             <div className="mt-4 pt-3 border-t border-gray-100">
               <a
-                href="https://www.google.com/maps/place/Papalidan+Outdoor+Resto/@-6.7029647,106.8263511,932m/data=!3m1!1e3!4m6!3m5!1s0x2e69c97505cbbd4d:0x3efd818443a97b1e!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11hmz948fj"
+                href="https://www.google.com/maps/place/SA+Adventure+-+Rafting+%26+Outbound+Bogor/@-6.7030071,106.8237315,923m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e69c9c731f02ae3:0x1996d61c44e0df81!8m2!3d-6.7030124!4d106.8263064!16s%2Fg%2F11zz1hdq5j"
                 target="_blank"
                 rel="noreferrer"
                 className="text-xs uppercase font-bold tracking-widest text-brand-dark hover:text-emerald-700 inline-flex items-center gap-2 transition"
