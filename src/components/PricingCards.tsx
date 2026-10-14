@@ -77,7 +77,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
           className="flex md:grid md:grid-cols-3 gap-8 items-stretch mb-10 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
         >
           {/* Card 1: Paket A */}
-          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col justify-between">
+          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-200/80 flex flex-col justify-between">
             <div>
               {/* Card Photo with Zoom Hover */}
               <div className="h-56 overflow-hidden relative">
@@ -169,7 +169,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
           </div>
 
           {/* Card 2: Paket B - BEST SELLER */}
-          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-brand-dark flex flex-col justify-between relative md:-translate-y-2">
+          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-3.5 transition-all duration-300 border-2 border-brand-dark flex flex-col justify-between relative md:-translate-y-2">
             <div className="absolute top-0 right-0 bg-brand-dark text-white text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 z-20 flex items-center gap-1.5 font-sans">
               <Flame className="w-3.5 h-3.5 text-amber-400" />
               <span>MOST POPULAR</span>
@@ -259,7 +259,7 @@ export default function PricingCards({ onSelectPackage }: PricingProps) {
           </div>
 
           {/* Card 3: Paket Combo (Rafting + Paintball) */}
-          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col justify-between">
+          <div className="w-[86vw] max-w-[370px] md:w-auto shrink-0 snap-center service-card group cursor-pointer bg-white overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-200/80 flex flex-col justify-between">
             <div>
               {/* Card Photo */}
               <div className="h-56 overflow-hidden relative">

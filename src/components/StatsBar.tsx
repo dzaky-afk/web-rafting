@@ -32,10 +32,10 @@ export default function StatsBar() {
           return (
             <div
               key={i}
-              className="bg-white border border-gray-200 p-3.5 sm:p-5 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5 shadow-sm hover:border-gray-400 transition-colors"
+              className="group bg-white border border-gray-200 p-3.5 sm:p-5 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5 shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-gray-400 transition-all duration-300 cursor-default"
             >
-              <div className="w-9 h-9 sm:w-11 sm:h-11 border border-brand-dark text-brand-dark flex items-center justify-center shrink-0">
-                <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+              <div className="w-9 h-9 sm:w-11 sm:h-11 border border-brand-dark text-brand-dark flex items-center justify-center shrink-0 group-hover:bg-brand-dark group-hover:text-white transition-colors duration-300">
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div className="min-w-0 flex-1">
                 <h3 className="font-serif text-lg sm:text-2xl md:text-3xl text-brand-dark leading-none mb-1 font-bold">

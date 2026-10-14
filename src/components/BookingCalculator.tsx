@@ -452,9 +452,9 @@ Mohon info ketersediaan slot jadwal dan petunjuk pembayaran DP. Terima kasih!`;
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#10b981] hover:bg-[#059669] active:scale-[0.99] text-white font-heading font-bold text-sm py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer mt-1"
+                    className="group w-full bg-[#10b981] hover:bg-[#059669] active:scale-[0.98] text-white font-heading font-bold text-sm py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer mt-1"
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current shrink-0 group-hover:rotate-12 transition-transform duration-300" />
                     <span>Kirim Estimasi ke WhatsApp</span>
                   </button>
 

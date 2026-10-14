@@ -12,7 +12,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       {/* Large Elegant Serif Title */}
       <div className="text-center px-4 max-w-6xl mx-auto shrink-0">
         {/* Large Elegant Serif Title as Scalable SVG */}
-        <h1 className="w-full flex justify-center items-center my-0">
+        <h1 className="w-full flex justify-center items-center my-0 animate-hero-1">
           <span className="sr-only">SA ADVENTURE - Event Organizer, Outbound &amp; Rafting Cisadane Bogor</span>
           <svg
             viewBox="0 0 920 95"
@@ -40,7 +40,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         </h1>
 
         {/* Tag Pill: ACARA SERU • TEAM HAPPY • KAMI YANG ATUR SEMUA! */}
-        <div className="mt-2 sm:mt-2.5 flex justify-center">
+        <div className="mt-2 sm:mt-2.5 flex justify-center animate-hero-2">
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1 rounded-full bg-brand-dark text-white text-[9.5px] sm:text-[11px] font-bold font-sans uppercase tracking-[0.16em] shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
             <span>ACARA SERU &bull; TEAM HAPPY &bull; KAMI YANG ATUR SEMUA!</span>
@@ -48,45 +48,45 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         </div>
 
         {/* Handwritten Emotional Slogan from Flyer */}
-        <div className="mt-2 sm:mt-2.5 inline-block relative max-w-2xl px-2">
+        <div className="mt-2 sm:mt-2.5 inline-block relative max-w-2xl px-2 animate-hero-3">
           <p className="font-handwriting text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#0b4b6f] font-bold tracking-wide leading-tight">
             Jelajahi Alam, Ciptakan Kenangan, Rayakan Kebersamaan!
           </p>
           {/* Hand-drawn energetic curved underline matching flyer */}
           <svg className="w-full h-2 sm:h-3 -mt-0.5 mx-auto" viewBox="0 0 500 20" fill="none" preserveAspectRatio="none">
-            <path d="M 10,14 Q 250,2 490,14" stroke="#f59e0b" strokeWidth="3.5" strokeLinecap="round" />
+            <path className="animate-underline-draw" d="M 10,14 Q 250,2 490,14" stroke="#f59e0b" strokeWidth="3.5" strokeLinecap="round" />
           </svg>
         </div>
 
         {/* Minimalist Editorial Service Pillars (Clean, Professional, No Icons) */}
-        <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 max-w-3xl mx-auto px-2">
+        <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 max-w-3xl mx-auto px-2 animate-hero-4">
           <a
             href="#about"
-            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline active:scale-95"
           >
             Event Organizer
           </a>
           <a
             href="#paket-rafting"
-            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline active:scale-95"
           >
             Rafting Cisadane
           </a>
           <a
             href="#aktivitas"
-            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline active:scale-95"
           >
             Outbound &amp; Team Building
           </a>
           <a
             href="#aktivitas"
-            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline active:scale-95"
           >
             Paintball &amp; Offroad
           </a>
           <a
             href="#accommodation"
-            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline"
+            className="px-3 sm:px-4 py-1.5 rounded-full border border-gray-300/90 hover:border-brand-dark bg-white hover:bg-brand-dark hover:text-white text-gray-700 text-[10.5px] sm:text-xs font-semibold font-sans uppercase tracking-[0.14em] transition-all duration-200 shadow-2xs hover:shadow-sm no-underline active:scale-95"
           >
             Villa &amp; Katering
           </a>
@@ -109,14 +109,14 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         </svg>
 
         {/* Hero Photo Container - Absolute inset-0 guarantees full coverage without black background gaps */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <Image
             src="/images/drive_uploads/hero-new.webp"
             alt="Keseruan Arung Jeram Rafting Cisadane Bogor bersama SA Adventure"
             fill
             priority
             quality={90}
-            className="object-cover object-center"
+            className="object-cover object-center animate-hero-img"
             sizes="100vw"
           />
 

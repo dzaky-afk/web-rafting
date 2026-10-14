@@ -308,3 +308,109 @@
 .gallery-item:hover img {
   transform: scale(1.08);
 }
+
+/* ===================================================
+   MICRO-ANIMATIONS & INTERACTION UTILITIES
+   Hardware-accelerated, lightweight, zero-dependency
+   =================================================== */
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroZoomOut {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1.2deg);
+  }
+}
+
+@keyframes radarPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes underlineDraw {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-hero-1 {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.animate-hero-2 {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-3 {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
+
+.animate-hero-4 {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both;
+}
+
+.animate-hero-img {
+  animation: heroZoomOut 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  will-change: transform;
+}
+
+.animate-float-badge {
+  animation: floatGentle 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-radar-pulse {
+  animation: radarPulse 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-underline-draw {
+  stroke-dasharray: 500;
+  animation: underlineDraw 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-1,
+  .animate-hero-2,
+  .animate-hero-3,
+  .animate-hero-4,
+  .animate-hero-img,
+  .animate-float-badge,
+  .animate-radar-pulse,
+  .animate-underline-draw {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
